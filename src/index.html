@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,128 +7,50 @@
   <link rel="icon" href="/image/logo-browser.jpg">
   <!-- tailwind css link -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- flowbite cdn link -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
   <!-- my style -->
   <link rel="stylesheet" href="/style/style.css">
 </head>
-<body class="bg-whitesmoke">
-  <header>
-    <!-- navbar section -->
-    <nav >
-      <div
-        class="max-w-screen-full flex flex-wrap items-center justify-between mx-auto p-0">
-        <a href=""
-          class="flex items-center ms-20 ">
-          <img src="/image/logo.png" class="h-20 w-20" alt="Khmer Mart Logo"/>
-        </a>
-        <a href class="flex " style="color:var(--primary-color)">Category
-          <svg class="w-4 h-4 text-gray-500  mt-2 ms-2"
-            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 14 8">
-            <path stroke="currentColor" stroke-linecap="round"
-              stroke-linejoin="round" stroke-width="2" style="color: var(--primary-color)"
-              d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1" />
-          </svg>
-        </a>
-
-        <div class="flex justify-center ">
-          <button type="button" data-collapse-toggle="navbar-search"
-            aria-controls="navbar-search" aria-expanded="false"
-            class="md:hidden text-gray-500 dark:text-gray-400 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-none rounded-lg text-sm p-2.5 me-1">
-            <svg class="w-5 h-5" aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg" fill="none"
-              viewBox="0 0 20 20">
-              <path stroke="currentColor" stroke-linecap="round"
-                stroke-linejoin="round" stroke-width="2"
-                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-            </svg>
-            <span class="sr-only">Search </span>
-          </button>
-          <div class="relative hidden md:block">
-            <div
-              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400"
-                aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                fill="none" viewBox="0 0 20 20">
-                <path stroke="currentColor" stroke-linecap="round"
-                  stroke-linejoin="round" stroke-width="2"
-                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+<body class="bg-[#f5f5f5]">
+  <header class="bg-[#f5f5f5]">
+    <nav class="max-w-screen-xl container-fluid flex flex-wrap items-center justify-between mx-auto p-4 sm:p-4 md:p-0  ">
+      <!-- Logo and Category Link -->
+      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="/image/logo.png" alt="Khmer-Mart Logo" class="h-20 w-20 ms-[-12px]">
+      </a>
+      <a href="#" class="flex items-center space-x-2 rtl:space-x-reverse">
+          <span class="hidden sm:inline-flex md:inline-flex items-center text-[#1A6E09]">
+              Category
+              <svg class="w-5 h-5 text-gray-800 dark:text-[#1A6E09] ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
               </svg>
-              <span class="sr-only">Search icon</span>
-            </div>
-            <input type="text" id="search-navbar"
-              class="block w-[500px] p-2 ps-10 text-sm text-gray-900 rounded-[20px]  dark:bg-whitesmoke  dark:placeholder-gray-500 dark:text-black focus:outline-none focus:ring-1 focus:ring-green-800 "
-              placeholder="Search for anything">
-          </div>
-          <button data-collapse-toggle="navbar-search" type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2  dark:text-gray-400 "
-            aria-controls="navbar-search" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-5 h-5" aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg" fill="none
-              viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round"
-                stroke-linejoin="round" stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15" />
-            </svg>
-          </button>
-        </div>
-        <div
-          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 "
-          id="navbar-search" >
-          <div class="relative mt-3 md:hidden">
-            <div
-              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400"
-                aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                fill="none" viewBox="0 0 20 20">
-                <path stroke="currentColor" stroke-linecap="round"
-                  stroke-linejoin="round" stroke-width="2"
-                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+          </span>
+       </a>
+      <!-- Search Bar -->
+      <div class="relative flex-4 md:inline-flex sm:w-[250px] w-[200px] md:w-[400px] ">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
               </svg>
-            </div>
-            <input type="text" id="search-navbar"
-              class="block w-full p-2 ps-10 text-sm text-gray-900  rounded-lg bg-gray-50  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-              placeholder="Search for anything">
           </div>
-
-        </div>
-      
-        <div class="hidden w-full md:block md:w-auto justify-center mt-4 me-0" id="navbar-default" >
-          <ul class="font flex  p-4 md:p-0  justify-center gap-[30px] ">
-            <li>
-              <a href="#"
-                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                aria-current="page">
-                <svg class="w-6 h-6 text-gray-700 "
-                  aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="none" viewBox="0 0 21 19">
-                  <path stroke="currentColor" stroke-linecap="round"
-                    stroke-linejoin="round" stroke-width="1"
-                    d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z" />
-                </svg>
-                <div class="notification">
-                    
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#"  style="color:var(--primary-color)"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About
-                Us</a>
-            </li>
-            <li>
-              <a href="#"  style="color:var(--primary-color)"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sign
-                In</a>
-            </li>
-          </ul>
-        </div>
+          <input type="text" placeholder="Search for anything" class="py-2 pl-8 pr-3 border border-[#f5f5f5] rounded-full focus:outline-none focus:ring-1 focus:ring-[#1A6E09]  w-full  space-x-4">
       </div>
-
-    </nav>
-
+  
+      <!-- Navigation Links -->
+      <ul class="flex  space-x-2 sm:space-x-4 md:space-x-8 md:flex-row md:mt-0 md:border-0 ">
+          <li>
+              <a href="#" class="md:inline-flex text-[#1A6E09] hover:text-gray-300 flex items-center space-x-0 ">
+                  <svg class="w-6 h-6 text-gray-800 dark:text-black  md:mt-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 19">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8" d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z"/>
+                  </svg>
+              </a>
+          </li>
+          <li><a href="#" class="text-[#1A6E09] hover:text-gray-300 hidden md:inline-flex space-x-0">About Us</a></li>
+          <li><a href="#" class="text-[#1A6E09] hover:text-gray-300">Sign In</a></li>
+          </div>
+      </ul>
+  </nav>
+  
+    
   </header>
   <body>
     
@@ -155,8 +76,11 @@
   </section>
 
 </footer>
-<!-- flowbite script -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 </body>
 
 </html>
+
+
+
+
+
