@@ -21,5 +21,9 @@
   #search-navbar{
     border-color: whitesmoke;
   }
+  .discount-percent{
+    border-radius: 15px 0px;
+    background: #FF9E37;
+  }
  
   
