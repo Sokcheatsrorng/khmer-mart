@@ -6,11 +6,11 @@ const renderCard = ({title, price, images})=>{
     return ` 
     <div class="w-full max-w-sm bg-white border border-white rounded-xl
  shadow-none">
- <div class="discount-percent absolute h-12 w-24 mt-4 ms-4 text-center justify-center text-2xl flex items-center mx-auto">
+ <div class="discount-percent  z-10 h-12 w-24 mt-4 ms-4 text-center justify-center text-2xl flex items-center mx-auto">
    15%
  </div>
  <a href="#">
-  <img class="p-5 rounded-t-lg w-[400px] h-[200px]" src="${images[0]}" alt="food-discount" />
+  <img class="p-5 rounded-t-lg w-[400px] h-[200px]  z-0" src="${images[0]}" alt="food-discount" />
  </a>
  <div class="px-5 pb-5"> 
   <a href="#">
