@@ -16,7 +16,7 @@
     <nav class="max-w-screen-xl container-fluid flex flex-wrap items-center justify-between mx-auto p-4 sm:p-4  ">
       <!-- Logo and Category Link -->
       <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse  ">
-          <img src="../image/logo.png" alt="Khmer-Mart Logo" class="h-20 w-15 ms-[-12px]">
+          <img src="/image/logo.png" alt="Khmer-Mart Logo" class="h-20 w-15 ms-[-12px]">
       </a>
       <a href="#" class="flex flex-wrap items-center space-x-2 rtl:space-x-reverse">
           <span class="hidden xl:inline-block
@@ -56,16 +56,16 @@
   </header>
 
   <!-- Main -->
-  <main>
-    <h1 class="ml-[15px] mt-[30px] font-semibold text-3xl text-[#1A6E09]">My favourite list</h1>
+  <main class="max-w-screen-xl container-fluid mx-auto justify-center p-4 text-inter">
+    <h1 class=" mt-[30px] font-semibold text-3xl text-[#1A6E09]">My favourite list</h1>
     <div class="flex justify-between items-center">
         <div>
-            <h2 class="ml-[15px] mt-[20px] text-2xl">Whistlist</h2>
-            <p class="ml-[15px]">all your favorite here</p>
+            <h2 class=" mt-[20px] text-2xl">Whistlist</h2>
+            <p>All your favorite here</p>
         </div>
-        <div class="mr-[40px]">
+        <div>
             <button class="px-4 py-2 rounded-lg bg-[#1A6E09] text-[#FFFFFF] text-sm" >New favorite</button>
-            <button class="px-4 py-2 rounded-lg bg-red-600 text-[#FFFFFF] text-sm" >Remove all</button>
+            <button class="px-4 py-2 rounded-lg bg-red-600 text-[#FFFFFF] text-sm" id="btnRemoveAll">Remove all</button>
         </div>
     </div>
     
@@ -94,8 +94,13 @@
                 </th>
             </tr>
         </thead>
-        <tbody>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <button class="flex gap-8" id="btnaddtoFav">
+          <svg class="w-6 h-6 text-gray-800 dark:text-black  md:mt-0" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 21 19">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8" d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z"/>
+          </svg>
+          </button>
+        <tbody id="addFavRow">
+            <!-- <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     Apple MacBook Pro 17"
                 </th>
@@ -211,7 +216,7 @@
                 <td class="px-6 py-4 text-right">
                     <a href="#" class="px-3 py-1 bg-red-600 font-sm text-white hover:underline rounded-lg">Remove</a>
                 </td>
-            </tr>
+            </tr> -->
         </tbody>
     </table>
 </div>
@@ -374,5 +379,8 @@
 </footer>
  
 </body>
+<!-- add to favorite -->
+<script src="/myscript/addtoFav.js">
 
+</script>
 </html>
