@@ -1,6 +1,5 @@
 
 'use strict'
-
  const cardContainer = document.querySelector(".display-card");
 const renderCard = ({title, price, images})=>{
     return ` 
@@ -69,7 +68,7 @@ const renderCard = ({title, price, images})=>{
  </div>
  </div>
 
-    `;
+    `; 
 };
 
 //fetch data from api
@@ -80,6 +79,16 @@ res.json()).then(data=>{
         cardContainer.insertAdjacentHTML('beforeend',renderCard(product));
     })
 }).catch(err => console.log(err));
+
+
+
+
+
+
+
+
+
+
 
 
 
