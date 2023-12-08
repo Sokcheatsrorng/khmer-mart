@@ -1,0 +1,306 @@
+{ 
+   "foods":[
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      },
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      },
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      },
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      }
+    ],
+    "electronics":[
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      },
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      },
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      },
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      }
+    ],
+    
+    "drinks":[
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      },
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      },
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      },
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      }
+    ],
+    "clothes":[
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      },
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      },
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      },
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      }
+    ],
+    "cosmetics":[
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      },
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      },
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      },
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      }
+    ],
+    "plants":[
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      },
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      },
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      },
+      {
+        "discPer": "15%",
+        "images":"/image/1.png",
+        "title":"Apple Watch",
+        "rating": "4.00 / 5.00",
+        "stars": "★★★★☆",
+        "price": 120,
+        "discPrice": 200,
+        "dateTime": "December 2 2023",
+        "hours": "5h 00m"
+      }
+    ],
+    "reviews": [
+      {
+        "username": "UserA",
+        "rating": 1,
+        "comment": "It's quite Bad!"
+      },
+      {
+        "username": "UserB",
+        "rating": 2,
+        "comment": "Average product!"
+      },
+      {
+        "username": "UserC",
+        "rating": 3,
+        "comment": "Good product!"
+      },
+      {
+        "username": "UserA",
+        "rating": 4,
+        "comment": "Great product!"
+      },
+      {
+        "username": "UserB",
+        "rating": 5,
+        "comment": "Excellent quality!"
+      }
+    ]
+  }
