@@ -4,7 +4,7 @@ const card = ({ images, title, price}) => {
     return `
     <div class="object-fit max-w-sm bg-white rounded-lg">
                             <div>
-                                <img class=" absolute mx-1  mt-1 h-24 " src="../Img/b_buy1get1.png" alt="">
+                                <img class=" absolute mx-1  mt-1 h-24 " src="../Img/b1g1/Logobuy1get1.jpg" alt="">
                                 <img class=" rounded-t-lg" src="${images[0]}" alt="foods img" />
                             </div>
                             <div class="px-5 pb-5">
