@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Khmer Mart-Coupon</title>
-  <link rel="icon" href="/image/logo-browser.jpg">
+  <link rel="icon" href="/khmer-mart/Img/logo-browser.jpg">
   <!-- tailwind css link -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- my style -->
-  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/khmer-mart/style/style.css">
 </head>
 <body class="bg-[#f5f5f5]">
   <!-- nav bar  -->
@@ -19,7 +19,7 @@
         <!-- Logo and Category Link -->
         <a href="/src/index.html"
           class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="/image/logo.png" alt="Khmer-Mart Logo"
+          <img src="/khmer-mart/Img/logo.png" alt="Khmer-Mart Logo"
             class="h-20 w-15 ms-[-12px]">
         </a>
         <!--  Category -->
@@ -110,8 +110,26 @@
     </nav>
   </header>
   <!-- main section -->
-  <main class="max-w-screen-xl container-fluid mx-auto justify-center p-4 text-inter z-10 ">
-     
+    <main class="max-w-screen-xl container-fluid mx-auto justify-center p-4 text-inter">
+        <!-- Coupon -->
+        <section>
+            <div class="grid xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-1">  
+                <a href="#">
+                    <img class="rounded-3xl  xl:w-[500px]h-[270px]  " src="/khmer-mart/Img/coupon1.png" alt="Coupon 1">
+                </a>
+                <a href="#"><img class="rounded-3xl xl:w-[500px]h-[270px]" src="/khmer-mart/Img/coupon2.png" alt="Coupon 2">
+                </a>
+            </div>
+        </section>
+        <!-- food card section -->
+        <section class="flashSaleCard">
+          <div class="container mx-auto px-0 py-8">
+            <h1 class="font-semibold text-[2rem]">Foods</h1>
+            <div class="grid xl:grid-cols-4 gap-4 py-2 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 display-card p-4">
+              
+          </div>
+         
+        </section>
     </main>
     <footer class="bg-[#f5f5f5]">
       <div
@@ -120,7 +138,7 @@
           <div
             class="mb-2 md:mb-0 md:ms-[-20px] sm:ms-[-22px] xl:ms-[-20px] ms-[-23px]">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-              <img src="/image/logo.png" alt="Khmer-Mart Logo" class="max-h-32">
+              <img src="/khmer-mart/Img/logo.png" alt="Khmer-Mart Logo" class="max-h-32">
             </a>
           </div>
           <div
@@ -301,7 +319,7 @@
 <!-- jquery -->
 <script src="/jquery/jquery.js"></script>
 <!--my script -->
-<script src="/myscript/script.js"></script>
+<script src="/khmer-mart/myscript/script.js"></script>
 <!-- flowbite scripte -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 

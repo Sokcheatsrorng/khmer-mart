@@ -2,7 +2,7 @@
    "foods":[
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -13,7 +13,7 @@
       },
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -24,7 +24,7 @@
       },
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -35,7 +35,7 @@
       },
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -48,7 +48,7 @@
     "electronics":[
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -59,7 +59,7 @@
       },
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -70,7 +70,7 @@
       },
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -81,7 +81,7 @@
       },
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -95,7 +95,7 @@
     "drinks":[
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -106,7 +106,7 @@
       },
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -117,7 +117,7 @@
       },
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -128,7 +128,7 @@
       },
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -141,7 +141,7 @@
     "clothes":[
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -152,7 +152,7 @@
       },
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -163,7 +163,7 @@
       },
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -174,7 +174,7 @@
       },
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -187,7 +187,7 @@
     "cosmetics":[
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -198,7 +198,7 @@
       },
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -209,7 +209,7 @@
       },
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -220,7 +220,7 @@
       },
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -233,7 +233,7 @@
     "plants":[
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -244,7 +244,7 @@
       },
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -255,7 +255,7 @@
       },
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",
@@ -266,7 +266,7 @@
       },
       {
         "discPer": "15%",
-        "images":"/image/1.png",
+        "images":"/khmer-mart/Img/1.png",
         "title":"Apple Watch",
         "rating": "4.00 / 5.00",
         "stars": "★★★★☆",

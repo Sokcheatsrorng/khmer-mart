@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Khmer Mart</title>
-  <link rel="icon" href="/image/logo-browser.jpg">
+  <link rel="icon" href="/khmer-mart/Img/logo-browser.jpg">
   <!-- tailwind css link -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- my style -->
@@ -15,18 +15,18 @@
 <body class="bg-[#f5f5f5]">
 
 <!-- Navbar -->
-<header class=" sticky top-0 ">
-  <nav class="bg-slate-900 border-gray-200 dark:bg-[#f5f5f5] p-0]">
+<header class=" sticky top-0 z-30 ">
+  <nav class=" border-gray-200 bg-[#f5f5f5] p-0]">
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-[20px] xl:p-0">
       <!-- Logo and Category Link -->
-      <a href="/src/index.html"
+      <a href="#"
         class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="/image/logo.png" alt="Khmer-Mart Logo"
-          class="h-20 w-15 ms-[-12px]">
+        <img src="/khmer-mart/Img/logo.png" alt="Khmer-Mart Logo"
+          class="h-20 w-15 ms-[-10px]">
       </a>
       <!--  Category -->
-      <a href="#"
+      <a href=""
         class="flex flex-wrap items-center space-x-2 rtl:space-x-reverse ">
         <span class="hidden md:inline-block
         items-center font-semibold text-[#1A6E09] md:hover:text-[#363636] md:p-0 dark:text-[#1A6E09]  ">
@@ -72,7 +72,7 @@
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul
-          class="font-medium flex flex-col justify-around p-0 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-3 rtl:space-x-reverse md:mt-0 md:border-0 md:dark:bg-[#f5f5f5] dark:bg-[#f5f5f5] md:dark:bg-[#f5f5f5]dark:border-gray-700">
+          class="font-medium flex flex-col justify-around p-0 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-3 rtl:space-x-reverse md:mt-0 md:border-0 md:dark:bg-[#f5f5f5] dark:bg-[#f5f5f5] md:dark:bg-[#f5f5f5]dark:border-gray-700">
           <li>
             <a href="#"
               class=" hidden text-[#1A6E09] hover:text-gray-300 items-center space-x-0 md:block ">
@@ -87,23 +87,23 @@
           </li>
           <li>
             <a href="#"
-              class="block py-2 px-0 text-gray-900  hover:bg-none
-              md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]   dark:hover:text-[#FF9E37] 
+              class="block py-2 px-0 hover:bg-none
+              md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]  hover:text-[#FF9E37] 
                md:dark:hover:bg-transparent md:hidden">Category</a>
           </li>
           <li>
-            <a href="#"
-              class="block py-2 px-0 text-gray-900  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]    dark:hover:text-[#FF9E37] md:dark:hover:bg-transparent md:hidden">Favorite
+            <a href="/khmer-mart/src/favourite.html"
+              class="block py-2 px-0  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]   hover:text-[#FF9E37] md:dark:hover:bg-transparent md:hidden">Favorite
               List</a>
           </li>
           <li>
-            <a href="/src/aboutUs.html"
-              class="block py-2 px-0 text-gray-900  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]    dark:hover:text-[#FF9E37] md:dark:hover:bg-transparent ">About
+            <a href="/khmer-mart/src/aboutUs.html"
+              class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]    hover:text-[#FF9E37] md:dark:hover:bg-transparent ">About
               Us</a>
           </li>
           <li>
-            <a href="#"
-              class="block py-2 px-0 text-gray-900  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]    dark:hover:text-[#FF9E37] md:dark:hover:bg-transparent">Sign
+            <a href="/khmer-mart/tevy/signIn.html"
+              class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]   hover:text-[#FF9E37] md:dark:hover:bg-transparent">Sign
               In</a>
           </li>
 
@@ -119,7 +119,7 @@
             <div class=" w-full ">
                 <u class=" text-[23px] leading-[34px] font-semibold mb-1 sm:text-[30px] sm:leading-[52px] sm:font-semibold md:text-[2.1rem] lg:text-[3rem] md:leading-[64px] md:font-semibold md:mb-1">What Is <span class="dark:text-[#1A6E09]">KHMER MART</span> ?</u>
               
-                <img class=" flex mx-auto w-[250px] md:hidden " src="../image/image_AboutUs.jpg" alt="image About Us">  
+                <img class=" flex mx-auto w-[250px] md:hidden " src="/khmer-mart/Img/image_AboutUs.jpg" alt="image About Us">  
                 <p class="w-full font-inter font-medium tracking-[0.36px] leading-[18px] text-[15px] text-gray-600 mt-[30px] md:tracking-[0.36px] md:font-medium md:leading-[28px] lg:leading-[36px] md:text-[1.1rem] lg:text-[1.5rem] md:text-gray-600 md:mt-[30px] ">
 
                   <span class="dark:text-[#1A6E09]"> KHMER MART</span> help drive business. We believe that local businesses are the backbone of every successful community, and our teammates work tirelessly to help them their reach and bring on new customers. To do that, KHMER MART connects businesses to our loyal customer base of millions of active customers.
@@ -129,7 +129,7 @@
                 </div>
             </div>
             
-            <img class=" hidden md:block md:w-[50%] md:my-[0%] lg:m-0 " src="../image/image_AboutUs.jpg" alt="image About Us">
+            <img class=" hidden md:block md:w-[50%] md:my-[0%] lg:m-0 " src="/khmer-mart/Img/image_AboutUs.jpg" alt="image About Us">
             
 
         </section>
@@ -142,7 +142,7 @@
           <div class=" grid grid-cols-1 justify-items-center gap-y-10 md:px-[100px] md:grid-cols-2 lg:px-[200px] lg:gap-[300px] mt-[50px] ">
 
             <div class=" flex flex-col items-center w-[250px]">
-              <img class=" w-[100px] sm:w-[130px] md:w-[180px] lg:w-[200px]" src="../image/cher_chhaya_pic.png" alt=" Cher Chan Chhaya">
+              <img class=" w-[100px] sm:w-[130px] md:w-[180px] lg:w-[200px]" src="/khmer-mart/Img/cher_chhaya_pic.png" alt=" Cher Chan Chhaya">
               <p class=" text-[1rem] sm:text-[1.6rem] font-inter font-semibold lg:text-[2rem] lg:font-semibold ">Chan Chhaya</p>
               <p class=" font-inter text-gray-500 text-center text-[0.7rem] md:text-[18px] ">Full Stack Developer at CSTAD
                 and the mentor of team project 
@@ -150,7 +150,7 @@
             </div>
 
             <div class=" flex flex-col items-center w-[250px]">
-              <img class=" w-[100px] sm:w-[130px] md:w-[180px] lg:w-[200px]" src="../image/cher_sokkea_pic.png" alt=" Cher Chan Chhaya">
+              <img class=" w-[100px] sm:w-[130px] md:w-[180px] lg:w-[200px]" src="/khmer-mart/Img/cher_sokkea_pic.png" alt=" Cher Chan Chhaya">
               <p class=" text-[1rem] sm:text-[1.6rem] font-inter font-semibold lg:text-[2rem] lg:font-semibold ">Sang Sokkea</p>
               <p class=" font-inter text-gray-500 text-center text-[0.7rem] md:text-[18px] ">Full Stack Developer at CSTAD
                 and the mentor of team project 
@@ -173,55 +173,55 @@
 
 
             <div class=" flex flex-col items-center w-[250px]">
-              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px] " src="../image/Chipor_pic.png" alt="">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px] " src="/khmer-mart/Img/Chipor_pic.png" alt="">
               <p class="font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px]  ">Sreng Chipor</p>
               <p class=" font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Back End Developer</p>
             </div>
 
             <div class=" flex flex-col items-center w-[250px]">
-              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="../image/Mengkheang_ppic.png" alt="">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/khmer-mart/Img/Mengkheang_ppic.png" alt="">
               <p class="font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px] ">Seang Mengkheang</p>
               <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Back End Developer</p>
             </div>
 
 
             <div class=" flex flex-col items-center w-[250px]">
-              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="../image/Sokny_pic.png" alt="">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/khmer-mart/Img/Sokny_pic.png" alt="">
               <p class=" font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px]  ">Pov Sokny</p>
               <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Back End Developer</p>
             </div>
 
 
             <div class=" flex flex-col items-center w-[250px]">
-              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="../image/Piseth_pic.png" alt="">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/khmer-mart/Img/Piseth_pic.png" alt="">
               <p class=" font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px] ">Long Piseth</p>
               <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px]  ">Back End Developer</p>
             </div>
 
 
             <div class=" flex flex-col items-center w-[250px]">
-              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="../image/Meansreang_pic.png" alt="">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/khmer-mart/Img/Meansreang_pic.png" alt="">
               <p class=" font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px] ">Ly meansreang</p>
               <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Fronted End Developer</p>
             </div>
 
 
             <div class=" flex flex-col items-center w-[250px]">
-              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="../image/Votey_pic.png" alt="">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/khmer-mart/Img/Votey_pic.png" alt="">
               <p class=" font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px] ">Hom Pheakakvotey</p>
               <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Fronted End Developer</p>
             </div>
 
 
             <div class=" flex flex-col items-center w-[250px]">
-              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="../image/tevy_pic.png" alt="">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/khmer-mart/Img/tevy_pic.png" alt="">
               <p class=" font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px] ">Nhoem Tevy</p>
               <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Fronted End Developer</p>
             </div>
 
 
             <div class=" flex flex-col items-center mt-2 w-[250px]">
-              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="../image/Sokcheat_pic.png" alt="">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/khmer-mart/Img/Sokcheat_pic.png" alt="">
               <p class=" font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px] ">Srorng Sokcheat</p>
               <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Fronted End Developer</p>
             </div>
@@ -235,9 +235,9 @@
         class="mx-auto w-full max-w-screen-xl p-[20px] sm:p-4  py-6 lg:py-8 container-fluid">
         <div class="md:flex md:justify-between gap-8">
           <div
-            class="mb-2 md:mb-0 md:ms-[-20px] sm:ms-[-22px] xl:ms-[-20px] ms-[-23px]">
+            class="mb-2 md:mb-0  ">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-              <img src="/image/logo.png" alt="Khmer-Mart Logo" class="max-h-32">
+              <img src="/khmer-mart/Img/logo.png" alt="Khmer-Mart Logo" class="max-h-32 md:ms-[-25px]  ms-[-23px] ">
             </a>
           </div>
           <div
