@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khmer Mart</title>
+  <link rel="icon" href="/khmer-mart/Img/logo-browser.jpg">
+  <!-- tailwind css link -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- my style -->
+  <link rel="stylesheet" href="/khmer-mart/style/style.css">
+</head>
+<body>
+    <header class=" sticky top-0 z-30">
+        <nav class="bg-[#f5f5f5] border-gray-200 dark:bg-[#f5f5f5] p-0]">
+          <div
+            class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-[20px] xl:p-0 z-30 sticky">
+            <!-- Logo and Category Link -->
+            <a href="/khmer-mart/src/index.html"
+              class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src="/khmer-mart/Img/logo.png" alt="Khmer-Mart Logo"
+                class="h-20 w-15 ms-[-12px]">
+            </a>
+            <!--  Category -->
+            <a href="#"
+              class="flex flex-wrap items-center space-x-2 rtl:space-x-reverse ">
+              <span class="hidden md:inline-block
+              items-center font-semibold text-[#1A6E09] md:hover:text-[#363636] md:p-0 dark:text-[#1A6E09]  ">
+                Category
+                <svg
+                  class="w-5 h-5 text-gray-800 dark:text-[#1A6E09] ms-2 inline md:hover:text-[#363636]  md:p-0  "
+                  aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="0 0 14 8">
+                  <path stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="1.5"
+                    d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1" />
+                </svg>
+              </span>
+            </a>
+  
+            <!-- Search Bar -->
+            <div
+              class="relative flex  flex-wrap sm:w-[350px] w-[220px] xl:w-[500px]  lg:w-[400px] justify-between ms-[-30px] ">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none ">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                  aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="0 0 20 20">
+                  <path stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                </svg>
+              </div>
+              <input type="text" placeholder="Search for anything"
+                class="py-2 pl-8 pr-3 border border-[#f5f5f5] rounded-full focus:outline-none focus:ring-1 focus:ring-[#1A6E09]  w-full  space-x-4 xl:w-[500px] ">
+            </div>
+  
+            <button data-collapse-toggle="navbar-default" type="button"
+              class="inline-flex items-center me-[-10px] w-10 h-10 justify-center text-xl text-[#1A6E09] rounded-lg md:hidden hover:bg-gray-100 focus:outline-none  "
+              aria-controls="navbar-default" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15" />
+              </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+              <ul
+                class="font-medium flex flex-col justify-around p-0 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-3 rtl:space-x-reverse md:mt-0 md:border-0 md:dark:bg-[#f5f5f5] dark:bg-[#f5f5f5] md:dark:bg-[#f5f5f5]dark:border-gray-700">
+                <li>
+                  <a href="#"
+                    class=" hidden text-[#1A6E09] hover:text-gray-300 items-center space-x-0 md:block ">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-black  md:mt-0"
+                      aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                      fill="none" viewBox="0 0 21 19">
+                      <path stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="0.8"
+                        d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block py-2 px-0 bg-gray-100  hover:bg-none
+                    md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]   dark:hover:text-[#FF9E37] 
+                     md:dark:hover:bg-transparent md:hidden">Category</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block py-2 px-0 bg-gray-100  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]    dark:hover:text-[#FF9E37] md:dark:hover:bg-transparent md:hidden">Favorite
+                    List</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block py-2 px-0 bg-gray-100  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]    dark:hover:text-[#FF9E37] md:dark:hover:bg-transparent ">About
+                    Us</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block py-2 px-0 bg-gray-100  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]    dark:hover:text-[#FF9E37] md:dark:hover:bg-transparent">Sign
+                    In</a>
+                </li>
+  
+              </ul>
+            </div> 
+          </div>
+        </nav>
+      </header>
+      <main class="bg-[#f5f5f5]">
+        
+        <!-- Image -->
+        <div class="w-full mx-auto max-w-screen-xl p-4 sm:p-4 py-6 lg:py-8 gap-4 relative md:flex-row md:max-w-screen-xl">
+          <!-- Image -->
+          <div class="rounded-[15px] bg-white">
+                  <img class="" src="/khmer-mart/cards/img/image 42.png" alt="" ></div>
+        </div>  
+        
+        <!-- Related Product -->
+        <div class="mx-auto w-full max-w-screen-xl px-4 sm:p-4 lg:py-8 relative mt-0">
+          <div class=" text-black text-4xl font-semibold capitalize leading-[144px] tracking-wide">Event Discount Product</div>
+            <div class="flex gap-4 justify-around ">
+                <div class="container mx-auto px-0 py-8">
+                  <div class="grid xl:grid-cols-3 gap-4 py-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 display-card-trending p-4"></div>  
+                </div>
+            </div>
+        </div>
+      </div>
+       <!-- flashsale section -->
+       <section class="FlashSale container mx-auto w-full max-w-screen-xl px-4 sm:p-4 lg:py-8 relative mt-0">
+          <div class="grid xl:grid-cols-4 gap-4 py-2 md:grid-cols-3   grid-cols-1 p-0 xl:p-0 md:p-0 sm:p-0 mt-2">
+            <div class="w-full max-w-sm bg-white border border-white rounded-xl
+         shadow-none">
+         <div class="discount-percent bg-orange-400 rounded-lg z-10 h-12 w-24 mt-4 ms-4 text-center justify-center text-2xl flex items-center mx-auto rounded-tl-3xl rounded-br-3xl">
+           15%
+         </div>
+         <a href="#">
+          <img class="p-5 rounded-t-lg w-[400px] h-[200px]  z-0" src="/khmer-mart/Img/1.png" alt="food-discount" />
+         </a>
+         <div class="px-5 pb-5"> 
+          <a href="#">
+           <h5 class="text-xl font-semibold tracking-tight text-gray-600 ">Apple
+            Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+            </a>
+         <div class="flex items-center mt-2.5 mb-5">
+         <div class="flex items-center space-x-1 rtl:space-x-reverse">
+         <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+         <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+         </svg>
+         <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+         <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+         </svg>
+         <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+         <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+         </svg>
+         <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+         <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+         </svg>
+         <svg class="w-4 h-4 text[#FF9E37] " aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 21 20">
+         <path stroke="#FF9E37" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"/>
+         </svg>
+         </div>
+         <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">4.00 / 5.00</span>
+         </div>
+         <div class="flex items-center justify-between gap-4">
+         <span class="text-3xl font-bold text-gray-900 dark:text-red-700">$120</span>
+         <span class="text-3xl font-inter text-gray-700"><del>$160 </del> </span>
+         <button class="flex gap-8" id="btnaddtoFav">
+         <svg class="w-6 h-6 text-gray-800 dark:text-black  md:mt-0" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 21 19">
+         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8" d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z"/>
+         </svg>
+         </button>
+         </div>
+         <hr class="mt-3">
+         <div class="flex items-center justify-between gap-4 mt-3">
+         <span class="flex items-center"> 
+         <svg class="w-4 h-4 text-[#1A6E09] " aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+         <path fill="currentColor" d="M6 1a1 1 0 0 0-2 0h2ZM4 4a1 1 0 0 0 2 0H4Zm7-3a1 1 0 1 0-2 0h2ZM9 4a1 1 0 1 0 2 0H9Zm7-3a1 1 0 1 0-2 0h2Zm-2 3a1 1 0 1 0 2 0h-2ZM1 6a1 1 0 0 0 0 2V6Zm18 2a1 1 0 1 0 0-2v2ZM5 11v-1H4v1h1Zm0 .01H4v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM10 11v-1H9v1h1Zm0 .01H9v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM10 15v-1H9v1h1Zm0 .01H9v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM15 15v-1h-1v1h1Zm0 .01h-1v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM15 11v-1h-1v1h1Zm0 .01h-1v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM5 15v-1H4v1h1Zm0 .01H4v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM2 4h16V2H2v2Zm16 0h2a2 2 0 0 0-2-2v2Zm0 0v14h2V4h-2Zm0 14v2a2 2 0 0 0 2-2h-2Zm0 0H2v2h16v-2ZM2 18H0a2 2 0 0 0 2 2v-2Zm0 0V4H0v14h2ZM2 4V2a2 2 0 0 0-2 2h2Zm2-3v3h2V1H4Zm5 0v3h2V1H9Zm5 0v3h2V1h-2ZM1 8h18V6H1v2Zm3 3v.01h2V11H4Zm1 1.01h.01v-2H5v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H5v2h.01v-2ZM9 11v.01h2V11H9Zm1 1.01h.01v-2H10v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H10v2h.01v-2ZM9 15v.01h2V15H9Zm1 1.01h.01v-2H10v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H10v2h.01v-2ZM14 15v.01h2V15h-2Zm1 1.01h.01v-2H15v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H15v2h.01v-2ZM14 11v.01h2V11h-2Zm1 1.01h.01v-2H15v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H15v2h.01v-2ZM4 15v.01h2V15H4Zm1 1.01h.01v-2H5v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H5v2h.01v-2Z"/>
+         </svg> &nbsp;
+         <span>
+         December 23 2023
+         </span>
+         </span>
+         <span class="flex items-center">
+         <svg class="w-4 h-4 text-[#1A6E09]" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+         <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 6v4l3.276 3.276M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+         </svg> 
+         &nbsp;
+         <span>
+          4h 00m
+         </span>
+         </span>
+        
+         </div>
+         </div>
+         </div>
+            <div class="w-full max-w-sm bg-white border border-white rounded-xl
+         shadow-none">
+         <div class="discount-percent bg-orange-400 rounded-lg z-10 h-12 w-24 mt-4 ms-4 text-center justify-center text-2xl flex items-center mx-auto rounded-tl-3xl rounded-br-3xl">
+          15%
+        </div>
+         <a href="#">
+          <img class="p-5 rounded-t-lg w-[400px] h-[200px]  z-0" src="/khmer-mart/Img/1.png" alt="food-discount" />
+         </a>
+         <div class="px-5 pb-5"> 
+          <a href="#">
+           <h5 class="text-xl font-semibold tracking-tight text-gray-600 ">Apple
+            Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+            </a>
+         <div class="flex items-center mt-2.5 mb-5">
+         <div class="flex items-center space-x-1 rtl:space-x-reverse">
+         <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+         <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+         </svg>
+         <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+         <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+         </svg>
+         <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+         <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+         </svg>
+         <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+         <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+         </svg>
+         <svg class="w-4 h-4 text[#FF9E37] " aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 21 20">
+         <path stroke="#FF9E37" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"/>
+         </svg>
+         </div>
+         <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">4.00 / 5.00</span>
+         </div>
+         <div class="flex items-center justify-between gap-4">
+         <span class="text-3xl font-bold text-gray-900 dark:text-red-700">$120</span>
+         <span class="text-3xl font-inter text-gray-700"><del>$160 </del> </span>
+         <button class="flex gap-8" id="btnaddtoFav">
+         <svg class="w-6 h-6 text-gray-800 dark:text-black  md:mt-0" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 21 19">
+         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8" d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z"/>
+         </svg>
+         </button>
+         </div>
+         <hr class="mt-3">
+         <div class="flex items-center justify-between gap-4 mt-3">
+         <span class="flex items-center"> 
+         <svg class="w-4 h-4 text-[#1A6E09] " aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+         <path fill="currentColor" d="M6 1a1 1 0 0 0-2 0h2ZM4 4a1 1 0 0 0 2 0H4Zm7-3a1 1 0 1 0-2 0h2ZM9 4a1 1 0 1 0 2 0H9Zm7-3a1 1 0 1 0-2 0h2Zm-2 3a1 1 0 1 0 2 0h-2ZM1 6a1 1 0 0 0 0 2V6Zm18 2a1 1 0 1 0 0-2v2ZM5 11v-1H4v1h1Zm0 .01H4v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM10 11v-1H9v1h1Zm0 .01H9v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM10 15v-1H9v1h1Zm0 .01H9v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM15 15v-1h-1v1h1Zm0 .01h-1v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM15 11v-1h-1v1h1Zm0 .01h-1v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM5 15v-1H4v1h1Zm0 .01H4v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM2 4h16V2H2v2Zm16 0h2a2 2 0 0 0-2-2v2Zm0 0v14h2V4h-2Zm0 14v2a2 2 0 0 0 2-2h-2Zm0 0H2v2h16v-2ZM2 18H0a2 2 0 0 0 2 2v-2Zm0 0V4H0v14h2ZM2 4V2a2 2 0 0 0-2 2h2Zm2-3v3h2V1H4Zm5 0v3h2V1H9Zm5 0v3h2V1h-2ZM1 8h18V6H1v2Zm3 3v.01h2V11H4Zm1 1.01h.01v-2H5v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H5v2h.01v-2ZM9 11v.01h2V11H9Zm1 1.01h.01v-2H10v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H10v2h.01v-2ZM9 15v.01h2V15H9Zm1 1.01h.01v-2H10v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H10v2h.01v-2ZM14 15v.01h2V15h-2Zm1 1.01h.01v-2H15v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H15v2h.01v-2ZM14 11v.01h2V11h-2Zm1 1.01h.01v-2H15v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H15v2h.01v-2ZM4 15v.01h2V15H4Zm1 1.01h.01v-2H5v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H5v2h.01v-2Z"/>
+         </svg> &nbsp;
+         <span>
+         December 23 2023
+         </span>
+         </span>
+         <span class="flex items-center">
+         <svg class="w-4 h-4 text-[#1A6E09]" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+         <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 6v4l3.276 3.276M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+         </svg> 
+         &nbsp;
+         <span>
+          4h 00m
+         </span>
+         </span>
+        
+         </div>
+         </div>
+         </div>
+            <div class="w-full max-w-sm bg-white border border-white rounded-xl
+         shadow-none">
+         <div class="discount-percent bg-orange-400 rounded-lg z-10 h-12 w-24 mt-4 ms-4 text-center justify-center text-2xl flex items-center mx-auto rounded-tl-3xl rounded-br-3xl">
+          15%
+        </div>
+         <a href="#">
+          <img class="p-5 rounded-t-lg w-[400px] h-[200px]  z-0" src="/khmer-mart/Img/1.png" alt="food-discount" />
+         </a>
+         <div class="px-5 pb-5"> 
+          <a href="#">
+           <h5 class="text-xl font-semibold tracking-tight text-gray-600 ">Apple
+            Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+            </a>
+         <div class="flex items-center mt-2.5 mb-5">
+         <div class="flex items-center space-x-1 rtl:space-x-reverse">
+         <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+         <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+         </svg>
+         <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+         <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+         </svg>
+         <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+         <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+         </svg>
+         <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+         <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+         </svg>
+         <svg class="w-4 h-4 text[#FF9E37] " aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 21 20">
+         <path stroke="#FF9E37" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"/>
+         </svg>
+         </div>
+         <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">4.00 / 5.00</span>
+         </div>
+         <div class="flex items-center justify-between gap-4">
+         <span class="text-3xl font-bold text-gray-900 dark:text-red-700">$120</span>
+         <span class="text-3xl font-inter text-gray-700"><del>$160 </del> </span>
+         <button class="flex gap-8" id="btnaddtoFav">
+         <svg class="w-6 h-6 text-gray-800 dark:text-black  md:mt-0" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 21 19">
+         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8" d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z"/>
+         </svg>
+         </button>
+         </div>
+         <hr class="mt-3">
+         <div class="flex items-center justify-between gap-4 mt-3">
+         <span class="flex items-center"> 
+         <svg class="w-4 h-4 text-[#1A6E09] " aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+         <path fill="currentColor" d="M6 1a1 1 0 0 0-2 0h2ZM4 4a1 1 0 0 0 2 0H4Zm7-3a1 1 0 1 0-2 0h2ZM9 4a1 1 0 1 0 2 0H9Zm7-3a1 1 0 1 0-2 0h2Zm-2 3a1 1 0 1 0 2 0h-2ZM1 6a1 1 0 0 0 0 2V6Zm18 2a1 1 0 1 0 0-2v2ZM5 11v-1H4v1h1Zm0 .01H4v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM10 11v-1H9v1h1Zm0 .01H9v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM10 15v-1H9v1h1Zm0 .01H9v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM15 15v-1h-1v1h1Zm0 .01h-1v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM15 11v-1h-1v1h1Zm0 .01h-1v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM5 15v-1H4v1h1Zm0 .01H4v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM2 4h16V2H2v2Zm16 0h2a2 2 0 0 0-2-2v2Zm0 0v14h2V4h-2Zm0 14v2a2 2 0 0 0 2-2h-2Zm0 0H2v2h16v-2ZM2 18H0a2 2 0 0 0 2 2v-2Zm0 0V4H0v14h2ZM2 4V2a2 2 0 0 0-2 2h2Zm2-3v3h2V1H4Zm5 0v3h2V1H9Zm5 0v3h2V1h-2ZM1 8h18V6H1v2Zm3 3v.01h2V11H4Zm1 1.01h.01v-2H5v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H5v2h.01v-2ZM9 11v.01h2V11H9Zm1 1.01h.01v-2H10v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H10v2h.01v-2ZM9 15v.01h2V15H9Zm1 1.01h.01v-2H10v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H10v2h.01v-2ZM14 15v.01h2V15h-2Zm1 1.01h.01v-2H15v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H15v2h.01v-2ZM14 11v.01h2V11h-2Zm1 1.01h.01v-2H15v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H15v2h.01v-2ZM4 15v.01h2V15H4Zm1 1.01h.01v-2H5v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H5v2h.01v-2Z"/>
+         </svg> &nbsp;
+         <span>
+         December 23 2023
+         </span>
+         </span>
+         <span class="flex items-center">
+         <svg class="w-4 h-4 text-[#1A6E09]" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+         <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 6v4l3.276 3.276M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+         </svg> 
+         &nbsp;
+         <span>
+          4h 00m
+         </span>
+         </span>
+        
+         </div>
+         </div>
+         </div>
+            <div class="w-full max-w-sm bg-white border border-white rounded-xl
+         shadow-none">
+         <div class="discount-percent bg-orange-400 rounded-lg z-10 h-12 w-24 mt-4 ms-4 text-center justify-center text-2xl flex items-center mx-auto rounded-tl-3xl rounded-br-3xl">
+          15%
+        </div>
+         <a href="#">
+          <img class="p-5 rounded-t-lg w-[400px] h-[200px]  z-0" src="/khmer-mart/Img/1.png" alt="food-discount" />
+         </a>
+         <div class="px-5 pb-5"> 
+          <a href="#">
+           <h5 class="text-xl font-semibold tracking-tight text-gray-600 ">Apple
+            Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+            </a>
+         <div class="flex items-center mt-2.5 mb-5">
+         <div class="flex items-center space-x-1 rtl:space-x-reverse">
+         <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+         <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+         </svg>
+         <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+         <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+         </svg>
+         <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+         <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+         </svg>
+         <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+         <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+         </svg>
+         <svg class="w-4 h-4 text[#FF9E37] " aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 21 20">
+         <path stroke="#FF9E37" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"/>
+         </svg>
+         </div>
+         <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">4.00 / 5.00</span>
+         </div>
+         <div class="flex items-center justify-between gap-4">
+         <span class="text-3xl font-bold text-gray-900 dark:text-red-700">$120</span>
+         <span class="text-3xl font-inter text-gray-700"><del>$160 </del> </span>
+         <button class="flex gap-8" id="btnaddtoFav">
+         <svg class="w-6 h-6 text-gray-800 dark:text-black  md:mt-0" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 21 19">
+         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8" d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z"/>
+         </svg>
+         </button>
+         </div>
+         <hr class="mt-3">
+         <div class="flex items-center justify-between gap-4 mt-3">
+         <span class="flex items-center"> 
+         <svg class="w-4 h-4 text-[#1A6E09] " aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+         <path fill="currentColor" d="M6 1a1 1 0 0 0-2 0h2ZM4 4a1 1 0 0 0 2 0H4Zm7-3a1 1 0 1 0-2 0h2ZM9 4a1 1 0 1 0 2 0H9Zm7-3a1 1 0 1 0-2 0h2Zm-2 3a1 1 0 1 0 2 0h-2ZM1 6a1 1 0 0 0 0 2V6Zm18 2a1 1 0 1 0 0-2v2ZM5 11v-1H4v1h1Zm0 .01H4v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM10 11v-1H9v1h1Zm0 .01H9v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM10 15v-1H9v1h1Zm0 .01H9v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM15 15v-1h-1v1h1Zm0 .01h-1v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM15 11v-1h-1v1h1Zm0 .01h-1v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM5 15v-1H4v1h1Zm0 .01H4v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM2 4h16V2H2v2Zm16 0h2a2 2 0 0 0-2-2v2Zm0 0v14h2V4h-2Zm0 14v2a2 2 0 0 0 2-2h-2Zm0 0H2v2h16v-2ZM2 18H0a2 2 0 0 0 2 2v-2Zm0 0V4H0v14h2ZM2 4V2a2 2 0 0 0-2 2h2Zm2-3v3h2V1H4Zm5 0v3h2V1H9Zm5 0v3h2V1h-2ZM1 8h18V6H1v2Zm3 3v.01h2V11H4Zm1 1.01h.01v-2H5v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H5v2h.01v-2ZM9 11v.01h2V11H9Zm1 1.01h.01v-2H10v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H10v2h.01v-2ZM9 15v.01h2V15H9Zm1 1.01h.01v-2H10v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H10v2h.01v-2ZM14 15v.01h2V15h-2Zm1 1.01h.01v-2H15v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H15v2h.01v-2ZM14 11v.01h2V11h-2Zm1 1.01h.01v-2H15v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H15v2h.01v-2ZM4 15v.01h2V15H4Zm1 1.01h.01v-2H5v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H5v2h.01v-2Z"/>
+         </svg> &nbsp;
+         <span>
+         December 23 2023
+         </span>
+         </span>
+         <span class="flex items-center">
+         <svg class="w-4 h-4 text-[#1A6E09]" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+         <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 6v4l3.276 3.276M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+         </svg> 
+         &nbsp;
+         <span>
+          4h 00m
+         </span>
+         </span>
+        
+         </div>
+         </div>
+
+       
+      </section>
+
+        <!-- buy one get one  -->
+      <section class="BuyOneGetOneCard container flex flex-row mx-auto w-full max-w-screen-xl px-4 sm:p-4 lg:py-8 relative mt-0 ">
+        <div class="container mx-auto px-0 py-0 ">
+          <div class="grid xl:grid-cols-4 gap-4 py-2 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 display-card p-0 mt-2">
+                <div class="mt-6 w-full max-w-sm bg-white rounded-lg">
+                    <div>
+                        <img class=" absolute mx-1  mt-1 h-24 " src="/khmer-mart/Img/buy1get1.jpg" alt="discount-logo-get1-buy1">
+                        <img class=" rounded-t-lg" src="/khmer-mart/Img/Buy1Get1-1.jpg" alt="buy one get one img" />
+                    </div>
+                    <div class="px-5 pb-5">
+                        <a href="#">
+                            <h5 class="mt-4 font-bold tracking-normal text-xl text-[#363636]">Thick, Sizzling Beef Patty Char-Grilled to Perfection</h5>
+                        </a>
+                        <div class="flex items-center mt-2.5 mb-5">
+                            <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                                <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-[#FF9E37]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m11.479 1.712 2.367 4.8a.532.532 0 0 0 .4.292l5.294.769a.534.534 0 0 1 .3.91l-3.83 3.735a.534.534 0 0 0-.154.473l.9 5.272a.535.535 0 0 1-.775.563l-4.734-2.49a.536.536 0 0 0-.5 0l-4.73 2.487a.534.534 0 0 1-.775-.563l.9-5.272a.534.534 0 0 0-.154-.473L2.158 8.48a.534.534 0 0 1 .3-.911l5.294-.77a.532.532 0 0 0 .4-.292l2.367-4.8a.534.534 0 0 1 .96.004Z"/>
+                                  </svg>
+                            </div>
+                            <span class="text-gray-500 text-sm px-2.5 py-0.5  ms-3">4.0/5.0</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-3xl font-bold text-red-600 ">$539</span>
+                            <svg class="w-6 h-6 text-gray-800 dark:text-black  md:mt-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 19">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8" d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        
+        
+       
+      </section>
+
+      </main>
+      <footer class="bg-[#f5f5f5]">
+        <div class="mx-auto w-full max-w-screen-xl p-4 sm:p-4  py-6 lg:py-8 container-fluid">
+            <div class="md:flex md:justify-between gap-8">
+              <div class="mb-2 md:mb-0 md:ms-[-20px] sm:ms-[-22px] xl:ms-[-20px] ms-[-23px]">
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                  <img src="/khmer-mart/Img/logo.png" alt="Khmer-Mart Logo" class="max-h-32" >
+                </a>
+              </div>
+              <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 md:gap-4 ">
+                  <div>
+                      <h2 class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
+                       Event
+                      </h2>
+                      <ul class="text-gray-500 dark:text-gray-400 font-inter text-sm">
+                          <li class="mb-4">
+                              <a href="#" class="hover:text-[#1A6E09]">Discount Type</a>
+                          </li>
+                          <li class="mb-4" >
+                              <a href="#" class="hover:text-[#1A6E09]">Find Information</a>
+                          </li>
+                          <li class="mb-4">
+                              <a href="#" class="hover:text-[#1A6E09]">Privacy Prolicy</a>
+                          </li>
+                          <li class="mb-4">
+                              <a href="#" class="hover:text-[#1A6E09]">Shops</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div>
+                    <h2 class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
+                      About
+                     </h2>
+                     <ul class="text-gray-500 dark:text-gray-400 font-inter text-sm">
+                      <li class="mb-4">
+                          <a href="#" class="hover:text-[#1A6E09]">About Us</a>
+                      </li>
+                      <li class="mb-4" >
+                          <a href="#" class="hover:text-[#1A6E09]">Help</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="#" class="hover:text-[#1A6E09]">Location</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="#" class="hover:text-[#1A6E09]">Contact
+                          </a>
+                      </li>
+                  </ul>
+                  </div>
+                  <div>
+                    <h2 class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
+                      Catalog
+                     </h2>
+                     <ul class="text-gray-500 dark:text-gray-400 font-inter text-sm">
+                      <li class="mb-4">
+                          <a href="#" class="hover:text-[#1A6E09]">Buy One Get One</a>
+                      </li>
+                      <li class="mb-4" >
+                          <a href="#" class="hover:text-[#1A6E09]">Flash Sale</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="#" class="hover:text-[#1A6E09]">Events</a>
+                      </li>
+                  </ul>
+                  </div>
+                  <div>
+                    <h2 class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
+                      Work Time
+                     </h2>
+                     <ul class="text-gray-500 dark:text-gray-400 font-inter text-sm">
+                      <li class="mb-4">
+                          <a href="#" class="hover:text-[#1A6E09]">Mon-Thu 9:00 - 20:00</a>
+                      </li>
+                      <li class="mb-4" >
+                          <a href="#" class="hover:text-[#1A6E09]">Fri 9:00- 19:00</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="#" class="hover:text-[#1A6E09]">Sat 9:00 - 17:00</a>
+                      </li>
+                      
+                  </ul>
+                  </div>
+                  <div class="col-span-2">
+                    <h2 class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
+                      Subscribe Our Newsletters
+                     </h2>
+                     <div class="relative w-full flex md:w-[320px] ">
+                      <input type="email" id="currency-input" class="flex p-2.5 w-full z-20 ps-10 text-sm placeholder:text-left text-gray-900  rounded-0 border border-[#1A6E09]  focus:ring-white  focus:outline-none focus:border-[#1A6E09]  dark:placeholder-gray-300 dark:text-black dark:focus:border-[#1A6E09]" 
+                      placeholder="Your Email" >
+                      <button class="flex-shrink-0 z-10 inline-flex items-center  px-4 text-sm font-medium text-center text-gray-900 bg-[#1A6E09] border border-gray-300 rounded-0  focus:ring-0 focus:outline-none  dark:bg-[#1A6E09]  dark:focus:ring-gray-700 dark:border-gray-600" type="button">
+                      Subscribe
+                      </button>
+                     </div>
+                     <div class="relative w-full flex md:w-[320px] mt-4">
+                      <ul class="flex gap-4">
+                           <li class="mb-4 border rounded-full p-1 ring-1 ring-[#1A6E09]">
+                        <a href="#" class="hover:text-[#1A6E09]">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <g clip-path="url(#clip0_1630_814)">
+                              <path d="M9.07934 15.9688H6.51207C6.08325 15.9688 5.73443 15.6206 5.73443 15.1926V9.41333H4.23663C3.80781 9.41333 3.45898 9.06506 3.45898 8.63721V6.16077C3.45898 5.73279 3.80781 5.38464 4.23663 5.38464H5.73443V4.14453C5.73443 2.91492 6.12129 1.86877 6.85307 1.11938C7.58814 0.366577 8.61542 -0.03125 9.82383 -0.03125L11.7818 -0.0280762C12.2098 -0.0273437 12.5581 0.320801 12.5581 0.748047V3.04736C12.5581 3.47534 12.2094 3.82349 11.7807 3.82349L10.4624 3.82398C10.0604 3.82398 9.95801 3.90442 9.93611 3.92908C9.90003 3.96997 9.8571 4.08557 9.8571 4.40479V5.38452H11.6816C11.8189 5.38452 11.952 5.41834 12.0664 5.48206C12.3131 5.61963 12.4664 5.87976 12.4664 6.16089L12.4655 8.63733C12.4655 9.06506 12.1166 9.41321 11.6878 9.41321H9.8571V15.1926C9.8571 15.6206 9.50815 15.9688 9.07934 15.9688ZM6.67425 15.0308H8.91716V8.99341C8.91716 8.70764 9.15016 8.47522 9.43636 8.47522H11.5256L11.5265 6.32263H9.43624C9.15003 6.32263 8.91716 6.09021 8.91716 5.80444V4.40479C8.91716 4.03833 8.95446 3.62158 9.23161 3.30835C9.5665 2.92969 10.0943 2.88599 10.4622 2.88599L11.6182 2.8855V0.909668L9.8231 0.906738C7.88107 0.906738 6.67425 2.14746 6.67425 4.14453V5.80444C6.67425 6.09009 6.44137 6.32263 6.15517 6.32263H4.39881V8.47522H6.15517C6.44137 8.47522 6.67425 8.70764 6.67425 8.99341V15.0308ZM11.7799 0.909912H11.78H11.7799Z" fill="#1A6E09"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_1630_814">
+                                <rect width="16" height="16" fill="white"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                    </li>
+                    <li class="mb-4 border rounded-full p-1 ring-1 ring-[#1A6E09]">
+                      <a href="#" class="hover:text-[#1A6E09]"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <g clip-path="url(#clip0_1630_817)">
+                            <path d="M11.6689 0H4.33105C1.94287 0 0 1.94287 0 4.33105V11.669C0 14.0571 1.94287 16 4.33105 16H11.669C14.0571 16 16 14.0571 16 11.669V4.33105C16 1.94287 14.0571 0 11.6689 0V0ZM15.062 11.669C15.062 13.5399 13.5399 15.062 11.6689 15.062H4.33105C2.46008 15.062 0.937986 13.5399 0.937986 11.669V4.33105C0.937986 2.46008 2.46008 0.937986 4.33105 0.937986H11.669C13.5399 0.937986 15.062 2.46008 15.062 4.33105V11.669Z" fill="#1A6E09"/>
+                            <path d="M7.99987 3.625C5.58752 3.625 3.625 5.58752 3.625 7.99987C3.625 10.4122 5.58752 12.3747 7.99987 12.3747C10.4122 12.3747 12.3747 10.4122 12.3747 7.99987C12.3747 5.58752 10.4122 3.625 7.99987 3.625ZM7.99987 11.4368C6.10485 11.4368 4.56299 9.89501 4.56299 7.99987C4.56299 6.10485 6.10485 4.56299 7.99987 4.56299C9.89501 4.56299 11.4368 6.10485 11.4368 7.99987C11.4368 9.89501 9.89501 11.4368 7.99987 11.4368Z" fill="#1A6E09"/>
+                            <path d="M12.4802 2.07129C11.7673 2.07129 11.1875 2.65124 11.1875 3.36401C11.1875 4.0769 11.7673 4.65686 12.4802 4.65686C13.1931 4.65686 13.7731 4.0769 13.7731 3.36401C13.7731 2.65112 13.1931 2.07129 12.4802 2.07129ZM12.4802 3.71875C12.2847 3.71875 12.1255 3.55957 12.1255 3.36401C12.1255 3.16833 12.2847 3.00928 12.4802 3.00928C12.6759 3.00928 12.8351 3.16833 12.8351 3.36401C12.8351 3.55957 12.6759 3.71875 12.4802 3.71875Z" fill="#1A6E09"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1630_817">
+                              <rect width="16" height="16" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </a>
+                  </li>
+                  <li class="mb-4 border rounded-full p-1 ring-1 ring-[#1A6E09]">
+                    <a href="#" class="hover:text-[#1A6E09]">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <g clip-path="url(#clip0_1630_823)">
+                          <path d="M4.13623 4.73828H1.43896C1.1366 4.73828 0.890625 4.98425 0.890625 5.28662V15.4518C0.890625 15.754 1.1366 16 1.43896 16H4.13623C4.43848 16 4.68445 15.754 4.68445 15.4518V5.28662C4.68445 4.98425 4.43848 4.73828 4.13623 4.73828ZM3.74561 15.0611H1.82947V5.67712H3.74561V15.0611Z" fill="#1A6E09"/>
+                          <path d="M2.7876 0C1.73291 0 0.875 0.857909 0.875 1.91247C0.875 2.96716 1.73291 3.82507 2.7876 3.82507C3.84204 3.82507 4.70007 2.96716 4.70007 1.91247C4.70007 0.857909 3.84216 0 2.7876 0ZM2.7876 2.88622C2.25061 2.88622 1.81384 2.44946 1.81384 1.91247C1.81384 1.37561 2.25061 0.938841 2.7876 0.938841C3.32446 0.938841 3.76123 1.37561 3.76123 1.91247C3.76123 2.44934 3.32446 2.88622 2.7876 2.88622Z" fill="#1A6E09"/>
+                          <path d="M13.408 5.92993C12.7632 5.39172 11.9435 5.10388 11.1007 5.11951C10.5773 5.12915 10.0658 5.25537 9.60229 5.48389V5.26196C9.60229 4.97278 9.3678 4.73828 9.07861 4.73828H6.33228C6.04309 4.73828 5.80859 4.97278 5.80859 5.26196V15.4762C5.80859 15.7655 6.04309 15.9999 6.33228 15.9999H9.13281C9.39209 15.9999 9.60229 15.7897 9.60229 15.5305V9.44054C9.60229 8.91918 10.0103 8.47802 10.5312 8.46252C11.0728 8.44653 11.5183 8.88219 11.5183 9.42016V15.5403C11.5183 15.794 11.7241 15.9999 11.9779 15.9999H14.6694C14.9232 15.9999 15.129 15.794 15.129 15.5403V9.60631C15.129 8.18298 14.5017 6.84289 13.408 5.92993ZM14.1902 15.061H12.4573V9.42016C12.4573 8.37426 11.6063 7.52331 10.5603 7.52331C9.5144 7.52331 8.66345 8.37426 8.66345 9.42016V15.061H6.74744V5.677H8.66345V6.35925H8.66406C8.66394 6.46985 8.70239 6.58093 8.78149 6.67041C8.95325 6.8645 9.25 6.88256 9.44409 6.71069C9.90662 6.30127 10.5011 6.06958 11.118 6.0581C11.7356 6.04638 12.335 6.25708 12.8064 6.65063C13.6859 7.38476 14.1902 8.46203 14.1902 9.60631V15.061Z" fill="#1A6E09"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1630_823">
+                            <rect width="16" height="16" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </a>
+                </li>
+                      </ul>
+                   
+                     </div>
+                  </div>
+              </div>
+          </div>
+          <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-200 lg:my-8" />
+          <div class="sm:flex sm:items-center sm:justify-between">
+              <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Khmer Mart CSTAD</a>. All Rights Reserved.
+              </span>
+              
+          </div>
+        </div>
+      </footer>
+     
+    
+</body>
+<!-- My script -->
+<script src="/khmer-mart/cards/script.js"></script>
+<!-- flowbite script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+</html>

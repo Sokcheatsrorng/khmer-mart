@@ -3,205 +3,233 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Khmer Mart-Flash Sale</title>
+  <title>Khmer Mart</title>
   <link rel="icon" href="/khmer-mart/Img/logo-browser.jpg">
   <!-- tailwind css link -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- my style -->
-  <link rel="stylesheet" href="/khmer-mart/style/style.css">
+  <link rel="stylesheet" href="/style/style.css">
 </head>
+
+
 <body class="bg-[#f5f5f5]">
-  <!-- nav bar  -->
-  <header class=" sticky top-0 z-30 ">
-    <nav class=" border-gray-200 bg-[#f5f5f5] p-0]">
+
+<!-- Navbar -->
+<header class=" sticky top-0 z-30 ">
+  <nav class=" border-gray-200 bg-[#f5f5f5] p-0]">
+    <div
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-[20px] xl:p-0">
+      <!-- Logo and Category Link -->
+      <a href="#"
+        class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="/khmer-mart/Img/logo.png" alt="Khmer-Mart Logo"
+          class="h-20 w-15 ms-[-10px]">
+      </a>
+      <!--  Category -->
+      <a href=""
+        class="flex flex-wrap items-center space-x-2 rtl:space-x-reverse ">
+        <span class="hidden md:inline-block
+        items-center font-semibold text-[#1A6E09] md:hover:text-[#363636] md:p-0 dark:text-[#1A6E09]  ">
+          Category
+          <svg
+            class="w-5 h-5 text-gray-800 dark:text-[#1A6E09] ms-2 inline md:hover:text-[#363636]  md:p-0  "
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 14 8">
+            <path stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="1.5"
+              d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1" />
+          </svg>
+        </span>
+      </a>
+
+      <!-- Search Bar -->
       <div
-        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-[20px] xl:p-0">
-        <!-- Logo and Category Link -->
-        <a href="#"
-          class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="/khmer-mart/Img/logo.png" alt="Khmer-Mart Logo"
-            class="h-20 w-15 ms-[-10px]">
-        </a>
-        <!--  Category -->
-        <a href=""
-          class="flex flex-wrap items-center space-x-2 rtl:space-x-reverse ">
-          <span class="hidden md:inline-block
-          items-center font-semibold text-[#1A6E09] md:hover:text-[#363636] md:p-0 dark:text-[#1A6E09]  ">
-            Category
-            <svg
-              class="w-5 h-5 text-gray-800 dark:text-[#1A6E09] ms-2 inline md:hover:text-[#363636]  md:p-0  "
-              aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-              fill="none" viewBox="0 0 14 8">
-              <path stroke="currentColor" stroke-linecap="round"
-                stroke-linejoin="round" stroke-width="1.5"
-                d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1" />
-            </svg>
-          </span>
-        </a>
-
-        <!-- Search Bar -->
+        class="relative flex  flex-wrap sm:w-[350px] w-[220px] xl:w-[500px]  lg:w-[400px] justify-between ms-[-30px] ">
         <div
-          class="relative flex  flex-wrap sm:w-[350px] w-[220px] xl:w-[500px]  lg:w-[400px] justify-between ms-[-30px] ">
-          <div
-            class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none ">
-            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400"
-              aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-              fill="none" viewBox="0 0 20 20">
-              <path stroke="currentColor" stroke-linecap="round"
-                stroke-linejoin="round" stroke-width="2"
-                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-            </svg>
-          </div>
-          <input type="text" placeholder="Search for anything"
-            class="py-2 pl-8 pr-3 border border-[#f5f5f5] rounded-full focus:outline-none focus:ring-1 focus:ring-[#1A6E09]  w-full  space-x-4 xl:w-[500px] ">
-        </div>
-
-        <button data-collapse-toggle="navbar-default" type="button"
-          class="inline-flex items-center me-[-10px] w-10 h-10 justify-center text-xl text-[#1A6E09] rounded-lg md:hidden hover:bg-gray-100 focus:outline-none  "
-          aria-controls="navbar-default" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none ">
+          <svg class="w-4 h-4 text-gray-500 dark:text-gray-400"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 20 20">
             <path stroke="currentColor" stroke-linecap="round"
               stroke-linejoin="round" stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15" />
+              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
           </svg>
-        </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul
-            class="font-medium flex flex-col justify-around p-0 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-3 rtl:space-x-reverse md:mt-0 md:border-0 md:dark:bg-[#f5f5f5] dark:bg-[#f5f5f5] md:dark:bg-[#f5f5f5]dark:border-gray-700">
-            <li>
-              <a href="#"
-                class=" hidden text-[#1A6E09] hover:text-gray-300 items-center space-x-0 md:block ">
-                <svg class="w-6 h-6 text-gray-800 dark:text-black  md:mt-0"
-                  aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="none" viewBox="0 0 21 19">
-                  <path stroke="currentColor" stroke-linecap="round"
-                    stroke-linejoin="round" stroke-width="0.8"
-                    d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                class="block py-2 px-0 hover:bg-none
-                md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]  hover:text-[#FF9E37] 
-                 md:dark:hover:bg-transparent md:hidden">Category</a>
-            </li>
-            <li>
-              <a href="/src/favourite.html"
-                class="block py-2 px-0  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]   hover:text-[#FF9E37] md:dark:hover:bg-transparent md:hidden">Favorite
-                List</a>
-            </li>
-            <li>
-              <a href="/src/aboutUs.html"
-                class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]    hover:text-[#FF9E37] md:dark:hover:bg-transparent ">About
-                Us</a>
-            </li>
-            <li>
-              <a href="/tevy/signIn.html"
-                class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]   hover:text-[#FF9E37] md:dark:hover:bg-transparent">Sign
-                In</a>
-            </li>
-
-          </ul>
         </div>
+        <input type="text" placeholder="Search for anything"
+          class="py-2 pl-8 pr-3 border border-[#f5f5f5] rounded-full focus:outline-none focus:ring-1 focus:ring-[#1A6E09]  w-full  space-x-4 xl:w-[500px] ">
       </div>
-    </nav>
-  </header>
-  <!-- main section -->
-    <main class="max-w-screen-xl container-fluid mx-auto justify-center p-4 text-inter z-10">
-        <!-- into section -->
-        <div>
-            <ul class="flex">
-                <li>
-                    <a href="">Home /</a>
-                </li>
-                <li>
-                    <a href="">Flash Sale /</a>
-                </li>
-                <li>
-                    <a href="">Item Lists</a>
-                </li>
-            </ul>
-        </div> 
-        <!-- carousel section -->
-        <section class="mt-8 z-10">
-          
 
-<div id="default-carousel" class="relative w-full " data-carousel="slide">
-  <!-- Carousel wrapper -->
-  <div class="relative h-56 overflow-hidden rounded-lg md:h-96 ">
-       <!-- Item 1 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/khmer-mart/Img/cosmetic discount.jpg" class="absolute block w-full  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 " alt="cosmetic discount banner">
+      <button data-collapse-toggle="navbar-default" type="button"
+        class="inline-flex items-center me-[-10px] w-10 h-10 justify-center text-xl text-[#1A6E09] rounded-lg md:hidden hover:bg-gray-100 focus:outline-none  "
+        aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15" />
+        </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul
+          class="font-medium flex flex-col justify-around p-0 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-3 rtl:space-x-reverse md:mt-0 md:border-0 md:dark:bg-[#f5f5f5] dark:bg-[#f5f5f5] md:dark:bg-[#f5f5f5]dark:border-gray-700">
+          <li>
+            <a href="#"
+              class=" hidden text-[#1A6E09] hover:text-gray-300 items-center space-x-0 md:block ">
+              <svg class="w-6 h-6 text-gray-800 dark:text-black  md:mt-0"
+                aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 21 19">
+                <path stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="0.8"
+                  d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 px-0 hover:bg-none
+              md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]  hover:text-[#FF9E37] 
+               md:dark:hover:bg-transparent md:hidden">Category</a>
+          </li>
+          <li>
+            <a href="/khmer-mart/src/favourite.html"
+              class="block py-2 px-0  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]   hover:text-[#FF9E37] md:dark:hover:bg-transparent md:hidden">Favorite
+              List</a>
+          </li>
+          <li>
+            <a href="/khmer-mart/src/aboutUs.html"
+              class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]    hover:text-[#FF9E37] md:dark:hover:bg-transparent ">About
+              Us</a>
+          </li>
+          <li>
+            <a href="/khmer-mart/tevy/signIn.html"
+              class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]   hover:text-[#FF9E37] md:dark:hover:bg-transparent">Sign
+              In</a>
+          </li>
+
+        </ul>
       </div>
-      <!-- Item 2 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/khmer-mart/Img/electronic discountr.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="electronic discount">
-      </div>
-      <!-- Item 3 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/khmer-mart/Img/flashsale banner.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="flashsale discount">
-      </div>
-  </div>
-  <!-- Slider indicators -->
-  <div class="absolute z-10 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-      <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-  </div>
-</div>
+    </div>
+  </nav>
+</header>
+    <main class=" mx-auto w-full max-w-screen-xl p-[20px]  py-6  md:p-0 container-fluid">
+
+        <section class=" flex md:mt-5">
+
+            <div class=" w-full ">
+                <u class=" text-[23px] leading-[34px] font-semibold mb-1 sm:text-[30px] sm:leading-[52px] sm:font-semibold md:text-[2.1rem] lg:text-[3rem] md:leading-[64px] md:font-semibold md:mb-1">What Is <span class="dark:text-[#1A6E09]">KHMER MART</span> ?</u>
+              
+                <img class=" flex mx-auto w-[250px] md:hidden " src="/khmer-mart/Img/image_AboutUs.jpg" alt="image About Us">  
+                <p class="w-full font-inter font-medium tracking-[0.36px] leading-[18px] text-[15px] text-gray-600 mt-[30px] md:tracking-[0.36px] md:font-medium md:leading-[28px] lg:leading-[36px] md:text-[1.1rem] lg:text-[1.5rem] md:text-gray-600 md:mt-[30px] ">
+
+                  <span class="dark:text-[#1A6E09]"> KHMER MART</span> help drive business. We believe that local businesses are the backbone of every successful community, and our teammates work tirelessly to help them their reach and bring on new customers. To do that, KHMER MART connects businesses to our loyal customer base of millions of active customers.
+                </p>
+                <div class=" flex justify-center mt-12 bg-[#1A6E09] w-[230px] p-1 rounded-3xl md:mt-[60px] md:w-[300px] lg:w-[400px] ">
+                  <p class="text-[19px] text-white md:text-[25px] lg:text-[35px]">View Discount products</p>
+                </div>
+            </div>
+            
+            <img class=" hidden md:block md:w-[50%] md:my-[0%] lg:m-0 " src="/khmer-mart/Img/image_AboutUs.jpg" alt="image About Us">
+            
 
         </section>
-        <!-- food card section -->
-        <section class="flashSaleCard">
-          <div class="container mx-auto px-0 py-8">
-            <h1 class="font-semibold text-[2rem]">Foods</h1>
-            <div class="grid xl:grid-cols-4 gap-4 py-2 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  p-4 xl:p-0 md:p-0 sm:p-0 " id="foodsDisplayCard">
 
 
-              </div>
+        <!--  Section Our Mentor  -->
+        <section class="  mt-[100px] ">
+          <h1 class=" flex justify-center text-[23px] leading-[34px] font-semibold mb-1 sm:text-[30px] sm:leading-[52px] sm:font-semibold md:text-[2rem] lg:text-[3rem] md:leading-[64px] md:font-semibold md:mb-1">Our Mentor</h1>
+
+          <div class=" grid grid-cols-1 justify-items-center gap-y-10 md:px-[100px] md:grid-cols-2 lg:px-[200px] lg:gap-[300px] mt-[50px] ">
+
+            <div class=" flex flex-col items-center w-[250px]">
+              <img class=" w-[100px] sm:w-[130px] md:w-[180px] lg:w-[200px]" src="/khmer-mart/Img/cher_chhaya_pic.png" alt=" Cher Chan Chhaya">
+              <p class=" text-[1rem] sm:text-[1.6rem] font-inter font-semibold lg:text-[2rem] lg:font-semibold ">Chan Chhaya</p>
+              <p class=" font-inter text-gray-500 text-center text-[0.7rem] md:text-[18px] ">Full Stack Developer at CSTAD
+                and the mentor of team project 
+                KhmerMart</p>
+            </div>
+
+            <div class=" flex flex-col items-center w-[250px]">
+              <img class=" w-[100px] sm:w-[130px] md:w-[180px] lg:w-[200px]" src="/khmer-mart/Img/cher_sokkea_pic.png" alt=" Cher Chan Chhaya">
+              <p class=" text-[1rem] sm:text-[1.6rem] font-inter font-semibold lg:text-[2rem] lg:font-semibold ">Sang Sokkea</p>
+              <p class=" font-inter text-gray-500 text-center text-[0.7rem] md:text-[18px] ">Full Stack Developer at CSTAD
+                and the mentor of team project 
+                KhmerMart</p>
+            </div>
+            
           </div>
-          <div class="container mx-auto px-0 py-8">
-            <h1 class="font-semibold text-[2rem]">Drinks</h1>
-            <div class="grid xl:grid-cols-4 gap-4 py-2 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  p-4 xl:p-0 md:p-0 sm:p-0 " id="drinksDisplayCard">
-
-
-              </div>
-          </div>
-          <div class="container mx-auto px-0 py-8">
-            <h1 class="font-semibold text-[2rem]">Electronics</h1>
-            <div class="grid xl:grid-cols-4 gap-4 py-2 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  p-4 xl:p-0 md:p-0 sm:p-0" id="electronicsDisplayCard">
-
-
-              </div>
-          </div>
-          <div class="container mx-auto px-0 py-8">
-            <h1 class="font-semibold text-[2rem]">Clothes</h1>
-            <div class="grid xl:grid-cols-4 gap-4 py-2 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  p-4 xl:p-0 md:p-0 sm:p-0 " id="clothesDisplayCard">
-
-
-              </div>
-          </div>
-          <div class="container mx-auto px-0 py-8">
-            <h1 class="font-semibold text-[2rem]">Cosmetics</h1>
-            <div class="grid xl:grid-cols-4 gap-4 py-2 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  p-4 xl:p-0 md:p-0 sm:p-0" id="cosmeticsDisplayCard">
-
-
-              </div>
-          </div>
-          <div class="container mx-auto px-0 py-8">
-            <h1 class="font-semibold text-[2rem]">Plants</h1>
-            <div class="grid xl:grid-cols-4 gap-4 py-2 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  p-4 xl:p-0 md:p-0 sm:p-0 display-card" id="plantsDisplayCard">
-
-
-              </div>
-          </div>
-         
         </section>
+
+
+        <!-- Sectionn Our Project Team  -->
+        <section class=" flex flex-col  mt-[100px] ">
+          <h1 class=" flex text-center justify-center text-[23px] leading-[34px] font-semibold mb-1 sm:text-[30px] sm:leading-[52px] sm:font-semibold md:text-[2rem] lg:text-[3rem] md:leading-[64px] md:font-semibold md:mb-1 ">
+            Our <br> Project Team
+          </h1>
+          <p  class=" flex justify-center text-center font-inter font-medium tracking-[0.36px] leading-[18px] text-[15px] text-gray-600 mt-[30px] md:tracking-[0.36px] md:font-medium md:leading-[28px] lg:leading-[36px] md:text-[1.1rem] lg:text-[1.5rem] md:text-gray-600 md:mt-[30px] m-8 ">We built the future developer in Cambodia</p>
+
+
+          <div class=" grid grid-cols-2 md:grid-cols-4 gap-y-[70px] justify-between mt-6 mb-6 ">
+
+
+            <div class=" flex flex-col items-center w-[250px]">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px] " src="/khmer-mart/Img/Chipor_pic.png" alt="">
+              <p class="font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px]  ">Sreng Chipor</p>
+              <p class=" font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Back End Developer</p>
+            </div>
+
+            <div class=" flex flex-col items-center w-[250px]">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/khmer-mart/Img/Mengkheang_ppic.png" alt="">
+              <p class="font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px] ">Seang Mengkheang</p>
+              <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Back End Developer</p>
+            </div>
+
+
+            <div class=" flex flex-col items-center w-[250px]">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/khmer-mart/Img/Sokny_pic.png" alt="">
+              <p class=" font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px]  ">Pov Sokny</p>
+              <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Back End Developer</p>
+            </div>
+
+
+            <div class=" flex flex-col items-center w-[250px]">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/khmer-mart/Img/Piseth_pic.png" alt="">
+              <p class=" font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px] ">Long Piseth</p>
+              <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px]  ">Back End Developer</p>
+            </div>
+
+
+            <div class=" flex flex-col items-center w-[250px]">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/khmer-mart/Img/Meansreang_pic.png" alt="">
+              <p class=" font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px] ">Ly meansreang</p>
+              <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Fronted End Developer</p>
+            </div>
+
+
+            <div class=" flex flex-col items-center w-[250px]">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/khmer-mart/Img/Votey_pic.png" alt="">
+              <p class=" font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px] ">Hom Pheakakvotey</p>
+              <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Fronted End Developer</p>
+            </div>
+
+
+            <div class=" flex flex-col items-center w-[250px]">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/khmer-mart/Img/tevy_pic.png" alt="">
+              <p class=" font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px] ">Nhoem Tevy</p>
+              <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Fronted End Developer</p>
+            </div>
+
+
+            <div class=" flex flex-col items-center mt-2 w-[250px]">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/khmer-mart/Img/Sokcheat_pic.png" alt="">
+              <p class=" font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px] ">Srorng Sokcheat</p>
+              <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Fronted End Developer</p>
+            </div>
+          </div>
+        </section>
+
     </main>
-    <!-- footer section -->
+ 
     <footer class="bg-[#f5f5f5]">
       <div
         class="mx-auto w-full max-w-screen-xl p-[20px] sm:p-4  py-6 lg:py-8 container-fluid">
@@ -386,16 +414,10 @@
         </div>
       </div>
     </footer>
+
+ 
 </body>
 
-<!-- jquery -->
-<script src="/khmer-mart/jquery/jquery.js"></script>
-<!--my script -->
-<script src="/khmer-mart/myscript/script.js"></script>
-<!-- add to Favorite -->
-<!-- <script src="/myscript/addtoFav.js"></script> -->
-<!-- flowbite scripte -->
+<!--  Flowbite Script -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
-
-
 </html>
