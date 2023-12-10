@@ -106,26 +106,26 @@ res.json())
     foodLists.map(product =>{
         foodCardContainer.insertAdjacentHTML('beforeend',renderCard(product));
     });
-    const drinkLists = data.drinks
-    drinkLists.map(product =>{
-        drinkCardContainer.insertAdjacentHTML('beforeend',renderCard(product));
-    });
-    const electronicLists = data.electronics
-    electronicLists.map(product =>{
-        electronicCardContainer.insertAdjacentHTML('beforeend',renderCard(product));
-    });
-    const clothLists = data.clothes
-    clothLists.map(product =>{
-        clothCardContainer.insertAdjacentHTML('beforeend',renderCard(product));
-    });
-    const cosmeticLists = data.cosmetics
-    cosmeticLists.map(product =>{
-        cosmeticCardContainer.insertAdjacentHTML('beforeend',renderCard(product));
-    });
-    const plantLists = data.plants
-    plantLists.map(product =>{
-        plantCardContainer.insertAdjacentHTML('beforeend',renderCard(product));
-    });
+    // const drinkLists = data.drinks
+    // drinkLists.map(product =>{
+    //     drinkCardContainer.insertAdjacentHTML('beforeend',renderCard(product));
+    // });
+    // const electronicLists = data.electronics
+    // electronicLists.map(product =>{
+    //     electronicCardContainer.insertAdjacentHTML('beforeend',renderCard(product));
+    // });
+    // const clothLists = data.clothes
+    // clothLists.map(product =>{
+    //     clothCardContainer.insertAdjacentHTML('beforeend',renderCard(product));
+    // });
+    // const cosmeticLists = data.cosmetics
+    // cosmeticLists.map(product =>{
+    //     cosmeticCardContainer.insertAdjacentHTML('beforeend',renderCard(product));
+    // });
+    // const plantLists = data.plants
+    // plantLists.map(product =>{
+    //     plantCardContainer.insertAdjacentHTML('beforeend',renderCard(product));
+    // });
 }).catch(err => console.log(err));
 
 // rating star
