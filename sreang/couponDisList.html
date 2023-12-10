@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coupon Display list</title>
-    <link rel="icon" href="/khmer-mart/image/logo-browser.jpg">
+    <link rel="icon" href="/khmer-mart/Img/logo-browser.jpg">
     <!-- tailwind css link -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- my style -->
@@ -19,9 +19,9 @@
         <div
           class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-[20px] xl:p-0">
           <!-- Logo and Category Link -->
-          <a href="/src/index.html"
+          <a href="/khmer-mart/src/index.html"
             class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="/khmer-mart/image/logo.png" alt="Khmer-Mart Logo"
+            <img src="/khmer-mart/Img/logo.png" alt="Khmer-Mart Logo"
               class="h-20 w-15 ms-[-12px]">
           </a>
           <!--  Category -->
@@ -91,17 +91,17 @@
                    md:dark:hover:bg-transparent md:hidden">Category</a>
               </li>
               <li>
-                <a href="#"
+                <a href="/khmer-mart/src/favourite.html"
                   class="block py-2 px-0 text-gray-900  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]    dark:hover:text-[#FF9E37] md:dark:hover:bg-transparent md:hidden">Favorite
                   List</a>
               </li>
               <li>
-                <a href="#"
+                <a href="/khmer-mart/src/aboutUs.html"
                   class="block py-2 px-0 text-gray-900  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]    dark:hover:text-[#FF9E37] md:dark:hover:bg-transparent ">About
                   Us</a>
               </li>
               <li>
-                <a href="#"
+                <a href="/khmer-mart/tevy/signIn.html"
                   class="block py-2 px-0 text-gray-900  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]    dark:hover:text-[#FF9E37] md:dark:hover:bg-transparent">Sign
                   In</a>
               </li>
@@ -113,10 +113,104 @@
     </header>
     <!-- main section -->
      <main class="bg-[#f5f5f5] max-w-screen-xl container-fluid mx-auto justify-center p-[20px] md:p-0 text-inter z-10">
-        <section class="flex flex-row">
-          <img src="" alt="">
-          <img src="" alt="">
-        </section>
+
+      <!-- into section -->
+      <div>
+        <ul class="flex">
+            <li>
+                <a class="text-[#363636]" href="/khmer-mart/src/index.html">Home /</a>
+            </li>
+            <li>
+                <a class="text-[#363636]" href="">Coupon /</a>
+            </li>
+            <li>
+                <a href="">Item Lists</a>
+            </li>
+        </ul>
+    </div> 
+
+      <!-- Coupon image display -->
+      <section class="grid xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-1 mt-8">
+        <img src="/khmer-mart/Img/coupon1.jpg" alt="">
+        <img src="/khmer-mart/Img/coupon2.jpg" alt="">
+      </section>
+
+      <!-- Terms and Condition -->
+      <section class="mt-8">
+        <h1 class="text-[30px] font-inter font-semibold">TERMS AND CONDITIONS</h1>
+        <ul class="ml-8 list-disc text-[#363636] text-[16px]">
+          <li><p>During 16 October 2022 - 31 December 2023</p></li>
+          <li><p>Spend over 50  $ (amount after discount), get discount value 70% ( Discount Code : <span class="text-red-600">NCFW6</span>)</p></li>
+          <li><p>Limit only 1 right(time) / purchase order / promotion / customer / address</p></li>
+          <li><p>The discount code is not valid for parcel delivery</p></li>
+          <li><p>Location:  28 Phnom Penh Hanoi Friendship Blvd (1019), Phnom Penh</p></li>
+          <li><p>Contact: +888 96 500 342Limit only 1 right(time) / purchase order / promotion / customer / address</p></li>
+          <li><p>The discount code is not valid for parcel delivery</p></li>
+          <li><p>Location:  28 Phnom Penh Hanoi Friendship Blvd (1019), Phnom Penh</p></li>
+          <li><p>Contact: +885 96 500 342</p></li>
+        </ul>
+      </section>
+
+      <!-- Coupon discount product -->
+      <section>
+        <h1 class="text-[30px] font-inter font-semibold mt-8">Coupon Discount Products</h1>
+        <!-- Card -->
+        <div class="container mx-auto px-0 py-8">
+          <div class="grid xl:grid-cols-3 gap-4 py-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 display-card-trending p-4 flex flex-row">
+            <div class="bg-white border rounded-2xl ">
+              <a href="#">
+                  <img class="object-fit w-[480px] h-[320px] p-5 rounded-t-lg" src="/khmer-mart/sreang/img/keyboard.jpg" alt="product image" />
+              </a>
+              <div class="px-5 pb-5">
+                  <a href="#">
+                      <h5 class="text-xl font-semibold tracking-tight text-neutral-700 text-opacity-80 pb-5">Mechanical keyboard</h5>
+                  </a>
+                  <div class="items-center justify-between pb-5">
+                      <span class="text-3xl font-bold text-red-600">$200</span>
+                  </div>
+                  <div class="flex items-center justify-between ">
+                      <span class="text-3xl font-bold text-neutral-700 text-opacity-80 line-through">$250</span>
+                      <a href="#" class="text-white bg-[#1A6E09] hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Add to Favorite</a>
+                  </div>
+              </div>
+          </div>
+          <div class="bg-white border rounded-2xl ">
+            <a href="#">
+                <img class="object-fit w-[480px] h-[320px] p-5 rounded-t-lg" src="/khmer-mart/sreang/img/headset.jpg" alt="product image" />
+            </a>
+            <div class="px-5 pb-5">
+                <a href="#">
+                    <h5 class="text-xl font-semibold tracking-tight text-neutral-700 text-opacity-80 pb-5">Gaming headset</h5>
+                </a>
+                <div class="items-center justify-between pb-5">
+                    <span class="text-3xl font-bold text-red-600">$200</span>
+                </div>
+                <div class="flex items-center justify-between ">
+                    <span class="text-3xl font-bold text-neutral-700 text-opacity-80 line-through">$250</span>
+                    <a href="#" class="text-white bg-[#1A6E09] hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Add to Favorite</a>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white border rounded-2xl ">
+          <a href="#">
+              <img class="object-fit w-[480px] h-[320px] p-5 rounded-t-lg" src="/khmer-mart/sreang/img/monitor.jpg" alt="product image" />
+          </a>
+          <div class="px-5 pb-5">
+              <a href="#">
+                  <h5 class="text-xl font-semibold tracking-tight text-neutral-700 text-opacity-80 pb-5">Gigabyte Monitor</h5>
+              </a>
+              <div class="items-center justify-between pb-5">
+                  <span class="text-3xl font-bold text-red-600">$200</span>
+              </div>
+              <div class="flex items-center justify-between ">
+                  <span class="text-3xl font-bold text-neutral-700 text-opacity-80 line-through">$250</span>
+                  <a href="#" class="text-white bg-[#1A6E09] hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Add to Favorite</a>
+              </div>
+          </div>
+      </div>
+          </div>  
+        </div>
+      </section>
      </main>
 
       
@@ -126,7 +220,7 @@
             <div class="md:flex md:justify-between gap-8">
               <div class="mb-2 md:mb-0 md:ms-[-20px] sm:ms-[-22px] xl:ms-[-20px] ms-[-23px]">
                 <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                  <img src="/khmer-mart/image/logo.png" alt="Khmer-Mart Logo" class="max-h-32" >
+                  <img src="/khmer-mart/Img/logo.png" alt="Khmer-Mart Logo" class="max-h-32" >
                 </a>
               </div>
               <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 md:gap-4 ">
@@ -276,9 +370,8 @@
     </div>
   </footer>
 </body>
-<!-- script for aos -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script><div data-aos="zoom-in-up"></div>
+<!-- flowbite script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+<!-- My script -->
+<!-- <script src="/khmer-mart/sreang/script.js"></script> -->
 </html>
