@@ -33,7 +33,7 @@ products.forEach(pro =>{
         </div>
         <div class="flex items-center justify-between ">
             <span class="text-3xl font-bold text-neutral-700 text-opacity-80 line-through">$699</span>
-            <a href="#" class="text-white bg-[#1A6E09] hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Add to Favorite</a>
+            <a href="#" class="text-white bg-[#1A6E09] hover:bg-green-600   font-medium rounded-xl text-sm px-5 py-2.5 text-center">Add to Favorite</a>
         </div>
 </div>
 </div>
