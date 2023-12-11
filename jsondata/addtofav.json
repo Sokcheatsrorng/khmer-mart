@@ -1,0 +1,36 @@
+{
+    "favourite":[
+        {
+        "images":"/khmer-mart/Img/1.png",
+        "title": "Apple MacBook Pro 15",
+        "oriPrice": "$2,399.00",
+        "discPrice": "$240.00",
+        "percPrice": "10%",
+        "discType": "buy 1 get 1",
+        "stars": "★★★★☆"
+    
+    },
+        {
+        "images":"/khmer-mart/Img/1.png",
+        "title": "Apple MacBook Pro 17",
+        "oriPrice": "$2,399.00",
+        "discPrice": "$240.00",
+        "percPrice": "10%",
+        "discType": "buy 1 get 1",
+        "stars": "★★★★☆"
+    
+    },
+        {
+        "images":"/khmer-mart/Img/1.png",
+        "title": "Apple MacBook Pro 16",
+        "oriPrice": "$2,399.00",
+        "discPrice": "$240.00",
+        "percPrice": "10%",
+        "discType": "buy 1 get 1",
+        "stars": "★★★★☆"
+    
+    }
+]
+        
+
+}

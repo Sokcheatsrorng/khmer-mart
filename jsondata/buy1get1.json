@@ -28,5 +28,155 @@
             "stars": "★★★★☆",
             "price": 500
         }
+    ],
+    "drinks":[
+        {
+            "images":"/khmer-mart/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/khmer-mart/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/khmer-mart/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/khmer-mart/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        }
+    ],
+    "clothes":[
+        {
+            "images":"/khmer-mart/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/khmer-mart/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/khmer-mart/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/khmer-mart/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        }
+    ],
+    "electronics":[
+        {
+            "images":"/khmer-mart/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/khmer-mart/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/khmer-mart/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/khmer-mart/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        }
+    ],
+    "cosmetics":[
+        {
+            "images":"/khmer-mart/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/khmer-mart/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/khmer-mart/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/khmer-mart/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        }
+    ],
+    "plants":[
+        {
+            "images":"/khmer-mart/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/khmer-mart/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/khmer-mart/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/khmer-mart/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        }
     ]
 }
