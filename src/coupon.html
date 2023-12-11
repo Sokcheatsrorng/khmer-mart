@@ -20,16 +20,16 @@
         <a href="/src/index.html"
           class="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="/khmer-mart/Img/logo.png" alt="Khmer-Mart Logo"
-            class="h-20 w-15 ms-[-12px]">
+            class="h-20 w-15 ms-[-10px]">
         </a>
         <!--  Category -->
-        <a href="#"
+        <a href="/src/category.html"
           class="flex flex-wrap items-center space-x-2 rtl:space-x-reverse ">
           <span class="hidden md:inline-block
           items-center font-semibold text-[#1A6E09] md:hover:text-[#363636] md:p-0 dark:text-[#1A6E09]  ">
             Category
             <svg
-              class="w-5 h-5 text-gray-800 dark:text-[#1A6E09] ms-2 inline md:hover:text-[#363636]  md:p-0  "
+              class="w-5 h-5 text-[#1A6E09] ms-2 inline md:hover:text-[#363636]  md:p-0  "
               aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
               fill="none" viewBox="0 0 14 8">
               <path stroke="currentColor" stroke-linecap="round"
@@ -71,7 +71,7 @@
           <ul
             class="font-medium flex flex-col justify-around p-0 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-3 rtl:space-x-reverse md:mt-0 md:border-0 md:dark:bg-[#f5f5f5] dark:bg-[#f5f5f5] md:dark:bg-[#f5f5f5]dark:border-gray-700">
             <li>
-              <a href="#"
+              <a href="/src/favourite.html"
                 class=" hidden text-[#1A6E09] hover:text-gray-300 items-center space-x-0 md:block ">
                 <svg class="w-6 h-6 text-gray-800 dark:text-black  md:mt-0"
                   aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -83,24 +83,24 @@
               </a>
             </li>
             <li>
-              <a href="#"
+              <a href="/src/favourite.html"
                 class="block py-2 px-0 hover:bg-none
                 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]  hover:text-[#FF9E37] 
                  md:dark:hover:bg-transparent md:hidden">Category</a>
             </li>
             <li>
-              <a href="#"
+              <a href="/khmer-mart/src/favourite.html"
                 class="block py-2 px-0  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]   hover:text-[#FF9E37] md:dark:hover:bg-transparent md:hidden">Favorite
                 List</a>
             </li>
             <li>
               <a href="/src/aboutUs.html"
-                class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]    hover:text-[#FF9E37] md:dark:hover:bg-transparent ">About
+                class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0    hover:text-[#FF9E37] md:dark:hover:bg-transparent ">About
                 Us</a>
             </li>
-            <li>
-              <a href="#"
-                class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]   hover:text-[#FF9E37] md:dark:hover:bg-transparent">Sign
+            <li id="signInLink" >
+              <a href="/src/signIn.html" 
+                class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0    hover:text-[#FF9E37] md:dark:hover:bg-transparent">Sign
                 In</a>
             </li>
 
@@ -110,7 +110,7 @@
     </nav>
   </header>
   <!-- main section -->
-    <main class="max-w-screen-xl container-fluid mx-auto justify-center p-4 text-inter">
+    <main class="max-w-screen-xl container-fluid mx-auto justify-center p-[20px] md:p-0 text-inter">
         <!-- Coupon -->
         <section>
             <div class="grid xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-1">  
@@ -121,11 +121,26 @@
                 </a>
             </div>
         </section>
-        <!-- food card section -->
+        <!-- description  -->
+        <section>
+          <div class="text-[#363636] font-inter text-lg py-8">
+            <h1 class="font-bold">TERMS AND CONDITIONS </h1>
+            <ol style="list-style-type:disc" class="ms-5">
+              <li>During 16 October 2022 - 31 December 2023</li>
+              <li>Spend over 50 $ (amount after discount), get discount value 70% ( Discount Code : <span class="text-red-500">NCFW6</span>) </li>
+              <li>Limit only 1 right(time) / purchase order / promotion / customer / address</li>
+              <li>The discount code is not valid for parcel delivery</li>
+              <li> Location: 28 Phnom Penh Hanoi Friendship Blvd (1019), Phnom Penh</li>
+              <li>Contact: +888 96 500 342</li>
+            </ol>
+               
+          </div>
+        </section>
+        <!-- coupon card section -->
         <section class="flashSaleCard">
           <div class="container mx-auto px-0 py-8">
-            <h1 class="font-semibold text-[2rem]">Foods</h1>
-            <div class="grid xl:grid-cols-4 gap-4 py-2 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 display-card p-4">
+            <h1 class="font-semibold text-[2rem]">Coupon Discount Products</h1>
+            <div class="grid xl:grid-cols-3 gap-4 py-2 md:grid-cols-3  grid-cols-1 p-4" id="display-card-trending">
               
           </div>
          
@@ -133,12 +148,12 @@
     </main>
     <footer class="bg-[#f5f5f5]">
       <div
-        class="mx-auto w-full max-w-screen-xl p-[20px] sm:p-4  py-6 lg:py-8 container-fluid">
+        class="mx-auto w-full max-w-screen-xl p-[20px] xl:p-0 py-6 lg:py-8 mt-48">
         <div class="md:flex md:justify-between gap-8">
           <div
-            class="mb-2 md:mb-0 md:ms-[-20px] sm:ms-[-22px] xl:ms-[-20px] ms-[-23px]">
+            class="mb-2 md:mb-0  ">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-              <img src="/khmer-mart/Img/logo.png" alt="Khmer-Mart Logo" class="max-h-32">
+              <img src="/khmer-mart/Img/logo.png" alt="Khmer-Mart Logo" class="max-h-32 md:ms-[-10px]  ms-[-23px] ">
             </a>
           </div>
           <div
@@ -216,7 +231,7 @@
                 <li class="mb-4">
                   <a href="#" class="hover:text-[#1A6E09]">Sat 9:00 - 17:00</a>
                 </li>
-
+  
               </ul>
             </div>
             <div class="col-span-2">
@@ -300,7 +315,7 @@
                     </a>
                   </li>
                 </ul>
-
+  
               </div>
             </div>
           </div>
@@ -311,7 +326,7 @@
             2023 <a href="https://flowbite.com/" class="hover:underline">Khmer
               Mart CSTAD</a>. All Rights Reserved.
           </span>
-
+  
         </div>
       </div>
     </footer>
@@ -319,7 +334,7 @@
 <!-- jquery -->
 <script src="/jquery/jquery.js"></script>
 <!--my script -->
-<script src="/khmer-mart/myscript/script.js"></script>
+<script src="/myscript/trendingcard.js"></script>
 <!-- flowbite scripte -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 

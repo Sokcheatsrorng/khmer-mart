@@ -1,0 +1,23 @@
+{
+    "cards":[
+        {
+            "images":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MT613ref_VW_34FR+watch-49-titanium-ultra2_VW_34FR+watch-face-49-trail-ultra2_VW_34FR?wid=2000&hei=2000&fmt=png-alpha&.v=1694507270905",
+            "title":"Apple Watch",
+            "price": 120,
+            "discPrice": 200
+        },
+        {
+            "images":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MT613ref_VW_34FR+watch-49-titanium-ultra2_VW_34FR+watch-face-49-trail-ultra2_VW_34FR?wid=2000&hei=2000&fmt=png-alpha&.v=1694507270905",
+            "title":"Apple Watch",
+            "price": 120,
+            "discPrice": 200
+        },
+        {
+            "images":"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MT613ref_VW_34FR+watch-49-titanium-ultra2_VW_34FR+watch-face-49-trail-ultra2_VW_34FR?wid=2000&hei=2000&fmt=png-alpha&.v=1694507270905",
+            "title":"Apple Watch",
+            "price": 120,
+            "discPrice": 200
+        }
+       
+    ]
+}
