@@ -5,72 +5,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khmer Mart</title>
-    <link rel="icon" href="/khmer-mart/image/logo-browser.jpg">
+    <link rel="icon" href="/khmer-mart/Img/logo-browser.jpg">
     <!-- tailwind css link -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- my style -->
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/khmer-mart/style/style.css">
 </head>
 
 <body class="bg-[#f5f5f5]">
     <!-- nav bar  -->
-    <header class="bg-[#f5f5f5]">
-        <nav class="max-w-screen-xl container-fluid flex flex-wrap items-center justify-between mx-auto p-4 sm:p-4  ">
-            <!-- Logo and Category Link -->
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse  ">
-                <img src="/khmer-mart/image/logo.png" alt="Khmer-Mart Logo" class="h-20 w-15 ms-[-12px]">
-            </a>
-            <a href="#" class="flex flex-wrap items-center space-x-2 rtl:space-x-reverse">
-                <span class="hidden xl:inline-block
-           items-center text-[#1A6E09]">
-                    Category
-                    <svg class="w-5 h-5 text-gray-800 dark:text-[#1A6E09] ms-2 inline" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1" />
-                    </svg>
-                </span>
-            </a>
-            <!-- Search Bar -->
-            <div class="relative flex-4 md:inline-flex sm:w-[250px] w-[200px] md:w-[400px] ">
-                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                    </svg>
-                </div>
-                <input type="text" placeholder="Search for anything"
-                    class="py-2 pl-8 pr-3 border border-[#f5f5f5] rounded-full focus:outline-none focus:ring-1 focus:ring-[#1A6E09]  w-full  space-x-4">
-            </div>
-
-            <!-- Navigation Links -->
-            <ul class="flex  space-x-2 sm:space-x-4 md:space-x-8 md:flex-row md:mt-0 md:border-0  ">
-                <li>
-                    <a href="#" class="md:inline-flex text-[#1A6E09] hover:text-gray-300 flex items-center space-x-0 ">
-                        <svg class="w-6 h-6 text-gray-800 dark:text-black  md:mt-0" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 19">
+    <header class=" sticky top-0 z-30 ">
+        <nav class=" border-gray-200 bg-[#f5f5f5] p-0]">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-[20px] xl:p-0">
+                <!-- Logo and Category Link -->
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="/khmer-mart/Img/logo.png" alt="Khmer-Mart Logo" class="h-20 w-15 ms-[-10px]">
+                </a>
+                <!--  Category -->
+                <a href="" class="flex flex-wrap items-center space-x-2 rtl:space-x-reverse ">
+                    <span class="hidden md:inline-block
+            items-center font-semibold text-[#1A6E09] md:hover:text-[#363636] md:p-0 dark:text-[#1A6E09]  ">
+                        Category
+                        <svg class="w-5 h-5 text-gray-800 dark:text-[#1A6E09] ms-2 inline md:hover:text-[#363636]  md:p-0  "
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="0.8"
-                                d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z" />
+                                stroke-width="1.5" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1" />
                         </svg>
-                    </a>
-                </li>
-                <li><a href="#" class="text-[#1A6E09] hover:text-gray-300 hidden md:inline-flex space-x-0">About Us</a>
-                </li>
-                <li><a href="#" class="text-[#1A6E09] hover:text-gray-300">Sign In</a></li>
+                    </span>
+                </a>
+
+                <!-- Search Bar -->
+                <div
+                    class="relative flex  flex-wrap sm:w-[350px] w-[220px] xl:w-[500px]  lg:w-[400px] justify-between ms-[-30px] ">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none ">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                    </div>
+                    <input type="text" placeholder="Search for anything"
+                        class="py-2 pl-8 pr-3 border border-[#f5f5f5] rounded-full focus:outline-none focus:ring-1 focus:ring-[#1A6E09]  w-full  space-x-4 xl:w-[500px] ">
                 </div>
-            </ul>
+
+                <button data-collapse-toggle="navbar-default" type="button"
+                    class="inline-flex items-center me-[-10px] w-10 h-10 justify-center text-xl text-[#1A6E09] rounded-lg md:hidden hover:bg-gray-100 focus:outline-none  "
+                    aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                    <ul
+                        class="font-medium flex flex-col justify-around p-0 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-3 rtl:space-x-reverse md:mt-0 md:border-0 md:dark:bg-[#f5f5f5] dark:bg-[#f5f5f5] md:dark:bg-[#f5f5f5]dark:border-gray-700">
+                        <li>
+                            <a href="#"
+                                class=" hidden text-[#1A6E09] hover:text-gray-300 items-center space-x-0 md:block ">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-black  md:mt-0" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 19">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="0.8"
+                                        d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/khmer-mart/src/category.html" class="block py-2 px-0 hover:bg-none
+                  md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]  hover:text-[#FF9E37] 
+                   md:dark:hover:bg-transparent md:hidden">Category</a>
+                        </li>
+                        <li>
+                            <a href="/khmer-mart/src/favourite.html"
+                                class="block py-2 px-0  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]   hover:text-[#FF9E37] md:dark:hover:bg-transparent md:hidden">Favorite
+                                List</a>
+                        </li>
+                        <li>
+                            <a href="/khmer-mart/src/aboutUs.html"
+                                class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]    hover:text-[#FF9E37] md:dark:hover:bg-transparent ">About
+                                Us</a>
+                        </li>
+                        <li>
+                            <a href="/khmer-mart/tevy/signIn.html"
+                                class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]   hover:text-[#FF9E37] md:dark:hover:bg-transparent">Sign
+                                In</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
         </nav>
-
-
     </header>
 
-
     <!-- main section -->
-    <main class="max-w-screen-xl container-fluid mx-auto justify-center p-4 text-inter">
-        <section class="flex flex-col sm:flex-row">
-
+    <main class="max-w-screen-xl container-fluid mx-auto justify-center p-[20px] text-inter xl:p-0 ">
+       
+        <section class="flex flex-col sm:flex-row z-0 mt-6 mb-8">
+            
             <div class="w-full sm:w-[20%] ">
                 <h1 class="font-bold text-[20px]">Categories</h1>
                 <div class="mt-4 flex flex-col">
@@ -93,32 +126,25 @@
                 </div>
                 <div class="mt-4 ">
                     <h2 class="mt-2 font-medium text-[18px]">Avg. Coustomer Review</h2>
-                    <img class="mt-4" src="../image/categories/stars box.svg" alt="">
+                    <img class="mt-4" src="../Img/categories/stars.png" alt="">
                 </div>
             </div>
 
             <div class="w-full sm:w-[80%] ">
 
                 <!-- Row 1 -->
-                <h1 class="mt-4 text-[20px] font-medium text-center md:text-left">Featured Categories</h1>
+                <h1 class=" text-[20px] font-medium text-center md:text-left">Featured Categories</h1>
                 <!-- Cart container -->
-                <div class="w-full mt-6 flex flex-wrap justify-center items-center gap-8 md:gap-x-14 xl:gap-x-2 xl:justify-between ">
+                <div class="w-full mt-6 flex flex-wrap justify-center items-center gap-8 md:gap-x-14 xl:gap-x-2 xl:justify-between z-0">
 
                     <!-- Cart -->
-                    <div class=" w-full h-[380px] max-w-sm md:w-[310px] bg-white rounded-lg relative">
+                    <div class=" w-full h-[380px] max-w-sm md:w-[310px] bg-white rounded-lg relative z-0">
                         <div>
-                            <img class=" absolute mx-1  mt-1 h-24 " src="../Img/b_buy1get1.png" alt="">
-                            <img class=" rounded-t-lg" src="../image/categories/feature1.png" alt="buy one get one img" />
+                            <img class=" absolute mx-1  mt-1 h-24 " src="../Img/categories/Logobuy1get1.jpg" alt="">
+                            <img class=" rounded-t-lg" src="../Img/categories/feature1.png" alt="buy one get one img" />
                         </div>
                         <div class="px-5 pb-5">
                             <a href="#">
-                                <div class="absolute left-[-10px] top-1 flex flex-col justify-start items-start">
-                                    <img class="relative" src="../image/categories/circle-buy1-get1.png" alt="">
-                                    <span class="absolute top-6 left-9 font-extrabold text-white">BUY</span>
-                                    <span class="absolute top-11 left-9 font-extrabold text-white">GET</span>
-                                    <span
-                                        class="absolute top-5 left-[70px] font-extrabold text-white text-[35px]">1</span>
-                                </div>
                                 <h5 class="mt-4 mb-8 absolute bottom-20 font-bold tracking-normal text-xl text-[#363636]">Thick, Sizzling Beef
                                     Patty Char-Grilled to Perfection</h5>
                             </a>
@@ -171,18 +197,11 @@
                     <!-- Cart -->
                     <div class=" w-full h-[380px] max-w-sm md:w-[310px] bg-white rounded-lg relative">
                         <div>
-                            <img class=" absolute mx-1  mt-1 h-24 " src="../Img/b_buy1get1.png" alt="">
-                            <img class=" rounded-t-lg" src="../image/categories/feature2.png" alt="buy one get one img" />
+                            <img class=" absolute mx-1  mt-1 h-24 " src="../Img/categories/Logobuy1get1.jpg" alt="">
+                            <img class=" rounded-t-lg" src="../Img/categories/feature2.png" alt="buy one get one img" />
                         </div>
                         <div class="px-5 pb-5">
                             <a href="#">
-                                <div class="absolute left-[-10px] top-1 flex flex-col justify-start items-start">
-                                    <img class="relative" src="../image/categories/circle-buy1-get1.png" alt="">
-                                    <span class="absolute top-6 left-9 font-extrabold text-white">BUY</span>
-                                    <span class="absolute top-11 left-9 font-extrabold text-white">GET</span>
-                                    <span
-                                        class="absolute top-5 left-[70px] font-extrabold text-white text-[35px]">1</span>
-                                </div>
                                 <h5 class="mt-4 mb-8 absolute bottom-20 font-bold tracking-normal text-xl text-[#363636]">Miso Udon</h5>
                             </a>
                             <div class="flex items-center mt-2.5 mb-5 absolute bottom-12">
@@ -234,18 +253,11 @@
                     <!-- Cart -->
                     <div class=" w-full h-[380px] max-w-sm md:w-[310px] bg-white rounded-lg relative">
                         <div>
-                            <img class=" absolute mx-1  mt-1 h-24 " src="../Img/b_buy1get1.png" alt="">
-                            <img class=" rounded-t-lg" src="../image/categories/feature3.png" alt="buy one get one img" />
+                            <img class=" absolute mx-1  mt-1 h-24 " src="../Img/categories/Logobuy1get1.jpg" alt="">
+                            <img class=" rounded-t-lg" src="../Img/categories/feature3.png" alt="buy one get one img" />
                         </div>
                         <div class="px-5 pb-5">
                             <a href="#">
-                                <div class="absolute left-[-10px] top-1 flex flex-col justify-start items-start">
-                                    <img class="relative" src="../image/categories/circle-buy1-get1.png" alt="">
-                                    <span class="absolute top-6 left-9 font-extrabold text-white">BUY</span>
-                                    <span class="absolute top-11 left-9 font-extrabold text-white">GET</span>
-                                    <span
-                                        class="absolute top-5 left-[70px] font-extrabold text-white text-[35px]">1</span>
-                                </div>
                                 <h5 class="mt-4 mb-8 absolute bottom-20 font-bold tracking-normal text-xl text-[#363636] px-1">Premium Photo | Healthy fried chicken</h5>
                             </a>
                             <div class="flex items-center mt-2.5 mb-5 absolute bottom-12">
@@ -296,25 +308,18 @@
                 </div>
 
                 <!-- Row 2 -->
-                <h1 class="mt-8 text-[20px] font-medium text-center md:text-left">Featured Categories</h1>
+                <h1 class="mt-10 text-[20px] font-medium text-center md:text-left">Featured Categories</h1>
                 <!-- Cart container -->
                 <div class="w-full mt-6 flex flex-wrap justify-center items-center gap-8 md:gap-x-14 xl:gap-x-2 xl:justify-between ">
 
                     <!-- Cart -->
                     <div class=" w-full h-[380px] max-w-sm md:w-[310px] bg-white rounded-lg relative">
                         <div>
-                            <img class=" absolute mx-1  mt-1 h-24 " src="../Img/b_buy1get1.png" alt="">
-                            <img class=" rounded-t-lg" src="../image/categories/hotnew1.png" alt="buy one get one img" />
+                            <img class=" absolute mx-1  mt-1 h-24 " src="../Img/categories/Logobuy1get1.jpg" alt="">
+                            <img class=" rounded-t-lg" src="../Img/categories/besteller1.png" alt="buy one get one img" />
                         </div>
                         <div class="px-5 pb-5">
                             <a href="#">
-                                <div class="absolute left-[-10px] top-1 flex flex-col justify-start items-start">
-                                    <img class="relative" src="../image/categories/circle-buy1-get1.png" alt="">
-                                    <span class="absolute top-6 left-9 font-extrabold text-white">BUY</span>
-                                    <span class="absolute top-11 left-9 font-extrabold text-white">GET</span>
-                                    <span
-                                        class="absolute top-5 left-[70px] font-extrabold text-white text-[35px]">1</span>
-                                </div>
                                 <h5 class="mt-4 mb-8 absolute bottom-20 font-bold tracking-normal text-xl text-[#363636]">Green milk tea with pearl</h5>
                             </a>
                             <div class="flex items-center mt-2.5 mb-5 absolute bottom-12">
@@ -366,18 +371,11 @@
                     <!-- Cart -->
                     <div class=" w-full h-[380px] max-w-sm md:w-[310px] bg-white rounded-lg relative">
                         <div>
-                            <img class=" absolute mx-1  mt-1 h-24 " src="../Img/b_buy1get1.png" alt="">
-                            <img class=" rounded-t-lg" src="../image/categories/hotnew2.png" alt="buy one get one img" />
+                            <img class=" absolute mx-1  mt-1 h-24 " src="../Img/categories/Logobuy1get1.jpg" alt="">
+                            <img class=" rounded-t-lg" src="../Img/categories/besteller2.png" alt="buy one get one img" />
                         </div>
                         <div class="px-5 pb-5">
                             <a href="#">
-                                <div class="absolute left-[-10px] top-1 flex flex-col justify-start items-start">
-                                    <img class="relative" src="../image/categories/circle-buy1-get1.png" alt="">
-                                    <span class="absolute top-6 left-9 font-extrabold text-white">BUY</span>
-                                    <span class="absolute top-11 left-9 font-extrabold text-white">GET</span>
-                                    <span
-                                        class="absolute top-5 left-[70px] font-extrabold text-white text-[35px]">1</span>
-                                </div>
                                 <h5 class="mt-4 mb-8 absolute bottom-20 font-bold tracking-normal text-xl text-[#363636]">Budweiser beer</h5>
                             </a>
                             <div class="flex items-center mt-2.5 mb-5 absolute bottom-12">
@@ -429,18 +427,11 @@
                     <!-- Cart -->
                     <div class=" w-full h-[380px] max-w-sm md:w-[310px] bg-white rounded-lg relative">
                         <div>
-                            <img class=" absolute mx-1  mt-1 h-24 " src="../Img/b_buy1get1.png" alt="">
-                            <img class=" rounded-t-lg" src="../image/categories/hotnew3.png" alt="buy one get one img" />
+                            <img class=" absolute mx-1  mt-1 h-24 " src="../Img/categories/Logobuy1get1.jpg" alt="">
+                            <img class=" rounded-t-lg" src="../Img/categories/besteller3.png" alt="buy one get one img" />
                         </div>
                         <div class="px-5 pb-5">
                             <a href="#">
-                                <div class="absolute left-[-10px] top-1 flex flex-col justify-start items-start">
-                                    <img class="relative" src="../image/categories/circle-buy1-get1.png" alt="">
-                                    <span class="absolute top-6 left-9 font-extrabold text-white">BUY</span>
-                                    <span class="absolute top-11 left-9 font-extrabold text-white">GET</span>
-                                    <span
-                                        class="absolute top-5 left-[70px] font-extrabold text-white text-[35px]">1</span>
-                                </div>
                                 <h5 class="mt-4 mb-8 absolute bottom-20 font-bold tracking-normal text-xl text-[#363636] px-1">Budweiser beer</h5>
                             </a>
                             <div class="flex items-center mt-2.5 mb-5 absolute bottom-12">
@@ -491,25 +482,18 @@
                 </div>
 
                 <!-- Row 3 -->
-                <h1 class="mt-8 text-[20px] font-medium text-center md:text-left">Featured Categories</h1>
+                <h1 class="mt-10 text-[20px] font-medium text-center md:text-left">Featured Categories</h1>
                 <!-- Cart container -->
                 <div class="w-full mt-6 flex flex-wrap justify-center items-center gap-8 md:gap-x-14 xl:gap-x-2 xl:justify-between ">
 
                     <!-- Cart -->
                     <div class=" w-full h-[380px] max-w-sm md:w-[310px] bg-white rounded-lg relative">
                         <div>
-                            <img class=" absolute mx-1  mt-1 h-24 " src="../Img/b_buy1get1.png" alt="">
-                            <img class=" rounded-t-lg" src="../image/categories/besteller1.png" alt="buy one get one img" />
+                            <img class=" absolute mx-1  mt-1 h-24 " src="../Img/categories/Logobuy1get1.jpg" alt="">
+                            <img class=" rounded-t-lg" src="../Img/categories/hotnew1.png" alt="buy one get one img" />
                         </div>
                         <div class="px-5 pb-5">
                             <a href="#">
-                                <div class="absolute left-[-10px] top-1 flex flex-col justify-start items-start">
-                                    <img class="relative" src="../image/categories/circle-buy1-get1.png" alt="">
-                                    <span class="absolute top-6 left-9 font-extrabold text-white">BUY</span>
-                                    <span class="absolute top-11 left-9 font-extrabold text-white">GET</span>
-                                    <span
-                                        class="absolute top-5 left-[70px] font-extrabold text-white text-[35px]">1</span>
-                                </div>
                                 <h5 class="mt-4 mb-8 absolute bottom-20 font-bold tracking-normal text-xl text-[#363636]">High-Top Skateboarding Sneakers</h5>
                             </a>
                             <div class="flex items-center mt-2.5 mb-5 absolute bottom-12">
@@ -561,18 +545,11 @@
                     <!-- Cart -->
                     <div class=" w-full h-[380px] max-w-sm md:w-[310px] bg-white rounded-lg relative">
                         <div>
-                            <img class=" absolute mx-1  mt-1 h-24 " src="../Img/b_buy1get1.png" alt="">
-                            <img class=" rounded-t-lg" src="../image/categories/besteller2.png" alt="buy one get one img" />
+                            <img class=" absolute mx-1  mt-1 h-24 " src="../Img/categories/Logobuy1get1.jpg" alt="">
+                            <img class=" rounded-t-lg" src="../Img/categories/hotnew2.png" alt="buy one get one img" />
                         </div>
                         <div class="px-5 pb-5">
                             <a href="#">
-                                <div class="absolute left-[-10px] top-1 flex flex-col justify-start items-start">
-                                    <img class="relative" src="../image/categories/circle-buy1-get1.png" alt="">
-                                    <span class="absolute top-6 left-9 font-extrabold text-white">BUY</span>
-                                    <span class="absolute top-11 left-9 font-extrabold text-white">GET</span>
-                                    <span
-                                        class="absolute top-5 left-[70px] font-extrabold text-white text-[35px]">1</span>
-                                </div>
                                 <h5 class="mt-4 mb-8 absolute bottom-20 font-bold tracking-normal text-xl text-[#363636]">Pocketable UV Protection 3D Cut Parka</h5>
                             </a>
                             <div class="flex items-center mt-2.5 mb-5 absolute bottom-12">
@@ -624,18 +601,11 @@
                     <!-- Cart -->
                     <div class=" w-full h-[380px] max-w-sm md:w-[310px] bg-white rounded-lg relative">
                         <div>
-                            <img class=" absolute mx-1  mt-1 h-24 " src="../Img/b_buy1get1.png" alt="">
-                            <img class=" rounded-t-lg" src="../image/categories/besteller3.png" alt="buy one get one img" />
+                            <img class=" absolute mx-1  mt-1 h-24 " src="../Img/categories/Logobuy1get1.jpg" alt="">
+                            <img class=" rounded-t-lg" src="../Img/categories/hotnew3.png" alt="buy one get one img" />
                         </div>
                         <div class="px-5 pb-5">
                             <a href="#">
-                                <div class="absolute left-[-10px] top-1 flex flex-col justify-start items-start">
-                                    <img class="relative" src="../image/categories/circle-buy1-get1.png" alt="">
-                                    <span class="absolute top-6 left-9 font-extrabold text-white">BUY</span>
-                                    <span class="absolute top-11 left-9 font-extrabold text-white">GET</span>
-                                    <span
-                                        class="absolute top-5 left-[70px] font-extrabold text-white text-[35px]">1</span>
-                                </div>
                                 <h5 class="mt-4 mb-8 absolute bottom-20 font-bold tracking-normal text-xl text-[#363636] px-1">Slim Fit Jeans</h5>
                             </a>
                             <div class="flex items-center mt-2.5 mb-5 absolute bottom-12">
@@ -688,17 +658,16 @@
             </div>
 
         </section>
-
     </main>
 
-
-    <!-- footer section -->
+    <!-- Footer section -->
     <footer class="bg-[#f5f5f5]">
-        <div class="mx-auto w-full max-w-screen-xl p-4 sm:p-4  py-6 lg:py-8 container-fluid">
+        <div class="mx-auto w-full max-w-screen-xl p-[20px] sm:p-4  py-6 lg:py-8 container-fluid">
             <div class="md:flex md:justify-between gap-8">
-                <div class="mb-2 md:mb-0 md:ms-[-20px] sm:ms-[-22px] xl:ms-[-20px] ms-[-23px]">
+                <div class="mb-2 md:mb-0  ">
                     <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                        <img src="/image/logo.png" alt="Khmer-Mart Logo" class="max-h-32">
+                        <img src="/khmer-mart/Img/logo.png" alt="Khmer-Mart Logo"
+                            class="max-h-32 md:ms-[-25px]  ms-[-23px] ">
                     </a>
                 </div>
                 <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 md:gap-4 ">
@@ -727,7 +696,7 @@
                         </h2>
                         <ul class="text-gray-500 dark:text-[#363636]  font-inter text-sm">
                             <li class="mb-4">
-                                <a href="#" class="hover:text-[#1A6E09]">About Us</a>
+                                <a href="./aboutUs.html" class="hover:text-[#1A6E09]">About Us</a>
                             </li>
                             <li class="mb-4">
                                 <a href="#" class="hover:text-[#1A6E09]">Help</a>
@@ -780,7 +749,7 @@
                         </h2>
                         <div class="relative w-full flex md:w-[320px] ">
                             <input type="email" id="currency-input"
-                                class="flex p-2.5 w-full z-20 ps-10 text-sm placeholder:text-left text-gray-900  rounded-0 border border-[#1A6E09]  focus:ring-white  focus:outline-none focus:border-[#1A6E09]  dark:placeholder-gray-300 dark:text-black dark:focus:border-[#1A6E09]"
+                                class="flex p-2.5 w-full z-20 ps-10 text-sm placeholder:text-left text-gray-900  border border-[#1A6E09]  focus:ring-white  focus:outline-none focus:border-[#1A6E09]  dark:placeholder-gray-300 dark:text-black dark:focus:border-[#1A6E09]"
                                 placeholder="Your Email">
                             <button
                                 class="flex-shrink-0 z-10 inline-flex items-center  px-4 text-sm font-medium text-center text-gray-900 bg-[#1A6E09] border border-gray-300 rounded-0  focus:ring-0 focus:outline-none  dark:bg-[#1A6E09]  dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
@@ -800,9 +769,9 @@
                                                     fill="#1A6E09" />
                                             </g>
                                             <defs>
-                                                <clipPath id="clip0_1630_814">
+                                                <clippath id="clip0_1630_814">
                                                     <rect width="16" height="16" fill="white" />
-                                                </clipPath>
+                                                </clippath>
                                             </defs>
                                         </svg>
                                     </a>
@@ -823,9 +792,9 @@
                                                     fill="#1A6E09" />
                                             </g>
                                             <defs>
-                                                <clipPath id="clip0_1630_817">
+                                                <clippath id="clip0_1630_817">
                                                     <rect width="16" height="16" fill="white" />
-                                                </clipPath>
+                                                </clippath>
                                             </defs>
                                         </svg>
                                     </a>
@@ -846,9 +815,9 @@
                                                     fill="#1A6E09" />
                                             </g>
                                             <defs>
-                                                <clipPath id="clip0_1630_823">
+                                                <clippath id="clip0_1630_823">
                                                     <rect width="16" height="16" fill="white" />
-                                                </clipPath>
+                                                </clippath>
                                             </defs>
                                         </svg>
                                     </a>
@@ -861,8 +830,9 @@
             </div>
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-200 lg:my-8" />
             <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
-                        href="https://flowbite.com/" class="hover:underline">Khmer Mart CSTAD</a>. All Rights Reserved.
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">©
+                    2023 <a href="https://flowbite.com/" class="hover:underline">Khmer
+                        Mart CSTAD</a>. All Rights Reserved.
                 </span>
 
             </div>
@@ -870,12 +840,9 @@
     </footer>
 
 </body>
-<!-- jquery -->
-<script src="/jquery/jquery.js"></script>
-<!--my script -->
-<script src="/myscript/script.js"></script>
-<!-- flowbite scripte -->
+<!-- jquery script -->
+<script src="/khmer-mart/myscript/trendingcard.js"></script>
+<!-- tailwind script-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
-
 
 </html>
