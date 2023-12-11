@@ -1,0 +1,36 @@
+{
+    "food": [
+      {
+        "title": "Food 1",
+        "image": "path/to/food1.jpg",
+        "price": 9.99
+      },
+      {
+        "title": "Food 2",
+        "image": "path/to/food2.jpg",
+        "price": 12.99
+      },
+      {
+        "title": "Food 3",
+        "image": "path/to/food3.jpg",
+        "price": 15.99
+      }
+    ],
+    "drink": [
+      {
+        "title": "Drink 1",
+        "image": "path/to/drink1.jpg",
+        "price": 2.99
+      },
+      {
+        "title": "Drink 2",
+        "image": "path/to/drink2.jpg",
+        "price": 3.99
+      },
+      {
+        "title": "Drink 3",
+        "image": "path/to/drink3.jpg",
+        "price": 4.99
+      }
+    ]
+  }
