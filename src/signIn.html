@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
-    <link rel="icon" href="/khmer-mart/Img/logo.png">
+    <link rel="icon" href="/Img/logo.png">
     <!-- tailwind css link -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- my style -->
@@ -20,9 +20,9 @@
         <div
           class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-[20px] xl:p-0">
           <!-- Logo and Category Link -->
-          <a href="/khmer-mart/src/index.html"
+          <a href="/src/index.html"
             class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="/khmer-mart/Img/logo.png" alt="Khmer-Mart Logo"
+            <img src="/Img/logo.png" alt="Khmer-Mart Logo"
               class="h-20 w-15 ms-[-10px]">
           </a>
           <!--  Category -->
@@ -92,13 +92,11 @@
                    md:dark:hover:bg-transparent md:hidden">Category</a>
               </li>
               <li>
-                <a href="/khmer-mart/src/favourite.html"
+                <a href="/src/favourite.html"
                   class="block py-2 px-0  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]   hover:text-[#FF9E37] md:dark:hover:bg-transparent md:hidden">Favorite
                   List</a>
               </li>
               <li>
-                <a href="/khmer-mart/src/aboutUs.html"
-                  class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 dark:text-[#1A6E09]    hover:text-[#FF9E37] md:dark:hover:bg-transparent ">About
                 <a href="/src/aboutUs.html"
                   class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0    hover:text-[#FF9E37] md:dark:hover:bg-transparent ">About
                   Us</a>
@@ -257,11 +255,11 @@
                         <form class="space-y-4 md:space-y-6" action="#">
                             <div>
                                 <label for="email" class="block mb-2 text-sm font-semibold text-[#363636]">Email / Username</label>
-                                <input type="email" name="email" id="email" class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2" placeholder="Your Email / Username" required="">
+                                <input type="text" name="email" id="email" class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400  dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2" placeholder="Your Email / Username" required="">
                             </div>
                             <div>
                                 <label for="password" class="block mb-2 text-sm font-semibold text-[#363636]">Password</label>
-                                <input type="password" name="password" id="password" placeholder="••••••••" class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2" required="">
+                                <input type="password" name="password" id="password" placeholder="••••••••" class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400  dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2" required="">
                             </div>
                             <div class="flex items-center justify-between">
                                 <div class="flex items-start">
@@ -272,9 +270,9 @@
                                 </div>
                                 <a href="#" class="text-sm font-medium text-primary-600 hover:underline text-[#1A6E09]">Forgot password?</a>
                             </div>
-                            <button type="submit" class=" h-[55px] w-[450px] text-white text-[30px] font-semibold font-inter bg-[rgb(26,110,9)] hover:bg-[#1d4b13] rounded-2xl text-center ">Sign in</button>
+                            <button type="submit" class=" h-[55px] w-[450px] text-white text-[30px] font-semibold font-inter bg-[rgb(26,110,9)] hover:bg-[#1d4b13] rounded-2xl text-center " onclick="handleSignInClick()">Sign in</button>
                             <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                                Don’t have an account yet? <a href="/khmer-mart/src/" class="font-medium text-primary-600 hover:underline text-[#1A6E09]">Sign Up Here</a>
+                                Don’t have an account yet? <a href="/src/signUp.html" class="font-medium text-primary-600 hover:underline text-[#1A6E09]">Sign Up Here</a>
                             </p>
                         </form>
                   </div>
@@ -291,7 +289,7 @@
         <div
           class="mb-2 md:mb-0  ">
           <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="/khmer-mart/Img/logo.png" alt="Khmer-Mart Logo" class="max-h-32 md:ms-[-10px]  ms-[-23px] ">
+            <img src="/Img/logo.png" alt="Khmer-Mart Logo" class="max-h-32 md:ms-[-10px]  ms-[-23px] ">
           </a>
         </div>
         <div

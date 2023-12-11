@@ -9,7 +9,7 @@ const buyOneGetOneCard = ({
     return `
     <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none">
     <div class="md:py-4">
-    <img class=" absolute mx-1  mt-1 h-24 " src="/khmer-mart/Img/b1g1/Logobuy1get1.jpg" alt="buy1get1Logo">
+    <img class=" absolute mx-1  mt-1 h-24 " src="/Img/b1g1/Logobuy1get1.jpg" alt="buy1get1Logo">
     <img class=" rounded-t-lg" src="${images}" alt="buy one get one img"/>
     </div>
     <div class="px-5 pb-5">
@@ -159,7 +159,7 @@ $(document).on("click", "#btnaddtoFav", function () {
 fetch('/jsondata/buy1get1.json')
   .then(res => res.json())
   .then(data => {
-    const foodCardContainer = document.getElementById("foodsDisplayCard");
+    const foodCardContainer = document.getElementById("foodsDisplayCard1");
     const drinkCardContainer = document.getElementById("drinksDisplayCard");
     const electronicCardContainer = document.getElementById(
       "electronicsDisplayCard"
