@@ -1,0 +1,182 @@
+{
+    "foods":[
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        }
+    ],
+    "drinks":[
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        }
+    ],
+    "clothes":[
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        }
+    ],
+    "electronics":[
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        }
+    ],
+    "cosmetics":[
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        }
+    ],
+    "plants":[
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        },
+        {
+            "images":"/Img/Buy1Get1-4.jpg",
+            "title": "Pizza Plus Sarsage",
+            "rating": "4.00 / 5.00",
+            "stars": "★★★★☆",
+            "price": 500
+        }
+    ]
+}
