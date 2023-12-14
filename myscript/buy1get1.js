@@ -159,16 +159,16 @@ $(document).on("click", "#btnaddtoFav", function () {
 fetch('/jsondata/buy1get1.json')
   .then(res => res.json())
   .then(data => {
-    const foodCardContainer = document.getElementById("foodsDisplayCard");
-    const drinkCardContainer = document.getElementById("drinksDisplayCard1");
+    const foodCardContainer = document.getElementById("foodsDisplayCard1-1");
+    const drinkCardContainer = document.getElementById("drinksDisplayCard1-2");
     const electronicCardContainer = document.getElementById(
-      "electronicsDisplayCard"
+      "electronicsDisplayCard1-3"
     );
     const cosmeticCardContainer = document.getElementById(
-      "cosmeticsDisplayCard"
+      "cosmeticsDisplayCard1-5"
     );
-    const clothCardContainer = document.getElementById("clothesDisplayCard");
-    const plantCardContainer = document.getElementById("plantsDisplayCard");
+    const clothCardContainer = document.getElementById("clothesDisplayCard1-4");
+    const plantCardContainer = document.getElementById("plantsDisplayCard1-6");
     
     const foodLists = data.foods;
     foodLists.map((product) => {
