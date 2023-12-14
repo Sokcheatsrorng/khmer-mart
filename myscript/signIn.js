@@ -53,8 +53,6 @@ function handleSignInClick() {
 }
 
 
-
-
   // using token to sign In with API
     // function signIn() {
     //   // Retrieve the username and password from the input fields
