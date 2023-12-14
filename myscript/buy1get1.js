@@ -160,7 +160,7 @@ fetch('/jsondata/buy1get1.json')
   .then(res => res.json())
   .then(data => {
     const foodCardContainer = document.getElementById("foodsDisplayCard");
-    const drinkCardContainer = document.getElementById("drinksDisplayCard");
+    const drinkCardContainer = document.getElementById("drinksDisplayCard1");
     const electronicCardContainer = document.getElementById(
       "electronicsDisplayCard"
     );
