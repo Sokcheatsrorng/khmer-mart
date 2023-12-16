@@ -3,37 +3,55 @@ function handleSignInClick() {
   const password = document.getElementById('password').value.trim();
   const rememberMe = document.getElementById('remember').checked;
 
-  fetch('https://cms.istad.co/api/auth/local', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      identifier: email,
-      password: password,
-    }),
+  // In a real scenario, replace the alert with a fetch request to your server
+  fetch('/jsondata/signin.json', {
+    // method: 'POST',
+    // headers: {
+    //   'Content-Type': 'application/json',
+    // },
+    // body: JSON.stringify({
+    //   username: email,
+    //   password: password,
+    //   rememberMe: rememberMe,
+    // }),
   })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    // Handle the server response, which might include a token
+    console.log('Server Response:', data);
+    // Check if there are users in the response
+    if (data.users && data.users.length > 0) {
+      // Loop through the users to check credentials
+      const signInDisplay = document.querySelector("#signInLink")
+      for (const user of data.users) {
+        if (user.username === email && user.password === password) {
+          // Signed in successfully
+          alert('Signed in successfully');
+          const username = user.username;
+          signInDisplay.innerHTML = `
+          <a href="/src/signIn.html" 
+          class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0    hover:text-[#FF9E37] md:dark:hover:bg-transparent">
+          ${username}</a>
+        `;
+         window.location.href = '/src/index.html';
+        return;
+        }
       }
-      return response.json();
-    })
-    .then(data => {
-      console.log('Server Response:', data);
-
-      if (data.jwt) {
-        // Successful authentication, handle accordingly
-        alert('Signed in successfully');
-        // You might want to store the token securely and handle redirection here
-        window.location.href = '/src/index.html';
-      } else {
-        // Handle authentication failure
-        alert('Invalid username or password');
-      }
-    })
-    .catch(error => console.error('Error:', error));
+      // If no matching credentials were found
+      alert('Invalid username or password');
+    } else {
+      // Handle the case where there are no users in the response
+      alert('Invalid username or password');
+    }
+  })
+  .catch(error => console.error('Error:', error));
 }
+
 
 
 
@@ -69,82 +87,4 @@ function handleSignInClick() {
     //   });
     // }
 
-    // $(document).ready(function () {
-    //     // Function to get URL parameters
-    //     function getUrlParameter(name) {
-    //       name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-    //       var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-    //       var results = regex.exec(location.search);
-    //       return results === null
-    //         ? ''
-    //         : decodeURIComponent(results[1].replace(/\+/g, ' '));
-    //     }
-      
-    //     // Check for the login parameter in the URL
-    //     var loginStatus = getUrlParameter('login');
-      
-    //     // Check if the toast has already been shown
-    //     var toastShown = sessionStorage.getItem('toastShown');
-      
-    //     // Display a toast message if login was successful
-    //     if (loginStatus === 'success' && !toastShown) {
-    //       toastr.success('Login successful! Welcome.', 'Success', {
-    //         closeButton: true, // Display close button
-    //         timeOut: 5000, // Close the toast after 5 seconds (adjust as needed)
-    //         extendedTimeOut: 1000, // Increase the extended time for the close button
-    //       });
-      
-    //       // Set a flag in sessionStorage to indicate that the toast has been shown
-    //       sessionStorage.setItem('toastShown', 'true');
-    //     }
-      
-    //     const passwordInput = $('#password');
-    //     const togglePasswordButton = $('#togglePassword');
-      
-    //     togglePasswordButton.on('click', function () {
-    //       const type =
-    //         passwordInput.attr('type') === 'password' ? 'text' : 'password';
-    //       passwordInput.attr('type', type);
-      
-    //       // Change the label text based on the password visibility
-    //       const buttonText = type === 'password' ? 'Show' : 'Hide';
-    //       togglePasswordButton.text(buttonText);
-    //     });
-    //   });
-    //   function submitForm() {
-    //     // Get input values
-    //     var username = $('#username').val();
-    //     var password = $('#password').val();
-      
-    //     // Prepare data for AJAX request
-    //     var data = {
-    //       identifier: username,
-    //       password: password,
-    //     };
-      
-    //     // Make AJAX request to the login API
-    //     $.ajax({
-    //       type: 'POST',
-    //       url: 'https://cms.istad.co/api/auth/local',
-    //       data: JSON.stringify(data),
-    //       contentType: 'application/json',
-    //       success: function (response) {
-    //         console.log(response.user);
-    //         // Check if login was successful
-    //         if (response) {
-    //           // Store the token in local storage or a cookie for future requests
-    //           localStorage.setItem('token', response.jwt);
-    //           localStorage.setItem('id', response.user.id);
-    //           // Redirect to the home page or perform other actions
-    //           window.location.href = '/src/index.html?login=success';
-    //         } else {
-    //           // Show toastr notification for login failure
-    //         }
-    //       },
-    //       error: function (error) {
-    //         console.error('Error during login:', error);
-    //         toastr.error('Login failed. Please check your username and password.');
-    //       },
-    //     });
-    //   }
   
