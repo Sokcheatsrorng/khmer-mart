@@ -6,47 +6,65 @@
         <title>Document</title>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
+    <style>
+        /* Add some basic styling for better appearance */
+        body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+        }
+        form {
+          max-width: 600px;
+          margin: auto;
+        }
+        label {
+          display: block;
+          margin-bottom: 8px;
+          font-weight: bold;
+        }
+        input {
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 16px;
+          box-sizing: border-box;
+        }
+        button {
+          padding: 10px 15px;
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+      </style>
     <body>
-        <form>
+
+
+        <form id="productForm">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" value="string"
-                class=" border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[500px] p-2.5 focus:outline-none"
-                required>
-
-            <label for="fee">Fee:</label>
-            <input type="number" id="fee" name="fee" value="0"
-                class=" border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[500px] p-2.5 focus:outline-none"
-                required>
-
+            <input type="text" id="name" name="name" class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5  border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2" required>
+          
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5  border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2"required>
+          
             <label for="discount">Discount:</label>
-            <input type="number" id="discount" name="discount" value="0"
-                class=" border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[500px] p-2.5 focus:outline-none"
-                required>
-
+            <input type="number" id="discount" name="discount" class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5  border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2" required>
+          
             <label for="rating">Rating:</label>
-            <input type="number" id="rating" name="rating" value="0" required
-                class=" border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[500px] p-2.5 focus:outline-none">
-
-            <label for="createdAt">Created At:</label>
-            <input type="datetime-local" id="createdAt" name="createdAt"
-                value="2023-12-13T08:19:54" required
-                class=" border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[500px] p-2.5 focus:outline-none">
-
-            <label for="updatedAt">Updated At:</label>
-            <input type="datetime-local" id="updatedAt" name="updatedAt"
-                value="2023-12-13T08:19:54" required
-                class=" border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[500px] p-2.5 focus:outline-none">
-
-            <label for="publishedAt">Published At:</label>
-            <input type="datetime-local" id="publishedAt" name="publishedAt"
-                value="2023-12-13T08:19:54" required>
-            <label for="image">Image</label>
-            <input type="file" id="image"
-                class=" border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[500px] p-2.5 focus:outline-none">
-
-            <button type="button" onclick="createProduct()"
-                class=" border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[500px] p-2.5 focus:outline-none bg-green-300 mt-5">Submit</button>
-        </form>
+            <input type="number" id="rating" name="rating" class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5  border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2" required>
+          
+            <label for="type">Type:</label>
+            <input type="text" id="type" name="type"  class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5  border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2" required>
+          
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5  border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2" required>
+          
+          
+            <label for="image">Image (URL):</label>
+            <input type="text" id="image" name="image" class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5  border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2" required>
+          
+            <button type="button" onclick="createProduct()" class="  mt-5 h-[55px] w-[450px] bg-green-800 text-white sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5  border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2">Submit</button>
+          </form>
+          
 
     </body>
     <script src="/testing/script.js"></script>

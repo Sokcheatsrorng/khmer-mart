@@ -254,24 +254,23 @@
                         </div>
                         <form class="space-y-4 md:space-y-6" id="signInForm">
                           <div>
-                            <label for="email" class="block mb-2 text-sm font-semibold text-[#363636]">Email / Username</label>
-                            <input type="text" name="email" id="email" class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2" placeholder="Your Email / Username" required>
+                            <label for="username" class="block mb-2 text-sm font-semibold text-[#363636]"> Username</label>
+                            <input type="text" name="name" id="username" class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2" placeholder="Your Email / Username" required>
                           </div>
                           <div>
                             <label for="password" class="block mb-2 text-sm font-semibold text-[#363636]">Password</label>
-                            <input type="password" name="password" id="password" placeholder="••••••••" class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2" required>
+                            <input type="text" name="password" id="password" placeholder="••••••••" class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2" required>
                           </div>
                           <div class="flex items-center justify-between">
                             <div class="flex items-start">
                               <div class="flex items-center me-4">
-                                <input id="remember" type="checkbox" value="" class="w-5 h-5 border border-[#1A6E09] rounded accent-[#1A6E09] bg-white" required>
+                                <input id="remember" type="checkbox" value="" class="w-5 h-5 border border-[#1A6E09] rounded accent-[#1A6E09] bg-white">
                                 <label for="green-checkbox" class="ms-2 text-sm font-medium text-gray-600">Remember me</label>
                               </div>
                             </div>
-                            <a href="#" class="text-sm font-medium text-primary-600 hover:underline text-[#1A6E09]">Forgot password?</a>
                             
                           </div> 
-                              <button type="submit" onclick="handleSignInClick()" class="h-[55px] w-[450px] text-white text-[30px] font-inter bg-[rgb(26,110,9)] hover:bg-[#1d4b13] rounded-2xl text-center" id="signInLink">Sign in</button>
+                              <button type="button" onclick="submitForm()" class="h-[55px] w-[450px] text-white text-[30px] font-inter bg-[rgb(26,110,9)] hover:bg-[#1d4b13] rounded-2xl text-center" id="signInLink">Sign in</button>
                         
                           <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                             Don’t have an account yet? 

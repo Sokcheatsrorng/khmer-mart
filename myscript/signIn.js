@@ -1,88 +1,86 @@
-function handleSignInClick() {
-  const email = document.getElementById('email').value.trim();
-  const password = document.getElementById('password').value.trim();
-  const rememberMe = document.getElementById('remember').checked;
 
-  // In a real scenario, replace the alert with a fetch request to your server
-  fetch('/jsondata/signin.json', {
-    // method: 'POST',
-    // headers: {
-    //   'Content-Type': 'application/json',
-    // },
-    // body: JSON.stringify({
-    //   username: email,
-    //   password: password,
-    //   rememberMe: rememberMe,
-    // }),
-  })
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then(data => {
-    // Handle the server response, which might include a token
-    console.log('Server Response:', data);
-    // Check if there are users in the response
-    if (data.users && data.users.length > 0) {
-      // Loop through the users to check credentials
-      const signInDisplay = document.querySelector("#signInLink")
-      for (const user of data.users) {
-        if (user.username === email && user.password === password) {
-          // Signed in successfully
-          alert('Signed in successfully');
-          const username = user.username;
-          signInDisplay.innerHTML = `
-          <a href="/src/signIn.html" 
-          class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0    hover:text-[#FF9E37] md:dark:hover:bg-transparent">
-          ${username}</a>
-        `;
-         window.location.href = '/src/index.html';
-        return;
-        }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Function to get URL parameters
+      function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
       }
-      // If no matching credentials were found
-      alert('Invalid username or password');
-    } else {
-      // Handle the case where there are no users in the response
-      alert('Invalid username or password');
+    
+      // Check for the login parameter in the URL
+      var loginStatus = getUrlParameter('login');
+    
+      // Check if the toast has already been shown
+      var toastShown = sessionStorage.getItem('toastShown');
+    
+      // Display a toast message if login was successful
+      if (loginStatus === 'success' && !toastShown) {
+        toastr.success('Login successful! Welcome.', 'Success', {
+          closeButton: true,
+          timeOut: 5000,
+          extendedTimeOut: 1000,
+        });
+    
+        // Set a flag in sessionStorage to indicate that the toast has been shown
+        sessionStorage.setItem('toastShown', 'true');
+      }
+    
+      const passwordInput = document.getElementById('password');
+      const togglePasswordButton = document.getElementById('togglePassword');
+    
+      togglePasswordButton.addEventListener('click', function () {
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+    
+        const buttonText = type === 'password' ? 'Show' : 'Hide';
+        togglePasswordButton.textContent = buttonText;
+      });
+    });
+    
+    function submitForm() {
+      // Get input values
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+    
+      // Prepare data for fetch request
+      var data = {
+        identifier: username,
+        password: password,
+      };
+    
+      // Make fetch request to the login API
+      fetch('https://cms.istad.co/api/auth/local', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(response => {
+          console.log(response.user);
+          // Check if login was successful
+          if (response) {
+            // Store the token in local storage or a cookie for future requests
+            localStorage.setItem('token', response.jwt);
+            localStorage.setItem('id', response.user.id);
+            // Redirect to the home page or perform other actions
+            window.location.href = '/src/index.html?login=success';
+          } else {
+            // Show toastr notification for login failure
+          }
+        })
+        .catch(error => {
+          console.error('Error during login:', error);
+          toastr.error('Login failed. Please check your username and password.');
+        });
     }
-  })
-  .catch(error => console.error('Error:', error));
-}
-
-
-  // using token to sign In with API
-    // function signIn() {
-    //   // Retrieve the username and password from the input fields
-    //   const username = document.getElementById('username').value;
-    //   const password = document.getElementById('password').value;
-
-    //   // Make a fetch request to obtain the token from the API
-    //   fetch('', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({ username, password }),
-    //   })
-    //   .then(response => {
-    //     if (!response.ok) {
-    //       throw new Error('Network response was not ok');
-    //     }
-    //     return response.json();
-    //   })
-    //   .then(data => {
-    //     // Handle the successful response
-    //     const token = data.token; // Extract the token from the response
-    //     console.log('Token:', token);
-
-    //   })
-    //   .catch(error => {
-      
-    //     console.error('Error:', error.message);
-    //   });
-    // }
-
+    
   
