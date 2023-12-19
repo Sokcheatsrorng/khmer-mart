@@ -4,453 +4,397 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Admin-Create</title>
-        <link rel="icon" href="/khmer-mart/Img/logo-browser.jpg">
+        <link rel="icon" href="/Img/logo-browser.jpg">
         <!-- tailwind script-->
-        <script src="https://cdn.tailwindcss.com"></script>  
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body class="bg-[#f5f5f5]">
-        <main
-            class="max-w-screen-xl container-fluid mx-auto justify-center p-[20px] text-inter xl:p-0 bg-[#f5f5f5]">
-            <section class="max-w-screen-xl flex gap-10">
-                <aside id="logo-sidebar"
-                    class=" flex  top-0 left-0 z-40 w-80 overflow-hidden pt-0 transition-transform -translate-x-fullborder-r bg-white border-gray-200 sm:translate-x-0  rounded-tr-[50px] rounded-bl-[50px]"
-                    aria-label="Sidebar">
-                    <div class="h-[800px] w-full px-3 re pb-4 overflow-y-auto flex">
-                        <ul class="space-y-2 font-medium">
-                            <li>
-                                <a href="/src/index.html"
-                                    class="flex ms-[-10px] md:me-24">
-                                    <img src="/khmer-mart/Img/logo.png"
-                                        class="h-[100px] me-3"
-                                        alt="khmer-mart-logo" />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="home.html"
-                                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        width="30" height="30"
-                                        viewBox="0 0 36 36" fill="none">
-                                        <path
-                                            d="M15.1059 4.22977L4.71089 12.5548C3.54089 13.4848 2.79089 15.4498 3.04589 16.9198L5.04089 28.8598C5.40089 30.9898 7.44089 32.7148 9.60089 32.7148H26.4009C28.5459 32.7148 30.6009 30.9748 30.9609 28.8598L32.9559 16.9198C33.1959 15.4498 32.4459 13.4848 31.2909 12.5548L20.8959 4.24477C19.2909 2.95477 16.6959 2.95477 15.1059 4.22977Z"
-                                            stroke="#1A6E09" stroke-width="1.5"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M18 23.25C18.9946 23.25 19.9484 22.8549 20.6517 22.1517C21.3549 21.4484 21.75 20.4946 21.75 19.5C21.75 18.5054 21.3549 17.5516 20.6517 16.8483C19.9484 16.1451 18.9946 15.75 18 15.75C17.0054 15.75 16.0516 16.1451 15.3483 16.8483C14.6451 17.5516 14.25 18.5054 14.25 19.5C14.25 20.4946 14.6451 21.4484 15.3483 22.1517C16.0516 22.8549 17.0054 23.25 18 23.25Z"
-                                            stroke="#1A6E09" stroke-width="1.5"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                    <span class="ms-3 font-inter text-[#1A6E09]">Home</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="create.html"
-                                    class="flex items-center p-2 text-[#1A6E09] rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        width="30" height="30"
-                                        viewBox="0 0 36 36" fill="none">
-                                        <path
-                                            d="M25.4552 21.66C27.5102 22.005 29.7752 21.645 31.3652 20.58C33.4802 19.17 33.4802 16.86 31.3652 15.45C29.7602 14.385 27.4652 14.025 25.4102 14.385M10.5002 21.66C8.44516 22.005 6.18016 21.645 4.59016 20.58C2.47516 19.17 2.47516 16.86 4.59016 15.45C6.19516 14.385 8.49016 14.025 10.5452 14.385M27.0002 10.74C26.9058 10.725 26.8096 10.725 26.7152 10.74C25.7141 10.7038 24.7663 10.2798 24.0722 9.55764C23.378 8.83547 22.9918 7.8717 22.9952 6.87C22.9952 4.725 24.7202 3 26.8652 3C27.8915 3 28.8759 3.40773 29.6017 4.1335C30.3274 4.85926 30.7352 5.84361 30.7352 6.87C30.7324 7.87241 30.3422 8.83493 29.646 9.55622C28.9499 10.2775 28.0018 10.7017 27.0002 10.74ZM8.95516 10.74C9.04516 10.725 9.15016 10.725 9.24016 10.74C10.2412 10.7038 11.189 10.2798 11.8831 9.55764C12.5773 8.83547 12.9635 7.8717 12.9602 6.87C12.9602 4.725 11.2352 3 9.09016 3C8.06377 3 7.07942 3.40773 6.35365 4.1335C5.62789 4.85926 5.22016 5.84361 5.22016 6.87C5.23516 8.97 6.88516 10.665 8.95516 10.74ZM18.0002 21.945C17.9058 21.93 17.8096 21.93 17.7152 21.945C16.7141 21.9088 15.7663 21.4848 15.0722 20.7626C14.378 20.0405 13.9918 19.0767 13.9952 18.075C13.9952 15.93 15.7202 14.205 17.8652 14.205C18.8915 14.205 19.8759 14.6127 20.6017 15.3385C21.3274 16.0643 21.7352 17.0486 21.7352 18.075C21.7202 20.175 20.0702 21.885 18.0002 21.945ZM13.6352 26.67C11.5202 28.08 11.5202 30.39 13.6352 31.8C16.0352 33.405 19.9652 33.405 22.3652 31.8C24.4802 30.39 24.4802 28.08 22.3652 26.67C19.9802 25.08 16.0352 25.08 13.6352 26.67Z"
-                                            stroke="#1A6E09" stroke-width="1.5"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                    <span class="flex-1 ms-3 whitespace-nowrap">Create</span>
-
-                                </a>
-                            </li>
-                            <li>
-                                <a href="read.html"
-                                    class="flex items-center p-2 text-[#1A6E09] rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        width="30" height="30"
-                                        viewBox="0 0 36 36" fill="none">
-                                        <path
-                                            d="M4.5 33H31.5M8.4 12.57H6C5.175 12.57 4.5 13.245 4.5 14.07V27C4.5 27.825 5.175 28.5 6 28.5H8.4C9.225 28.5 9.9 27.825 9.9 27V14.07C9.9 13.245 9.225 12.57 8.4 12.57ZM19.2 7.785H16.8C15.975 7.785 15.3 8.46 15.3 9.285V27C15.3 27.825 15.975 28.5 16.8 28.5H19.2C20.025 28.5 20.7 27.825 20.7 27V9.285C20.7 8.46 20.025 7.785 19.2 7.785ZM30 3H27.6C26.775 3 26.1 3.675 26.1 4.5V27C26.1 27.825 26.775 28.5 27.6 28.5H30C30.825 28.5 31.5 27.825 31.5 27V4.5C31.5 3.675 30.825 3 30 3Z"
-                                            stroke="#1A6E09" stroke-width="1.5"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                    <span class="flex-1 ms-3 whitespace-nowrap">Overview</span>
-
-                                </a>
-                            </li>
-                            <li>
-                                <a href="update.html"
-                                    class="flex items-center p-2 text-[#FF9E37] rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        width="30" height="30"
-                                        viewBox="0 0 36 36" fill="none">
-                                        <path
-                                            d="M32.8957 10.1399L27.8407 30.4349C27.6653 31.1689 27.2466 31.8218 26.6529 32.2875C26.0592 32.7533 25.3253 33.0044 24.5707 32.9999H4.8607C2.5957 32.9999 0.975705 30.7799 1.6507 28.6049L7.96571 8.32494C8.17672 7.63719 8.60197 7.03486 9.17943 6.60581C9.75688 6.17677 10.4563 5.94347 11.1757 5.93994H29.6257C31.0507 5.93994 32.2357 6.80994 32.7307 8.00994C33.0157 8.65494 33.0757 9.38994 32.8957 10.1399Z"
-                                            stroke="#FF9E37" stroke-width="1.5"
-                                            stroke-miterlimit="10" />
-                                        <path
-                                            d="M24.0008 33.0002H31.1708C33.1058 33.0002 34.6208 31.3652 34.4858 29.4302L33.0008 9.00019M14.5208 9.57019L16.0808 3.0902M24.5708 9.5852L25.9808 3.0752M11.5508 18.0002H23.5508M10.0508 24.0002H22.0508"
-                                            stroke="#FF9E37" stroke-width="1.5"
-                                            stroke-miterlimit="10"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                    <span class="flex-1 ms-3 whitespace-nowrap">Update</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="delete.html"
-                                    class="flex items-center p-2 text-[#1A6E09] rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                    <svg
-                                        class="w-[30px] h-[30px] text-[#1A6E09]"
-                                        aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 18 20">
-                                        <path stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="0.9"
-                                            d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z" />
-                                    </svg>
-                                    <span class="flex-1 ms-3 whitespace-nowrap">Delete</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="signup.html"
-                                    class="flex items-center p-2  text-[#1A6E09] rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                    <svg
-                                        class="w-[27px] h-[27px] text-[#1A6E09]"
-                                        aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 20 18">
-                                        <path stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="0.9"
-                                            d="M4.109 17H1v-2a4 4 0 0 1 4-4h.87M10 4.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm7.95 2.55a2 2 0 0 1 0 2.829l-6.364 6.364-3.536.707.707-3.536 6.364-6.364a2 2 0 0 1 2.829 0Z" />
-                                    </svg>
-                                    <span class="flex-1 ms-3 whitespace-nowrap">Sign
-                                        Up</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="login.html"
-                                    class="flex items-center p-2 text-[#1A6E09] rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                    <svg
-                                        class="w-[27px] h-[27px] text-[#1A6E09] dark:text-white"
-                                        aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 18 15">
-                                        <path stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="0.9"
-                                            d="M1 7.5h11m0 0L8 3.786M12 7.5l-4 3.714M12 1h3c.53 0 1.04.196 1.414.544.375.348.586.82.586 1.313v9.286c0 .492-.21.965-.586 1.313A2.081 2.081 0 0 1 15 14h-3" />
-                                    </svg>
-                                    <span class="flex-1 ms-3 whitespace-nowrap">Sign
-                                        In</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </aside>
-
-                <div class="flex w-full  relative">
-                    <nav
-                        class="fixed top-0 z-50 border-b bg-[#f5f5f5] w-[1020px] ">
-                        <div class="px-3 py-3  md:pl-0">
-                            <div class="flex items-center justify-between">
-                                <div
-                                    class="flex items-center justify-start rtl:justify-end">
-                                    <button data-drawer-target="logo-sidebar"
-                                        data-drawer-toggle="logo-sidebar"
-                                        aria-controls="logo-sidebar"
-                                        type="button"
-                                        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-                                        <span class="sr-only">Open sidebar</span>
-                                        <svg class="w-6 h-6" aria-hidden="true"
-                                            fill="currentColor"
-                                            viewBox="0 0 20 20"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path clip-rule="evenodd"
-                                                fill-rule="evenodd"
-                                                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
-                                        </svg>
+        <main>
+            <nav
+                class="fixed top-0 z-50 w-full bg-white border-b border-gray-200  ">
+                <div class="px-3  lg:px-5 lg:pl-3">
+                    <div class="flex items-center justify-between xl:p-0">
+                        <div
+                            class="flex items-center justify-start rtl:justify-end ">
+                            <button data-drawer-target="logo-sidebar"
+                                data-drawer-toggle="logo-sidebar"
+                                aria-controls="logo-sidebar" type="button"
+                                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 ">
+                                <span class="sr-only">Open sidebar</span>
+                                <svg class="w-6 h-6" aria-hidden="true"
+                                    fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path clip-rule="evenodd"
+                                        fill-rule="evenodd"
+                                        d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+                                </svg>
+                            </button>
+                            <a href="/src/index.html"
+                                class="flex ms-[-10px] md:me-24">
+                                <img src="/Img/logo.png"
+                                    class="h-[100px] me-3"
+                                    alt="khmer-mart-logo" />
+                            </a>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="flex items-center ms-3">
+                                <div>
+                                    <button type="button" class="flex text-sm  rounded-full " aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                                      <span class="sr-only">Open user menu</span>
+                                      <img class="w-10 h-10 rounded-full" src="/Img/Sokcheat_pic.png" alt="user photo">
                                     </button>
-                                    <div
-                            
-                                class="flex items-center justify-end flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4  dark:bg-gray-900 md:py-2 mb-5">
-                                <label for="table-search" class="sr-only">Search</label>
-                                <div class="relative">
-                                    <div
-                                        class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
-                                        <svg
-                                            class="w-4 h-4 text-gray-500 dark:text-gray-400"
-                                            aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none" viewBox="0 0 20 20">
-                                            <path stroke="currentColor"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="2"
-                                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                                        </svg>
+                                  </div>
+                                  <div class="px-4 py-3" role="none">
+                                    <p class="text-sm text-gray-700 font-semibold" role="none">
+                                      Sokcheat Srorng
+                                    </p>
+                                    <p class="text-sm font-inter text-gray-500 hover:text-[#1A6E09]  cursor-pointer" role="none">
+                                     sokcheatsrorng@gmail.com
+                                    </p>
+                                  </div>
+                                  <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow " id="dropdown-user">
+                                    <div class="px-4 py-3" role="none">
+                                      <p class="text-sm text-gray-900 " role="none">
+                                        Sokcheat Srorng
+                                      </p>
+                                      <p class="text-sm font-medium text-gray-900 truncate " role="none">
+                                       sokcheatsrorng@gmail.com
+                                      </p>
                                     </div>
-                                    <input type="text" id="table-search-products"
-                                        class="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 h-10 focus:ring-[#1A6E09] focus:outline-[#1A6E09] "
-                                        placeholder="Search for Product Code">
-                                </div>
-                            </div>
-                                </div>
-                                <div class="flex items-center">
-                                    <div class="flex items-center">
-                                        <div class="px-6">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="13" height="12"
-                                                viewBox="0 0 13 12" fill="none"
-                                                class="absolute ms-4">
-                                                <circle cx="6.25" cy="6" r="4.5"
-                                                    fill="#FF0000"
-                                                    stroke="#F5F5F5"
-                                                    stroke-width="3" />
-                                            </svg>
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="30" height="30"
-                                                viewBox="0 0 36 36" fill="none">
-                                                <path
-                                                    d="M18.0299 4.36523C13.0649 4.36523 9.02989 8.40023 9.02989 13.3652V17.7002C9.02989 18.6152 8.63989 20.0102 8.17489 20.7902L6.44989 23.6552C5.38489 25.4252 6.11989 27.3902 8.06989 28.0502C14.5349 30.2102 21.5099 30.2102 27.9749 28.0502C29.7899 27.4502 30.5849 25.3052 29.5949 23.6552L27.8699 20.7902C27.4199 20.0102 27.0299 18.6152 27.0299 17.7002V13.3652C27.0299 8.41523 22.9799 4.36523 18.0299 4.36523Z"
-                                                    stroke="#1A6E09"
-                                                    stroke-width="1.5"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round" />
-
-                                                <path
-                                                    d="M20.8049 4.80016C18.9909 4.28354 17.0688 4.28354 15.2549 4.80016C15.6899 3.69016 16.7699 2.91016 18.0299 2.91016C19.2899 2.91016 20.3699 3.69016 20.8049 4.80016Z"
-                                                    stroke="#1A6E09"
-                                                    stroke-width="1.5"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M22.5303 28.5898C22.5303 31.0648 20.5053 33.0898 18.0303 33.0898C16.8003 33.0898 15.6603 32.5798 14.8503 31.7698C14.0075 30.9258 13.533 29.7826 13.5303 28.5898"
-                                                    stroke="#1A6E09"
-                                                    stroke-width="1.5"
-                                                    stroke-miterlimit="10" />
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <button type="button"
-                                                class="flex text-sm  rounded-full "
-                                                aria-expanded="false"
-                                                data-dropdown-toggle="dropdown-user">
-                                                <span class="sr-only">Open user
-                                                    menu</span>
-                                                <img
-                                                    class="w-10 h-10 rounded-full"
-                                                    src="/khmer-mart/Img/Sokcheat_pic.png"
-                                                    alt="user photo">
-                                            </button>
-                                        </div>
-                                        <div class="px-4 py-3" role="none">
-                                            <p
-                                                class="text-sm text-gray-700 font-semibold"
-                                                role="none">
-                                                Sokcheat Srorng
-                                            </p>
-                                            <p
-                                                class="text-sm font-inter text-gray-300 hover:text-[#1A6E09]  cursor-pointer"
-                                                role="none">
-                                                sokcheatsrorng@gmail.com
-                                            </p>
-                                        </div>
-
-                                        <div
-                                            class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
-                                            id="dropdown-user">
-                                            <div class="px-4 py-3" role="none">
-                                                <p
-                                                    class="text-sm text-gray-900 dark:text-white"
-                                                    role="none">
-                                                    Sokcheat Srorng
-                                                </p>
-                                                <p
-                                                    class="text-sm font-medium text-gray-900 truncate dark:text-gray-300"
-                                                    role="none">
-                                                    sokcheatsrorng@gmail.com
-                                                </p>
-                                            </div>
-                                            <ul class="py-1" role="none">
-                                                <li>
-                                                    <a href="#"
-                                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                                        role="menuitem">Dashboard</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                                        role="menuitem">Settings</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                                        role="menuitem">Sign out</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                    <ul class="py-1" role="none">
+                                      <li>
+                                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 " role="menuitem">Dashboard</a>
+                                      </li>
+                                      <li>
+                                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 " role="menuitem">Sign Up</a>
+                                      </li>
+                                      <li>
+                                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 " role="menuitem">Sign out</a>
+                                      </li>
+                                    </ul>
+                                  </div>
                             </div>
                         </div>
-                    </nav>
-                    <!-- table create data -->
-                    <div class="w-full mt-28 h-[840px] bg-white rounded-lg">
-                        <!-- display form for create products -->
-                        <div
-                            class="flex w-full px-4  overflow-y-hidden justify-between mt-5">
-                            <span>
-                             Update Discount Products
-                            </span>
-                            <!-- btn save and create -->
-                            <div class="flex justify-end items-center">
-                                <button type="button"
-                                    class="focus:outline-none text-white bg-[#1A6E09] font-inter rounded-lg text-sm px-5 py-1.5 me-2 mb-2 flex ">Save
-                                    and Update Another</button>
-                                <button type="button"
-                                    class="focus:outline-none text-white bg-[#1A6E09] font-inter rounded-lg text-sm px-5 py-1.5 me-2 mb-2 flex ">Save</button>
-                            </div>
-
-                        </div>
-                        <!-- form input -->
-                        <hr class="px-4 mt-5 flex ms-5 me-5">
-                        <!-- input product name -->
-                        <div
-                            class="flex w-full px-4  overflow-y-hidden justify-wrap mt-5 gap-20">
-                            <label for="Product Name"
-                                class="font-semibold text-[#1A6E09]"> Product
-                                Name</label>
-                            <input type="text" id="base-input"
-                                class=" border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[500px] p-2.5 focus:outline-none">
-                        </div>
-
-                        <hr class="px-4 mt-5 flex ms-5 me-5">
-                        <!-- input product Description -->
-                        <div
-                            class="flex w-full px-4  overflow-y-hidden justify-wrap mt-5 gap-[100px]">
-                            <label for="Description"
-                                class="font-semibold text-[#1A6E09]">Description</label>
-                            <textarea id="message" rows="4"
-                                class=" px-5 block p-2.5 w-[500px] text-sm text-gray-900  rounded-lg border border-[#1A6E09] focus:outline-none "
-                                placeholder="Enter Description..."></textarea>
-                        </div>
-
-                        <hr class="px-4 mt-5 flex ms-5 me-5">
-                        <!-- Choose Discount Type -->
-                        <div
-                            class="flex w-full px-4  overflow-y-hidden justify-wrap mt-5 gap-20">
-                            <label for="Discount Type"
-                                class="font-semibold text-[#1A6E09]"> Discount
-                                Type</label>
-                            <div class="flex gap-5">
-                                
-                            <button class=" focus:border-[#FF9E37] border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[100px] h-[70px] p-2 focus:outline-none items-center">
-                                <img src="/admin/images/Trending.png" alt="trending" class="mx-auto">
-                                Trending
-                            </button>
-                            <button class=" border focus:border-[#FF9E37] border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[100px] h-[70px] p-2 focus:outline-none items-center">
-                                <img src="/admin/images/Flash Sale.png" alt="flashsale" class="mx-auto">
-                                FlashSale
-                            </button>
-                            <button class=" border focus:border-[#FF9E37] border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[100px] h-[70px] p-2 focus:outline-none items-center">
-                                <img src="/admin/images/coupon.png" alt="coupon" class="mx-auto">
-                                Coupon
-                            </button>
-                            <button class=" border focus:border-[#FF9E37] border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[100px] h-[70px] p-2 focus:outline-none items-center">
-                                <img src="/admin/images/b1g1.png" alt="buy1get1" class="mx-auto">
-                                Buy 1 Get 1
-                            </button>
-                            <button class=" border focus:border-[#FF9E37] border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[100px] h-[70px] p-2 focus:outline-none items-center">
-                                <img src="/admin/images/Event.png" alt="Event" class="mx-auto">
-                                Event
-                            </button>
-                            </div>
-
-                        </div>
-
-                        <hr class="px-4 mt-5 flex ms-5 me-5">
-                        <!-- Input Original Price -->
-                        <div
-                            class="flex w-full px-4  overflow-y-hidden justify-wrap mt-5 gap-[88px]">
-                            <label for="Original Price"
-                                class="font-semibold text-[#1A6E09]"> Original
-                                Price</label>
-                            <input type="number" id="base-input"
-                                class=" border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[500px] p-2.5 focus:outline-none">
-                        </div>
-
-                        <hr class="px-4 mt-5 flex ms-5 me-5">
-                        <!-- Input Discount Price -->
-                        <div
-                            class="flex w-full px-4  overflow-y-hidden justify-wrap mt-5 gap-[84px]">
-                            <label for="Discount Price"
-                                class="font-semibold text-[#1A6E09]"> Discount
-                                Price</label>
-                            <input type="number" id="base-input"
-                                class=" border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[500px] p-2.5 focus:outline-none">
-                        </div>
-
-                        <hr class="px-4 mt-5 flex ms-5 me-5">
-                        <!-- Dropdown Category -->
-                        <div
-                            class="flex w-full px-4  overflow-y-hidden justify-wrap mt-5 gap-[120px]">
-                            <label for="Category"
-                                class="font-semibold text-[#1A6E09]"> Category</label>
-                             <select id="dropdown" name="fruit" class=" border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[500px] p-2.5 focus:outline-none">
-                                  <option value="food">Food</option>
-                                  <option value="drink">Drink</option>
-                                  <option value="electronic">Electronic</option>
-                                  <option value="cosmetic">Cosmetic</option>
-                                  <option value="cloth">Cloth</option>
-                                  <option value="plant">Plant</option>
-                              </select>
-                                
-                            
-                        </div>
-
-                        <hr class="px-4 mt-5 flex ms-5 me-5">
-                        <!-- Discount Date -->
-                        <div
-                            class="flex w-full px-4  overflow-y-hidden justify-wrap mt-5 gap-[84px]">
-                            <label for="Discount Date"
-                                class="font-semibold text-[#1A6E09]">Discount
-                                Date</label>
-                            <input type="datetime-local" id="base-input"
-                                class=" border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[500px] p-2.5 focus:outline-none">
-                        </div>
-                        <hr class="px-4 mt-5 flex ms-5 me-5">
-                        <!-- Input Product Image -->
-                        <div
-                            class="flex w-full px-4  overflow-y-hidden justify-wrap mt-5 gap-20">
-                            <label for="Product Image"
-                                class="font-semibold text-[#1A6E09]"> Product
-                                Image</label>
-                            <input type="file" id="base-input"
-                                class=" border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[500px] p-2.5 focus:outline-none">
-                        </div>
-
-                    </div>
-                    <div class="bg-red-700">
-
                     </div>
                 </div>
+            </nav>
+            <aside id="logo-sidebar"
+                class="fixed top-10 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 "
+                aria-label="Sidebar">
+                <div
+                    class="h-full px-3 pb-4 overflow-y-auto bg-white ">
+                    <ul class="space-y-2 font-medium">
+                        <li>
+                            <a href="home.html"
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100  group">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="30" height="30"
+                                    viewBox="0 0 36 36" fill="none">
+                                    <path
+                                        d="M15.1059 4.22977L4.71089 12.5548C3.54089 13.4848 2.79089 15.4498 3.04589 16.9198L5.04089 28.8598C5.40089 30.9898 7.44089 32.7148 9.60089 32.7148H26.4009C28.5459 32.7148 30.6009 30.9748 30.9609 28.8598L32.9559 16.9198C33.1959 15.4498 32.4459 13.4848 31.2909 12.5548L20.8959 4.24477C19.2909 2.95477 16.6959 2.95477 15.1059 4.22977Z"
+                                        stroke="#1A6E09" stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M18 23.25C18.9946 23.25 19.9484 22.8549 20.6517 22.1517C21.3549 21.4484 21.75 20.4946 21.75 19.5C21.75 18.5054 21.3549 17.5516 20.6517 16.8483C19.9484 16.1451 18.9946 15.75 18 15.75C17.0054 15.75 16.0516 16.1451 15.3483 16.8483C14.6451 17.5516 14.25 18.5054 14.25 19.5C14.25 20.4946 14.6451 21.4484 15.3483 22.1517C16.0516 22.8549 17.0054 23.25 18 23.25Z"
+                                        stroke="#1A6E09" stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span class="ms-3 font-inter text-[#1A6E09]">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="create.html"
+                                class="flex items-center p-2 text-[#1A6E09] rounded-lg  hover:bg-gray-100  group">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="30" height="30"
+                                    viewBox="0 0 36 36" fill="none">
+                                    <path
+                                        d="M25.4552 21.66C27.5102 22.005 29.7752 21.645 31.3652 20.58C33.4802 19.17 33.4802 16.86 31.3652 15.45C29.7602 14.385 27.4652 14.025 25.4102 14.385M10.5002 21.66C8.44516 22.005 6.18016 21.645 4.59016 20.58C2.47516 19.17 2.47516 16.86 4.59016 15.45C6.19516 14.385 8.49016 14.025 10.5452 14.385M27.0002 10.74C26.9058 10.725 26.8096 10.725 26.7152 10.74C25.7141 10.7038 24.7663 10.2798 24.0722 9.55764C23.378 8.83547 22.9918 7.8717 22.9952 6.87C22.9952 4.725 24.7202 3 26.8652 3C27.8915 3 28.8759 3.40773 29.6017 4.1335C30.3274 4.85926 30.7352 5.84361 30.7352 6.87C30.7324 7.87241 30.3422 8.83493 29.646 9.55622C28.9499 10.2775 28.0018 10.7017 27.0002 10.74ZM8.95516 10.74C9.04516 10.725 9.15016 10.725 9.24016 10.74C10.2412 10.7038 11.189 10.2798 11.8831 9.55764C12.5773 8.83547 12.9635 7.8717 12.9602 6.87C12.9602 4.725 11.2352 3 9.09016 3C8.06377 3 7.07942 3.40773 6.35365 4.1335C5.62789 4.85926 5.22016 5.84361 5.22016 6.87C5.23516 8.97 6.88516 10.665 8.95516 10.74ZM18.0002 21.945C17.9058 21.93 17.8096 21.93 17.7152 21.945C16.7141 21.9088 15.7663 21.4848 15.0722 20.7626C14.378 20.0405 13.9918 19.0767 13.9952 18.075C13.9952 15.93 15.7202 14.205 17.8652 14.205C18.8915 14.205 19.8759 14.6127 20.6017 15.3385C21.3274 16.0643 21.7352 17.0486 21.7352 18.075C21.7202 20.175 20.0702 21.885 18.0002 21.945ZM13.6352 26.67C11.5202 28.08 11.5202 30.39 13.6352 31.8C16.0352 33.405 19.9652 33.405 22.3652 31.8C24.4802 30.39 24.4802 28.08 22.3652 26.67C19.9802 25.08 16.0352 25.08 13.6352 26.67Z"
+                                        stroke="#1A6E09" stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span class="flex-1 ms-3 whitespace-nowrap">Create</span>
 
-            </section>
-            <br><br><br><br><br><br><br><br>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="read.html"
+                                class="flex items-center p-2 text-[#1A6E09] rounded-lg  hover:bg-gray-100  group">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="30" height="30"
+                                    viewBox="0 0 36 36" fill="none">
+                                    <path
+                                        d="M4.5 33H31.5M8.4 12.57H6C5.175 12.57 4.5 13.245 4.5 14.07V27C4.5 27.825 5.175 28.5 6 28.5H8.4C9.225 28.5 9.9 27.825 9.9 27V14.07C9.9 13.245 9.225 12.57 8.4 12.57ZM19.2 7.785H16.8C15.975 7.785 15.3 8.46 15.3 9.285V27C15.3 27.825 15.975 28.5 16.8 28.5H19.2C20.025 28.5 20.7 27.825 20.7 27V9.285C20.7 8.46 20.025 7.785 19.2 7.785ZM30 3H27.6C26.775 3 26.1 3.675 26.1 4.5V27C26.1 27.825 26.775 28.5 27.6 28.5H30C30.825 28.5 31.5 27.825 31.5 27V4.5C31.5 3.675 30.825 3 30 3Z"
+                                        stroke="#1A6E09" stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span class="flex-1 ms-3 whitespace-nowrap">Overview</span>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="update.html"
+                                class="flex items-center p-2 text-[#FF9E37] rounded-lg  hover:bg-gray-100  group">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="30" height="30"
+                                    viewBox="0 0 36 36" fill="none">
+                                    <path
+                                        d="M32.8957 10.1399L27.8407 30.4349C27.6653 31.1689 27.2466 31.8218 26.6529 32.2875C26.0592 32.7533 25.3253 33.0044 24.5707 32.9999H4.8607C2.5957 32.9999 0.975705 30.7799 1.6507 28.6049L7.96571 8.32494C8.17672 7.63719 8.60197 7.03486 9.17943 6.60581C9.75688 6.17677 10.4563 5.94347 11.1757 5.93994H29.6257C31.0507 5.93994 32.2357 6.80994 32.7307 8.00994C33.0157 8.65494 33.0757 9.38994 32.8957 10.1399Z"
+                                        stroke="#FF9E37" stroke-width="1.5"
+                                        stroke-miterlimit="10" />
+                                    <path
+                                        d="M24.0008 33.0002H31.1708C33.1058 33.0002 34.6208 31.3652 34.4858 29.4302L33.0008 9.00019M14.5208 9.57019L16.0808 3.0902M24.5708 9.5852L25.9808 3.0752M11.5508 18.0002H23.5508M10.0508 24.0002H22.0508"
+                                        stroke="#FF9E37" stroke-width="1.5"
+                                        stroke-miterlimit="10"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span class="flex-1 ms-3 whitespace-nowrap">Update</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="delete.html"
+                                class="flex items-center p-2 text-[#1A6E09] rounded-lg  hover:bg-gray-100  group">
+                                <svg
+                                    class="w-[30px] h-[30px] text-[#1A6E09]"
+                                    aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 18 20">
+                                    <path stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="0.9"
+                                        d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z" />
+                                </svg>
+                                <span class="flex-1 ms-3 whitespace-nowrap">Delete</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="signup.html"
+                                class="flex items-center p-2 text-[#1A6E09] rounded-lg  hover:bg-gray-100  group">
+                                <svg class="w-[27px] h-[27px] text-[#1A6E09]"
+                                    aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 20 18">
+                                    <path stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="0.9"
+                                        d="M4.109 17H1v-2a4 4 0 0 1 4-4h.87M10 4.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm7.95 2.55a2 2 0 0 1 0 2.829l-6.364 6.364-3.536.707.707-3.536 6.364-6.364a2 2 0 0 1 2.829 0Z" />
+                                </svg>
+                                <span class="flex-1 ms-3 whitespace-nowrap">Sign
+                                    Up</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="login.html"
+                                class="flex items-center p-2 text-[#1A6E09] rounded-lg  hover:bg-gray-100  group">
+                                <svg
+                                    class="w-[27px] h-[27px] text-[#1A6E09] "
+                                    aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 18 15">
+                                    <path stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="0.9"
+                                        d="M1 7.5h11m0 0L8 3.786M12 7.5l-4 3.714M12 1h3c.53 0 1.04.196 1.414.544.375.348.586.82.586 1.313v9.286c0 .492-.21.965-.586 1.313A2.081 2.081 0 0 1 15 14h-3" />
+                                </svg>
+                                <span
+                                    class="flex-1 ms-3 whitespace-nowrap text-[#1A6E09]">Sign
+                                    In</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="p-4 sm:ml-64 mt-28">
+                 <!-- search product code to update -->
+                 <div class="relative mt-5">
+                    <div
+                        class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg
+                            class="w-4 h-4 text-gray-500 "
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                    </div>
+                    <input type="text" id="table-search-products"
+                        class="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 h-10 focus:ring-[#1A6E09] focus:outline-[#1A6E09] "
+                        placeholder="Search for Product Code or category">
+                </div>
+                <div class="w-full  h-[840px] bg-white rounded-lg">
+                   
+                    <!-- display form for create products -->
+                    <div
+                        class="flex w-full px-4  py-5 overflow-y-hidden justify-between mt-5">
+                        <span class="text-2xl">
+                            Update Discount Products
+                        </span>
+                        <!-- btn save and create -->
+                        <div class="flex justify-end items-center">
+                            <button type="button"
+                                class="focus:outline-none text-white bg-[#1A6E09] font-inter rounded-lg text-sm px-5 py-2 me-2 mb-2 flex ">Save
+                                and Update Another</button>
+                            <button type="button"
+                                class="focus:outline-none text-white bg-[#1A6E09] font-inter rounded-lg text-sm px-5 py-2 me-2 mb-2 flex ">Save</button>
+                        </div>
+    
+                    </div>
+                    <!-- form input -->
+                    <hr class="px-4 mt-2 flex ms-5 me-5">
+                    <!-- input product name -->
+                    <div
+                        class="flex w-full px-4  overflow-y-hidden justify-wrap mt-5 gap-20">
+                        <label for="Product Name"
+                            class="font-semibold text-[#1A6E09]"> 
+                            Product
+                            Name</label>
+                        <input type="text" id="base-input title"
+                            class=" border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[500px] p-2.5 focus:outline-none">
+                    </div>
+    
+                    <hr class="px-4 mt-5 flex ms-5 me-5">
+                    <!-- input product Description -->
+                    <div
+                        class="flex w-full px-4  overflow-y-hidden justify-wrap mt-5 gap-[100px]">
+                        <label for="Description"
+                            class="font-semibold text-[#1A6E09]">Description</label>
+                        <textarea id="message Description" rows="4"
+                            class=" px-5 block p-2.5 w-[500px] text-sm text-gray-900  rounded-lg border border-[#1A6E09] focus:outline-none "
+                            placeholder="Enter Description..."></textarea>
+                    </div>
+    
+                    <hr class="px-4 mt-5 flex ms-5 me-5">
+                    <!-- Choose Discount Type -->
+                    <div
+                        class="flex w-full px-4  overflow-y-hidden justify-wrap mt-5 gap-20">
+                        <label for="Discount Type"
+                            class="font-semibold text-[#1A6E09]"> Discount
+                            Type</label>
+                        <div class="flex gap-5">
+    
+                            <button
+                                class=" focus:border-[#FF9E37] border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[100px] h-[70px] p-2 focus:outline-none items-center"
+                                id="trending">
+                                <img src="/admin/images/Trending.png"
+                                    alt="trending" class="mx-auto">
+                                Trending
+                            </button>
+                            <button
+                                class=" border focus:border-[#FF9E37] border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[100px] h-[70px] p-2 focus:outline-none items-center"
+                                id="flashsale">
+                                <img src="/admin/images/Flash Sale.png"
+                                    alt="flashsale" class="mx-auto">
+                                FlashSale
+                            </button>
+                            <button
+                                class=" border focus:border-[#FF9E37] border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[100px] h-[70px] p-2 focus:outline-none items-center"
+                                id="coupon">
+                                <img src="/admin/images/coupon.png" alt="coupon"
+                                    class="mx-auto">
+                                Coupon
+                            </button>
+                            <button
+                                class=" border focus:border-[#FF9E37] border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[100px] h-[70px] p-2 focus:outline-none items-center"
+                                id="buy1get1">
+                                <img src="/admin/images/b1g1.png" alt="buy1get1"
+                                    class="mx-auto">
+                                Buy 1 Get 1
+                            </button>
+                            <button
+                                class=" border focus:border-[#FF9E37] border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[100px] h-[70px] p-2 focus:outline-none items-center"
+                                id="event">
+                                <img src="/admin/images/Event.png" alt="Event"
+                                    class="mx-auto">
+                                Event
+                            </button>
+                        </div>
+    
+                    </div>
+    
+                    <hr class="px-4 mt-5 flex ms-5 me-5">
+                    <!-- Input Original Price -->
+                    <div
+                        class="flex w-full px-4  overflow-y-hidden justify-wrap mt-5 gap-[88px]">
+                        <label for="Original Price"
+                            class="font-semibold text-[#1A6E09]"> Original
+                            Price</label>
+                        <input type="number" id="base-input originalPrice"
+                            class=" border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[500px] p-2.5 focus:outline-none">
+                    </div>
+    
+                    <hr class="px-4 mt-5 flex ms-5 me-5">
+                    <!-- Input Discount Price -->
+                    <div
+                        class="flex w-full px-4  overflow-y-hidden justify-wrap mt-5 gap-[84px]">
+                        <label for="Discount Price"
+                            class="font-semibold text-[#1A6E09]"> Discount
+                            Price</label>
+                        <input type="number" id="base-input discountPrice"
+                            class=" border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[500px] p-2.5 focus:outline-none">
+                    </div>
+    
+                    <hr class="px-4 mt-5 flex ms-5 me-5">
+                    <!-- Dropdown Category -->
+                    <div
+                        class="flex w-full px-4  overflow-y-hidden justify-wrap mt-5 gap-[120px]">
+                        <label for="Category"
+                            class="font-semibold text-[#1A6E09]"> Category</label>
+                        <select id="dropdown" name="fruit"
+                            class=" border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[500px] p-2.5 focus:outline-none">
+                            <option value="food">Food</option>
+                            <option value="drink">Drink</option>
+                            <option value="electronic">Electronic</option>
+                            <option value="cosmetic">Cosmetic</option>
+                            <option value="cloth">Cloth</option>
+                            <option value="plant">Plant</option>
+                        </select>
+    
+                    </div>
+    
+                    <hr class="px-4 mt-5 flex ms-5 me-5">
+                    <!-- Discount Date -->
+                    <div
+                        class="flex w-full px-4  overflow-y-hidden justify-wrap mt-5 gap-[84px]">
+                        <label for="Discount Date"
+                            class="font-semibold text-[#1A6E09]">Discount
+                            Date</label>
+                        <input type="datetime-local" id="base-input"
+                            class=" border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[500px] p-2.5 focus:outline-none">
+                    </div>
+                    <hr class="px-4 mt-5 flex ms-5 me-5">
+                    <!-- Input Product Image -->
+                    <div
+                        class="flex w-full px-4  overflow-y-hidden justify-wrap mt-5 gap-20">
+                        <label for="Product Image"
+                            class="font-semibold text-[#1A6E09]"> Product
+                            Image</label>
+                        <input type="file" id="base-input"
+                            class=" border border-[#1A6E09] text-gray-900 text-sm rounded-lg block w-[500px] p-2.5 focus:outline-none">
+                    </div>
+    
+                </div>
+               
+            </div>
+        </div>
+           
 
         </main>
 
-    </body>
 
+    </body>
+    
     <!-- flowbite cdn -->
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js">

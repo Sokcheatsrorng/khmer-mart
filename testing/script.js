@@ -1,50 +1,38 @@
-const nameElement = document.querySelector('#name');
-const priceElement = document.querySelector('#price');
-const discountElement = document.querySelector('#discount');
-const ratingElement = document.querySelector('#rating');
-const typeElement = document.querySelector('#type');
-const categoryElement = document.querySelector('#category');
-const imageElement = document.querySelector('#image');
+// Input products
+const nameElement = document.querySelector("#name");
+const priceElement = document.querySelector("#price");
+const discountElement = document.querySelector("#discount");
+const ratingElement = document.querySelector("#rating");
+const typeElement = document.querySelector("#type");
+const categoryElement = document.querySelector("#category");
+const imageElement = document.querySelector("#image");
 
 function createProduct() {
-  const name = nameElement.value;
-  const price = Number(priceElement.value);
-  const discount = Number(discountElement.value);
-  const rating = Number(ratingElement.value);
-  const type = typeElement.value;
-  let category = categoryElement.value;
-  const image = imageElement.value;
+  const myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
 
+  // Get values of product
   const product = {
-    name,
-    price,
-    discount,
-    rating,
-    type,
-    category,
-    image,
+    name: nameElement.value,
+    price: Number(priceElement.value),
+    discount: Number(discountElement.value),
+    rating: Number(ratingElement.value),
+    type: typeElement.value,
+    category: categoryElement.value,
+    image: imageElement.value,
   };
 
-  console.log(product);
+  const raw = JSON.stringify({
+    data: product, 
+  });
 
-  fetch('https://cms.istad.co/api/km-products', {
+  fetch("https://cms.istad.co/api/km-products",{
     method: 'POST',
-    body: JSON.stringify(product),
-    headers: {
-      'Content-Type': 'application/json',
-    },
+    headers: myHeaders,
+    body: raw
   })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then(responseData => {
-      const createdProduct = responseData.data;
-      console.log('Product created successfully:', createdProduct);
-    })
-    .catch(error => {
-      console.error('Error creating product:', error);
-    });
+    .then(response => response.json())
+    .then(result => {console.log(result.data)
+     alert("You have created new discount product!")})
+    .catch(error => console.log('error', error));
 }

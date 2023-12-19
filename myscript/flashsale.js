@@ -199,7 +199,7 @@ $(document).on("click", "#btnaddtoFav", function () {
 fetch("/jsondata/flashsale.json")
   .then((res) => res.json())
   .then((data) => {
-    const foodCardContainer = document.getElementById("foodsDisplayCard");
+    const foodCardContainer = document.getElementById("foodsDisplayCard1");
     const drinkCardContainer = document.getElementById("drinksDisplayCard");
     const electronicCardContainer = document.getElementById(
       "electronicsDisplayCard"

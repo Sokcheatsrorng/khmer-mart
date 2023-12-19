@@ -15,7 +15,7 @@ const buy1Get1Card = ({ title, price, images, rating, stars }) => {
                     <!-- Cart -->
                     <div class=" w-full h-[320px] max-w-sm md:w-[310px] bg-white rounded-xl relative">
                         <div>
-                            <img class=" absolute mx-1  mt-1 h-24 " src="/khmer-mart/Img/b1g1/Logobuy1get1.jpg" alt="">
+                            <img class=" absolute mx-1  mt-1 h-24 " src="/Img/b1g1/Logobuy1get1.jpg" alt="">
                             <img class=" rounded-t-lg" src="${images}" alt="buy one get one img"/>
                         </div>
                         <div class="px-5 mt-0">
