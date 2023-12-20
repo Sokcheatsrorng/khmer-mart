@@ -41,10 +41,10 @@ const createPaginationButton = (text, isEnabled) => {
 };
 
 // Function to fetch data based on page number
-const fetchData = async (page) => {
+const fetchData = async (productId) => {
   try {
     const response = await fetch(
-      `https://cms.istad.co/api/km-products?populate=*&pagination%5Bpage%5D=${page}`,
+      `https://cms.istad.co/api/km-products`,
       { method: "GET" }
     );
     if (!response.ok) {
@@ -61,16 +61,11 @@ const fetchData = async (page) => {
       tableBody.insertAdjacentHTML("beforeend", cardHtml);
     });
 
-    // Update the current page
-    currentPage = page;
-
-    // Assuming 'meta' is the pagination metadata
-    const { pageCount } = result.meta.pagination;
-    renderPagination(pageCount);
   } catch (error) {
     console.error("Error fetching products:", error);
   }
 };
+const searchElement = document.querySelector("#search");
 
 // Replace this function with your actual implementation
 const renderStars = (rating) => {
@@ -138,8 +133,17 @@ const renderCard = ({id, attributes }) => {
               rating
             )}  <span class="text-sm ms-5 text-gray-400">${rating}</span>
             </td>
+            </td>
+            <td class="px-6 py-4 text-2xl text-[#FF9E37]">
+            <button type="button" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2" id="btnDelete">Delete</button>
+            </td>
+
         </tr>
     `;
 };
-// Initial fetch on page load
-fetchData(currentPage);
+
+
+const updateProductButton = document.getElementById("updateProductButton");
+updateProductButton.addEventListener("click", function () {
+  updateProduct(searchElement.value);
+});

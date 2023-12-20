@@ -229,11 +229,12 @@
                                 d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                         </svg>
                     </div>
-                    <input type="text" id="table-search-products"
+                    <input type="text" id="search"
                         class="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 h-10 focus:ring-[#1A6E09] focus:outline-[#1A6E09] "
                         placeholder="Search for Product Code or category">
                 </div>
                 <div class="w-full  h-[840px] bg-white rounded-lg">
+
                    
                     <!-- display form for create products -->
                     <div
@@ -244,28 +245,61 @@
                         <!-- btn save and create -->
                         <div class="flex justify-end items-center">
                             <button type="button"
-                                class="focus:outline-none text-white bg-[#1A6E09] font-inter rounded-lg text-sm px-5 py-2 me-2 mb-2 flex ">
-                                Delete Another</button>
+                                class="focus:outline-none text-white bg-[#1A6E09] font-inter rounded-lg text-sm px-5 py-2 me-2 mb-2 flex " id="getDeleteProduct">
+                                Get Delete Piscount</button>
                             <button type="button"
-                                class="focus:outline-none text-white bg-[#1A6E09] font-inter rounded-lg text-sm px-5 py-2 me-2 mb-2 flex ">Delete All</button>
+                                class="focus:outline-none text-white bg-[#1A6E09] font-inter rounded-lg text-sm px-5 py-2 me-2 mb-2 flex " id="deleteAll">Delete All</button>
                         </div>
     
                     </div>
+                    <div
+                    class=" overflow-x-auto md:rounded-xl md:py-5 w-full bg-white">
+                    <table
+                        class="w-full text-sm text-left rtl:text-right  rounded-xl bg-white">
+                        <thead
+                            class="text-xs  uppercase  text-[#1A6E09]">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">
+                                    Product Name
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Product id
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Original Price
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Discount Price
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Discount Type
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Category
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Rating
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+    
+                        </tbody>
+                    </table>
+                </div>
 
-                     
-                   
     
                 </div>
+                
                
             </div>
         </div>
            
 
         </main>
-
-
     </body>
-    
+    <!-- myscript -->
+    <script src="/admin/myscript/delete.js"></script>
     <!-- flowbite cdn -->
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js">

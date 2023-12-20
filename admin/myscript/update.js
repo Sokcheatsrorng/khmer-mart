@@ -1,11 +1,43 @@
-// Input products
 const nameElement = document.querySelector("#name");
+const descriptionElement = document.querySelector("#messageDescription");
 const priceElement = document.querySelector("#price");
 const discountElement = document.querySelector("#discount");
+const dropdown = document.getElementById("dropdown");
 const ratingElement = document.querySelector("#rating");
 const imageElement = document.querySelector("#image");
+const searchElement = document.querySelector("#search");
 
-// Type value
+// display data back when we search
+function populateForm(data) {
+  nameElement.value = data.name;
+  priceElement.value = data.price;
+  discountElement.value = data.discount;
+  dropdown.value = data.category;
+  ratingElement.value = data.rating;
+}
+
+function fetchProductById(productId) {
+  const myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+  fetch(`https://cms.istad.co/api/km-products/${productId}`, {
+    method: "GET",
+    headers: myHeaders,
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      const product = result.data.attributes;
+      populateForm(product);
+      console.log(product);
+    })
+    .catch((error) => console.log("error", error));
+}
+
+const fetchProductButton = document.getElementById("fetchProductButton");
+fetchProductButton.addEventListener("click", function () {
+  fetchProductById(searchElement.value);
+});
+
 let type = null;
 let selectedButton = null;
 
@@ -53,29 +85,14 @@ function resetBorder() {
 
 // get category from selected
 let category = 1;
-const dropdown = document.getElementById("dropdown");
 dropdown.addEventListener("change", (event) => {
   category = event.target.value;
 });
 
-function createProduct() {
+// Update data
+function updateProduct(productId) {
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
-
-  // Get values of product
-  const product = {
-    name: nameElement.value,
-    price: Number(priceElement.value),
-    discount: Number(discountElement.value),
-    rating: Number(ratingElement.value),
-    type: type,
-    category: category,
-    // image: imageElement.value,
-  };
-
-  const raw = JSON.stringify({
-    data: product,
-  });
 
   // Upload image
   const formdata = new FormData();
@@ -93,21 +110,33 @@ function createProduct() {
       const imageId = result[0].id; // Assuming the image ID is in the first element of the array
       console.log("Image ID:", imageId);
 
-      // Add image ID to the product data
-      product.image = imageId;
+      // Get values of product
+      const product = {
+        name: nameElement.value,
+        price: Number(priceElement.value),
+        discount: Number(discountElement.value),
+        rating: Number(ratingElement.value),
+        type: type,
+        category: category,
+        image: imageId,
+      };
 
-      // Create product after uploading the image
-      fetch("https://cms.istad.co/api/km-products", {
-        method: "POST",
+      // Update the product using PUT request, including the new image ID
+      return fetch(`https://cms.istad.co/api/km-products/${productId}`, {
+        method: "PUT",
         headers: myHeaders,
         body: JSON.stringify({ data: product }),
-      })
-        .then((response) => response.json())
-        .then((result) => {
-          console.log(result.data);
-          alert("You have created a new discount product!");
-        })
-        .catch((error) => console.log("error", error));
+      });
     })
-    .catch(error => console.log('error', error));
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result.data);
+      alert("Product updated successfully!");
+    })
+    .catch((error) => console.log("Error:", error));
 }
+
+const updateProductButton = document.getElementById("updateProductButton");
+updateProductButton.addEventListener("click", function () {
+  updateProduct(searchElement.value);
+});
