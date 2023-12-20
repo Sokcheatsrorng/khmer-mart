@@ -41,10 +41,10 @@ const createPaginationButton = (text, isEnabled) => {
 };
 
 // Function to fetch data based on page number
-const fetchData = async (productId) => {
+const fetchData = async (page) => {
   try {
     const response = await fetch(
-      `https://cms.istad.co/api/km-products`,
+      `https://cms.istad.co/api/km-products?populate=*&pagination%5Bpage%5D=${page}`,
       { method: "GET" }
     );
     if (!response.ok) {
@@ -61,11 +61,16 @@ const fetchData = async (productId) => {
       tableBody.insertAdjacentHTML("beforeend", cardHtml);
     });
 
+    // Update the current page
+    currentPage = page;
+
+    // Assuming 'meta' is the pagination metadata
+    const { pageCount } = result.meta.pagination;
+    renderPagination(pageCount);
   } catch (error) {
     console.error("Error fetching products:", error);
   }
 };
-const searchElement = document.querySelector("#search");
 
 // Replace this function with your actual implementation
 const renderStars = (rating) => {
@@ -95,17 +100,7 @@ const renderCard = ({id, attributes }) => {
 
   return `
         <tr class="bg-white border-b hover:bg-gray-50">
-            <td class="w-4 p-4">
-                <div class="flex items-center">
-                    <input
-                        id="checkbox-table-search-1"
-                        type="checkbox"
-                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-[#1A6E09] "
-                    >
-                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                </div>
-            </td>
-            <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap">
+            <th scope="row" class="flex items-center px-4 py-4 text-gray-900 whitespace-nowrap">
                 <div class="w-12 h-12 rounded-full overflow-hidden">
                 <img src="https://cms.istad.co${imageUrl}" alt="${imageName}" class="w-full h-full object-cover"/>
                 </div>
@@ -113,37 +108,62 @@ const renderCard = ({id, attributes }) => {
                     <div class="text-base font-semibold">${name}</div>
                 </div>
             </th>
-            <td class="px-6 py-4">
+            <td class="px-4 py-4">
             ${id}
         </td>
-            <td class="px-6 py-4">
+            <td class="px-4 py-4">
                 $${price}
             </td>
-            <td class="px-6 py-4">
+            <td class="px-4 py-4">
                 $${discount}
             </td>
-            <td class="px-6 py-4">
+            <td class="px-4 py-4">
                 ${typeName}
             </td>
-            <td class="px-6 py-4">
+            <td class="px-4 py-4">
             ${categoryName}
         </td>
-            <td class="px-6 py-4 text-2xl text-[#FF9E37]">
+            <td class="px-4 py-4 text-2xl text-[#FF9E37]">
             ${renderStars(
               rating
             )}  <span class="text-sm ms-5 text-gray-400">${rating}</span>
             </td>
+            <td class="px-4 py-4 text-2xl text-[#FF9E37]">
+            <button class="px-4 py-2 rounded-lg bg-red-600 text-[#FFFFFF] text-sm"  onclick="removeDataFromARow(${id},this)">Delete</button>
             </td>
-            <td class="px-6 py-4 text-2xl text-[#FF9E37]">
-            <button type="button" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2" id="btnDelete">Delete</button>
-            </td>
-
         </tr>
     `;
 };
+// Initial fetch on page load
+fetchData(currentPage);
+function removeDataFromARow(productId,button) {
+  const rowToRemove = button.closest('tr');
+  if (rowToRemove) {
+    // Send a DELETE request
+    fetch(`https://cms.istad.co/api/km-products/${productId}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Server response:', data);
+        // Remove the row from the UI after successful deletion
+        rowToRemove.parentNode.removeChild(rowToRemove);
+        alert(`You have deleted product id: ${productId}`);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }
+}
+
+// search product to delete 
+const searchIdDelete = document.querySelector('#search');
+const seachDelete = document.querySelector('#searchtoDelete');
+searchIdDelete.addEventListener('click',function(){
+  renderCard(searchIdDelete.value , attributes);
+})
 
 
-const updateProductButton = document.getElementById("updateProductButton");
-updateProductButton.addEventListener("click", function () {
-  updateProduct(searchElement.value);
-});

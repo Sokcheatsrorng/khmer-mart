@@ -113,12 +113,7 @@ function removeDataFromRows() {
 function removeDataFromARow(button) {
   const rowToRemove = button.closest('tr');
   if (rowToRemove) {
-    // Get the data associated with the row
-    //const rowData = getRowData(rowToRemove);
-     // Assuming you have a function to retrieve the data from the row
-    
-    // Send a request to the server to delete the corresponding data
-    fetch('/jsondata/addtoFav.json', {
+        fetch('/jsondata/addtoFav.json', {
       // method: 'POST', // Use POST instead of DELETE
        //body: JSON.stringify({ action: 'delete', data: rowData }),
        // Pass the data and an action in the request body
