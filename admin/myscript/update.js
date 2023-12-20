@@ -132,6 +132,7 @@ function updateProduct(productId) {
     .then((result) => {
       console.log(result.data);
       alert("Product updated successfully!");
+      window.location.reload();
     })
     .catch((error) => console.log("Error:", error));
 }

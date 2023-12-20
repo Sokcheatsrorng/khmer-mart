@@ -214,7 +214,7 @@
             </aside>
             <div class="p-4 sm:ml-64 mt-28">
                  <!-- search product code to update -->
-                 <div class="relative mt-5">
+                <div class="relative mt-5">
                     <div
                         class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
                         <svg
@@ -233,6 +233,11 @@
                         class="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 h-10 focus:ring-[#1A6E09] focus:outline-[#1A6E09] "
                         placeholder="Search for Product Code or category">
                 </div>
+                <div class="flex justify-end items-center">
+                    <button type="button"
+                        class="focus:outline-none text-white bg-[#1A6E09] font-inter rounded-lg text-sm px-5 py-2 me-2 mb-2 flex " id="searchtoDelete">Search</button>
+                </div>
+               
                 <div class="w-full  h-[840px] bg-white rounded-lg">
 
                    
@@ -241,38 +246,30 @@
                         class="flex w-full px-4  py-5 overflow-y-hidden justify-between mt-5">
                         <span class="text-2xl">
                            Delete Discount Products
-                        </span>
-                        <!-- btn save and create -->
-                        <div class="flex justify-end items-center">
-                            <button type="button"
-                                class="focus:outline-none text-white bg-[#1A6E09] font-inter rounded-lg text-sm px-5 py-2 me-2 mb-2 flex " id="getDeleteProduct">
-                                Get Delete Piscount</button>
-                            <button type="button"
-                                class="focus:outline-none text-white bg-[#1A6E09] font-inter rounded-lg text-sm px-5 py-2 me-2 mb-2 flex " id="deleteAll">Delete All</button>
-                        </div>
-    
+                        </span>    
+
                     </div>
                     <div
-                    class=" overflow-x-auto md:rounded-xl md:py-5 w-full bg-white">
-                    <table
+                        class=" overflow-x-auto md:rounded-xl md:py-5 w-full bg-white">
+                       <table
                         class="w-full text-sm text-left rtl:text-right  rounded-xl bg-white">
                         <thead
                             class="text-xs  uppercase  text-[#1A6E09]">
                             <tr>
                                 <th scope="col" class="px-6 py-3">
-                                    Product Name
+                                     Name
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-                                    Product id
+                                    id
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-                                    Original Price
+                                     Price
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-                                    Discount Price
+                                    Discount 
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-                                    Discount Type
+                                    Type
                                 </th>
                                 <th scope="col" class="px-6 py-3">
                                     Category
@@ -285,22 +282,53 @@
                         <tbody>
     
                         </tbody>
-                    </table>
+                       </table>
+                 </div>
+                  <!-- pagination -->
+                <nav>
+                    <ul
+                        class="flex -space-x-px text-sm items-center mt-5 justify-center" id="pagination">
+                        <li>
+                            <a href="#"
+                                class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 " id="pagination">Previous</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ">1</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ">2</a>
+                        </li>
+                        <li>
+                            <a href="#" aria-current="page"
+                                class="flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ">4</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ">5</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 ">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+                <br>
                 </div>
-
-    
-                </div>
-                
-               
             </div>
         </div>
-           
-
-        </main>
+        </main> 
     </body>
     <!-- myscript -->
     <script src="/admin/myscript/delete.js"></script>
     <!-- flowbite cdn -->
+    <!-- jquery script -->
+    <script src="/jquery/jquery.js"></script>
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js">
 </script>

@@ -106,6 +106,7 @@ function createProduct() {
         .then((result) => {
           console.log(result.data);
           alert("You have created a new discount product!");
+          window.location.reload();
         })
         .catch((error) => console.log("error", error));
     })
