@@ -41,9 +41,3 @@ products.forEach(pro =>{
     ;
 })
 trending.innerHTML = proItem;
-
-
-
-
-
-

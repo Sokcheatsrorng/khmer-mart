@@ -1,0 +1,16 @@
+
+{
+    "users": [
+      {"username": "sokcheat", "password": "cheat123"},
+      {"username": "Votey", "password": "tey123"}
+    ],
+    "userSignUp":[
+      {
+        "firstName" : " ",
+        "lastName" : " ",
+        "email": " ",
+        "password": " "
+      }
+    ]
+  }
+  
