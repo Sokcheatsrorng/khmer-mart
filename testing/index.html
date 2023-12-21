@@ -1,16 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Menu Cards</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display Data in Form</title>
+  <!-- Add your CSS styles here if needed -->
 </head>
 <body>
-  <h1>Food</h1>
-  <div id="foodCardContainer"></div>
 
-  <h1>Drinks</h1>
-  <div id="drinkCardContainer"></div>
+  <div>
+    <label for="id">Product ID:</label>
+    <input type="text" id="id" />
+  </div>
 
-  <script src="script.js"></script>
+  <div>
+    <label for="name">Product Name:</label>
+    <input type="text" id="name" />
+  </div>
+
+  <div>
+    <label for="messageDescription">Product Description:</label>
+    <textarea id="messageDescription"></textarea>
+  </div>
+
+  <div>
+    <label for="price">Product Price:</label>
+    <input type="number" id="price" />
+  </div>
+
+  <div>
+    <label for="discount">Product Discount:</label>
+    <input type="number" id="discount" />
+  </div>
+
+  <div>
+    <label for="dropdown">Product Category:</label>
+    <select id="dropdown">
+      <option value="5">Food</option>
+      <option value="6">Drink</option>
+      <option value="7">Electronic</option>
+      <option value="8">Cosmetic</option>
+      <option value="4">Cloth</option>
+      <option value="9">Plant</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="rating">Product Rating:</label>
+    <input type="number" id="rating" />
+  </div>
+
+  <div>
+    <label for="image">Product Image:</label>
+    <input type="text" id="image" />
+  </div>
+
+  <script>
+    // Function to populate form fields with data
+    function populateForm(data) {
+      document.getElementById("id").value = data.id;
+      document.getElementById("name").value = data.name;
+      document.getElementById("messageDescription").value = data.description;
+      document.getElementById("price").value = data.price;
+      document.getElementById("discount").value = data.discount;
+      document.getElementById("dropdown").value = data.category;
+      document.getElementById("rating").value = data.rating;
+      document.getElementById("image").value = data.image;
+      // Set values for other form fields based on your data object
+    }
+
+    // Sample product data
+    const productData = {
+      id: 1,
+      name: "Sample Product",
+      description: "Lorem ipsum dolor sit amet.",
+      price: 50,
+      discount: 10,
+      category: "7",
+      rating: 4.5,
+      image: "sample-image.jpg"
+    };
+
+    // Call the populateForm function with your productData
+    populateForm(productData);
+  </script>
+
 </body>
 </html>
