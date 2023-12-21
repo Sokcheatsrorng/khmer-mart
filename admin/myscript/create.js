@@ -5,6 +5,7 @@ const discountElement = document.querySelector("#discount");
 const ratingElement = document.querySelector("#rating");
 const imageElement = document.querySelector("#image");
 
+
 // Type value
 let type = null;
 let selectedButton = null;
@@ -82,14 +83,14 @@ function createProduct() {
   formdata.append("files", imageElement.files[0], "/path/to/file");
 
   const requestOptions = {
-    method: 'POST',
+    method: "POST",
     body: formdata,
-    redirect: 'follow',
+    redirect: "follow",
   };
 
   fetch("https://cms.istad.co/api/upload", requestOptions)
-    .then(response => response.json())
-    .then(result => {
+    .then((response) => response.json())
+    .then((result) => {
       const imageId = result[0].id; // Assuming the image ID is in the first element of the array
       console.log("Image ID:", imageId);
 
@@ -105,10 +106,10 @@ function createProduct() {
         .then((response) => response.json())
         .then((result) => {
           console.log(result.data);
-          alert("You have created a new discount product!");
+          alert('You have created new discount Product successfully!');
           window.location.reload();
         })
         .catch((error) => console.log("error", error));
     })
-    .catch(error => console.log('error', error));
+    .catch((error) => console.log("error", error));
 }

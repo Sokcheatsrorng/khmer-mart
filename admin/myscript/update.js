@@ -30,7 +30,10 @@ function fetchProductById(productId) {
       populateForm(product);
       console.log(product);
     })
-    .catch((error) => console.log("error", error));
+    .catch((error) => {
+      console.log("error", error);
+    alert("Product ID Not Found!!")
+    });
 }
 
 const fetchProductButton = document.getElementById("fetchProductButton");

@@ -100,6 +100,16 @@ const renderCard = ({id, attributes }) => {
 
   return `
         <tr class="bg-white border-b hover:bg-gray-50">
+            <td class="w-4 p-4">
+                <div class="flex items-center">
+                    <input
+                        id="checkbox-table-search-1"
+                        type="checkbox"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-[#1A6E09] "
+                    >
+                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                </div>
+            </td>
             <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap">
                 <div class="w-12 h-12 rounded-full overflow-hidden">
                 <img src="https://cms.istad.co${imageUrl}" alt="${imageName}" class="w-full h-full object-cover"/>
@@ -133,116 +143,3 @@ const renderCard = ({id, attributes }) => {
 };
 // Initial fetch on page load
 fetchData(currentPage);
-
-// review all discount product 
-const getReview = document.querySelector('#reviewProducts');
-const renderReview = `'
-<div class="flex items-center mb-5">
-
-<p
-    class="font-medium text-gray-900 dark:text-white">Discount
-    Products</p>
-<span
-    class="w-1 h-1 mx-2 bg-gray-900 rounded-full dark:bg-gray-500"></span>
-<p
-    class="text-sm font-medium text-gray-500 dark:text-gray-400">
-    products</p>
-<a href="read.html"
-    class="ms-auto text-sm font-medium text-blue-600 hover:underline ">Read
-    all products</a>
-</div>
-<div class="gap-8 sm:grid sm:grid-cols-2">
-<div>
-    <dl>
-        <dt
-            class="text-sm font-medium text-gray-500 dark:text-gray-400">Foods</dt>
-        <dd class="flex items-center mb-3">
-            <div
-                class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
-                <div
-                    class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                    style="width: 88%"></div>
-            </div>
-            <span
-                class="text-sm font-medium text-gray-500 dark:text-gray-400">8.8</span>
-        </dd>
-    </dl>
-    <dl>
-        <dt
-            class="text-sm font-medium text-gray-500 dark:text-gray-400">Drinks</dt>
-        <dd class="flex items-center mb-3">
-            <div
-                class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
-                <div
-                    class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                    style="width: 89%"></div>
-            </div>
-            <span
-                class="text-sm font-medium text-gray-500 dark:text-gray-400">8.9</span>
-        </dd>
-    </dl>
-    <dl>
-        <dt
-            class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            Electronics</dt>
-        <dd class="flex items-center mb-3">
-            <div
-                class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
-                <div
-                    class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                    style="width: 88%"></div>
-            </div>
-            <span
-                class="text-sm font-medium text-gray-500 dark:text-gray-400">8.8</span>
-        </dd>
-    </dl>
-    <dl>
-        <dt
-            class="text-sm font-medium text-gray-500 dark:text-gray-400">Clothes</dt>
-        <dd class="flex items-center">
-            <div
-                class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
-                <div
-                    class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                    style="width: 54%"></div>
-            </div>
-            <span
-                class="text-sm font-medium text-gray-500 dark:text-gray-400">5.4</span>
-        </dd>
-    </dl>
-</div>
-<div>
-    <dl>
-        <dt
-            class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            Cosmentics</dt>
-        <dd class="flex items-center mb-3">
-            <div
-                class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
-                <div
-                    class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                    style="width: 89%"></div>
-            </div>
-            <span
-                class="text-sm font-medium text-gray-500 dark:text-gray-400">8.9</span>
-        </dd>
-    </dl>
-    <dl>
-        <dt
-            class="text-sm font-medium text-gray-500 dark:text-gray-400">Plants</dt>
-        <dd class="flex items-center mb-3">
-            <div
-                class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
-                <div
-                    class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                    style="width: 70%"></div>
-            </div>
-            <span
-                class="text-sm font-medium text-gray-500 dark:text-gray-400">7.0</span>
-        </dd>
-    </dl>
-  
-</div>
-</div>
-`;
-getReview.innerHTML = renderReview;
