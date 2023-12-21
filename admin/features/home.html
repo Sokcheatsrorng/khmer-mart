@@ -43,7 +43,8 @@
                                         class="flex text-sm  rounded-full "
                                         aria-expanded="false"
                                         data-dropdown-toggle="dropdown-user">
-                                        <span class="sr-only">Open user menu</span>
+                                        <span class="sr-only">Open user
+                                            menu</span>
                                         <img class="w-10 h-10 rounded-full"
                                             src="/Img/Sokcheat_pic.png"
                                             alt="user photo">
@@ -77,17 +78,13 @@
                                     </div>
                                     <ul class="py-1" role="none">
                                         <li>
-                                            <a href="#"
+                                            <a href="home.html"
                                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
                                                 role="menuitem">Dashboard</a>
                                         </li>
+
                                         <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
-                                                role="menuitem">Sign Up</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
+                                            <a href="signout.html"
                                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
                                                 role="menuitem">Sign out</a>
                                         </li>
@@ -121,7 +118,8 @@
                                         stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
-                                <span class="ms-3 font-inter text-[#FF9E37]">Home</span>
+                                <span
+                                    class="ms-3 font-inter text-[#FF9E37]">Home</span>
                             </a>
                         </li>
                         <li>
@@ -136,7 +134,8 @@
                                         stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
-                                <span class="flex-1 ms-3 whitespace-nowrap">Create</span>
+                                <span
+                                    class="flex-1 ms-3 whitespace-nowrap">Create</span>
 
                             </a>
                         </li>
@@ -152,7 +151,8 @@
                                         stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
-                                <span class="flex-1 ms-3 whitespace-nowrap">Overview</span>
+                                <span
+                                    class="flex-1 ms-3 whitespace-nowrap">Overview</span>
 
                             </a>
                         </li>
@@ -173,7 +173,8 @@
                                         stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
-                                <span class="flex-1 ms-3 whitespace-nowrap">Update</span>
+                                <span
+                                    class="flex-1 ms-3 whitespace-nowrap">Update</span>
                             </a>
                         </li>
                         <li>
@@ -190,28 +191,12 @@
                                         stroke-width="0.9"
                                         d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z" />
                                 </svg>
-                                <span class="flex-1 ms-3 whitespace-nowrap">Delete</span>
+                                <span
+                                    class="flex-1 ms-3 whitespace-nowrap">Delete</span>
                             </a>
                         </li>
                         <li>
-                            <a href="signup.html"
-                                class="flex items-center p-2 text-[#1A6E09] rounded-lg  hover:bg-gray-100  group">
-                                <svg class="w-[27px] h-[27px] text-[#1A6E09]"
-                                    aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 20 18">
-                                    <path stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="0.9"
-                                        d="M4.109 17H1v-2a4 4 0 0 1 4-4h.87M10 4.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm7.95 2.55a2 2 0 0 1 0 2.829l-6.364 6.364-3.536.707.707-3.536 6.364-6.364a2 2 0 0 1 2.829 0Z" />
-                                </svg>
-                                <span class="flex-1 ms-3 whitespace-nowrap">Sign
-                                    Up</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="login.html"
+                            <a href="signout.html"
                                 class="flex items-center p-2 text-[#1A6E09] rounded-lg  hover:bg-gray-100  group">
                                 <svg
                                     class="w-[27px] h-[27px] text-[#1A6E09] "
@@ -226,7 +211,7 @@
                                 </svg>
                                 <span
                                     class="flex-1 ms-3 whitespace-nowrap text-[#1A6E09]">Sign
-                                    In</span>
+                                    Out</span>
                             </a>
                         </li>
                     </ul>
@@ -234,10 +219,16 @@
             </aside>
 
             <div class="p-4 sm:ml-64 mt-28">
+
                 <h1 class="text-[32px] text-[#1A6E09] font-semibold">
                     Dashboard</h1>
-                <p class="text-gray-400 font-semibold">Welcome Back,<span>Sokcheat</span>!</p>
+                <p class="text-gray-400 font-semibold">Welcome
+                    Back,<span>Sokcheat</span>!</p>
                 <label for="table-search" class="sr-only">Search</label>
+                <!-- expense all products -->
+                <div id="reviewProducts">
+                   
+                </div>
 
                 <div class="relative mt-5">
                     <div
@@ -265,17 +256,6 @@
                         <thead
                             class="text-xs  uppercase gap-5 text-[#1A6E09]">
                             <tr>
-                                <th scope="col" class="p-4">
-                                    <div class="flex items-center">
-                                        <input
-                                            id="checkbox-all-search"
-                                            type="checkbox"
-                                            class="w-4 h-4 text-[#1A6E09]bg-gray-100 rounded  accent-[#1A6E06] ">
-                                        <label
-                                            for="checkbox-all-search"
-                                            class="sr-only">checkbox</label>
-                                    </div>
-                                </th>
                                 <th scope="col" class="px-6 py-3">
                                     Name
                                 </th>
@@ -289,7 +269,7 @@
                                     Discount
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-                                     Type
+                                    Type
                                 </th>
                                 <th scope="col" class="px-6 py-3">
                                     Category
@@ -304,41 +284,6 @@
                         </tbody>
                     </table>
                 </div>
-                <!-- pagination -->
-                <nav>
-                    <ul
-                        class="flex -space-x-px text-sm items-center mt-5 justify-center" id="pagination">
-                        <li>
-                            <a href="#"
-                                class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 " id="pagination">Previous</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ">1</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ">2</a>
-                        </li>
-                        <li>
-                            <a href="#" aria-current="page"
-                                class="flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ">4</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ">5</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 ">Next</a>
-                        </li>
-                    </ul>
-                </nav>
-
             </div>
 
         </main>
