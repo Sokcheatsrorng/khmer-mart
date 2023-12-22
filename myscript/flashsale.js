@@ -40,7 +40,7 @@ const createPaginationButton = (text, isEnabled) => {
 const fetchData = async (page) => {
   try {
     const response = await $.ajax({
-      url: `https://cms.istad.co/api/km-products?filters[type][id][$containsi]=1&populate=*&&pagination%5Bpage%5D=${page}`,
+      url: `https://cms.istad.co/api/km-products?filters[type][id][$containsi]=1&populate=*&&pagination%5Bpage%5D=${page}&pagination[pageSize]=8`,
       method: "GET",
     });
 
@@ -77,7 +77,7 @@ const renderCard = ({ attributes }) => {
       ? image.data.attributes.name
       : "";
   const imageUrl =
-    image.data != null ? image.data.attributes.formats.thumbnail.url : "";
+    image.data != null ? image.data.attributes.formats.small.url : "";
   return `
         <style>
             /* Internal CSS */
@@ -86,14 +86,13 @@ const renderCard = ({ attributes }) => {
                 color: white;
             }
         </style>
-
         <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none">
             <div class="discount-percent z-10 h-12 w-24 mt-4 ms-4 text-center justify-center text-2xl flex items-center mx-auto" id="discPercent">
                15%
             </div>
-            <a href="/src/detail.html">
-        <img class="p-5 rounded-t-lg w-full h-48 object-cover z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images"/>
-    </a>
+            <a href="/src/detail-card.html">
+        <img class=" p-5 rounded-t-lg w-full h-48 object-cover z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images"/>
+        </a>
             <div class="px-5 pb-5">
                 <div class="flex items-center mt-2.5 mb-3">
                 <a href="#" class="w-full">

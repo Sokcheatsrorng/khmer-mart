@@ -8,7 +8,7 @@ const renderStars = (rating) => {
 };
 
 const renderCard = ({ attributes }) => {
-  const { name, discount, rating, price, image } = attributes;
+  const { name, rating, price, image } = attributes;
   // get image name
   const imageName =
     image && image.data && image.data.attributes
@@ -27,12 +27,14 @@ const renderCard = ({ attributes }) => {
         <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none">
     <div>
     <img class=" absolute mx-1  mt-1 h-24 " src="/Img/b1g1/Logobuy1get1.jpg" alt="buy1get1Logo">
+    <a href="/src/detail-card.html">
     <img class="p-3 rounded-t-lg w-full h-48 object-cover z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images"/>
+    </a>
     </div>
     <div class="px-3 pb-5">
-        <a href="/src/BuyoneGetoneList.html">
+    
         <h5 class="text-xl font-semibold tracking-tight text-gray-600 " id="title">${name}</h5>
-        </a>
+
         <div class="flex items-center mt-2.5 mb-5">
             <div class="flex items-center space-x-1 rtl:space-x-reverse text-[#FF9E37] text-2xl">
              ${renderStars(rating)}
@@ -55,7 +57,74 @@ const renderCard = ({ attributes }) => {
     `;
 };
 
-// btnadd to fav
+
+const renderPagination = (pageCount) => {
+  const paginationContainer = $("#pagination");
+  paginationContainer.empty();
+
+  // Previous button
+  paginationContainer.append(createPaginationButton('Previous', currentPage > 1));
+
+  for (let i = 1; i <= pageCount; i++) {
+    // Regular page button
+    const isActive = currentPage === i;
+    const button = createPaginationButton(i, isActive);
+    paginationContainer.append(button);
+  }
+  paginationContainer.append(createPaginationButton('Next', currentPage < pageCount));
+};
+
+const createPaginationButton = (text, isEnabled) => {
+  const listItem = $("<li>");
+  const link = $("<a>", {
+    href: "#",
+    text: text,
+    class: [
+      "flex", "items-center", "justify-center", "px-3", "h-8",
+      "leading-tight", "text-gray-500", "bg-white", "border", "border-gray-300",
+      "hover:bg-gray-100", "hover:text-gray-700",
+      !isEnabled ? "opacity-50 cursor-not-allowed" : ""
+    ].join(" ")
+  });
+
+  if (isEnabled) {
+    link.on("click", () => fetchData(text.toLowerCase() === 'next' ? currentPage + 1 : currentPage - 1));
+  }
+
+  listItem.append(link);
+  return listItem;
+};
+
+const fetchData = async (page) => {
+  try {
+    const response = await $.ajax({
+      url: `https://cms.istad.co/api/km-products?filters[type][id][$containsi]=2&populate=*&&pagination%5Bpage%5D=${page}&pagination[pageSize]=8`,
+      method: "GET",
+    });
+
+    const buy1get1CardContainer = $("#buy1get1container");
+    buy1get1CardContainer.empty(); 
+
+    const buy1get1Lists = response.data;
+    buy1get1Lists.forEach((product) => {
+      buy1get1CardContainer.append(renderCard(product));
+    });
+
+    // Update the current page
+    currentPage = page;
+
+    // Assuming 'meta' is the pagination metadata
+    const { pageCount } = response.meta.pagination;
+    renderPagination(pageCount);
+  } catch (error) {
+    console.error("Error fetching products:", error);
+  }
+};
+let currentPage = 1;
+fetchData(currentPage);
+
+
+//btnadd to fav
 $(document).on("click", "#btnaddtoFav", function () {
   console.log("Add to fav clicked");
   // Toggle the 'active' class
@@ -164,7 +233,7 @@ $(document).on("click", "#btnaddtoFav", function () {
       // },
       // body: JSON.stringify(storeData),
     })
-      .then((response) => response.json())
+      .then((response) => response.json()) 
       .then((data) => {
         // Handle the response from the server
         console.log("Server response (remove):", data);
@@ -175,70 +244,3 @@ $(document).on("click", "#btnaddtoFav", function () {
   }
 });
 
-// Fetch data from JSON
-
-
-const renderPagination = (pageCount) => {
-  const paginationContainer = $("#pagination");
-  paginationContainer.empty();
-
-  // Previous button
-  paginationContainer.append(createPaginationButton('Previous', currentPage > 1));
-
-  for (let i = 1; i <= pageCount; i++) {
-    // Regular page button
-    const isActive = currentPage === i;
-    const button = createPaginationButton(i, isActive);
-    paginationContainer.append(button);
-  }
-  paginationContainer.append(createPaginationButton('Next', currentPage < pageCount));
-};
-
-const createPaginationButton = (text, isEnabled) => {
-  const listItem = $("<li>");
-  const link = $("<a>", {
-    href: "#",
-    text: text,
-    class: [
-      "flex", "items-center", "justify-center", "px-3", "h-8",
-      "leading-tight", "text-gray-500", "bg-white", "border", "border-gray-300",
-      "hover:bg-gray-100", "hover:text-gray-700",
-      !isEnabled ? "opacity-50 cursor-not-allowed" : ""
-    ].join(" ")
-  });
-
-  if (isEnabled) {
-    link.on("click", () => fetchData(text.toLowerCase() === 'next' ? currentPage + 1 : currentPage - 1));
-  }
-
-  listItem.append(link);
-  return listItem;
-};
-
-const fetchData = async (page) => {
-  try {
-    const response = await $.ajax({
-      url: `https://cms.istad.co/api/km-products?filters[type][id][$containsi]=2&populate=*&&pagination%5Bpage%5D=${page}`,
-      method: "GET",
-    });
-
-    const cosmeticCardContainer = $("#buy1get1container");
-    cosmeticCardContainer.empty(); // Clear existing content
-
-    const cosmeticLists = response.data;
-    cosmeticLists.forEach((product) => {
-      cosmeticCardContainer.append(renderCard(product));
-    });
-
-    // Update the current page
-    currentPage = page;
-
-    // Assuming 'meta' is the pagination metadata
-    const { pageCount } = response.meta.pagination;
-    renderPagination(pageCount);
-  } catch (error) {
-    console.error("Error fetching products:", error);
-  }
-};
-let currentPage = 1;
-fetchData(currentPage);
