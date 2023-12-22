@@ -1,0 +1,53 @@
+{
+    "foods":[
+        {"images": "/Img/1.png",
+         "title": "Apple Watch S7",
+         "originalPrice": 2300,
+         "discountedPrice": 1999,
+         "discountType":"Flash Sale",
+         "stars": "★★★★☆"
+        },
+        {"images": "/Img/1.png",
+         "title": "Apple Watch S7",
+         "originalPrice": 2300,
+         "discountedPrice": 1999,
+         "discountType":"Flash Sale",
+         "stars": "★★★★☆"
+        },
+        {"images": "/Img/1.png",
+         "title": "Apple Watch S7",
+         "originalPrice": 2300,
+         "discountedPrice": 1999,
+         "discountType":"Flash Sale",
+         "stars": "★★★★☆"
+        },
+        {"images": "/Img/1.png",
+         "title": "Apple Watch S7",
+         "originalPrice": 2300,
+         "discountedPrice": 1999,
+         "discountType":"Flash Sale",
+         "stars": "★★★★☆"
+        },
+        {"images": "/Img/1.png",
+         "title": "Apple Watch S7",
+         "originalPrice": 2300,
+         "discountedPrice": 1999,
+         "discountType":"Flash Sale",
+         "stars": "★★★★☆"
+        },
+        {"images": "/Img/1.png",
+         "title": "Apple Watch S7",
+         "originalPrice": 2300,
+         "discountedPrice": 1999,
+         "discountType":"Flash Sale",
+         "stars": "★★★★☆"
+        },
+        {"images": "/Img/1.png",
+         "title": "Apple Watch S7",
+         "originalPrice": 2300,
+         "discountedPrice": 1999,
+         "discountType":"Flash Sale",
+         "stars": "★★★★☆"
+        }
+    ]
+}
