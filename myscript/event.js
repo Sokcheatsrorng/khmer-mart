@@ -50,7 +50,7 @@ const renderCard = ({ attributes }) => {
       ? image.data.attributes.name
       : "";
   const imageUrl =
-    image.data != null ? image.data.attributes.formats.thumbnail.url : "";
+    image.data != null ? image.data.attributes.url : "";
   return `
         <style>
             /* Internal CSS */

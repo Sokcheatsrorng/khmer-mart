@@ -77,7 +77,7 @@ const renderCard = ({ attributes }) => {
       ? image.data.attributes.name
       : "";
   const imageUrl =
-    image.data != null ? image.data.attributes.formats.small.url : "";
+    image.data != null ? image.data.attributes.url : "";
   return `
         <style>
             /* Internal CSS */
@@ -91,7 +91,7 @@ const renderCard = ({ attributes }) => {
                15%
             </div>
             <a href="/src/detail-card.html">
-        <img class=" p-5 rounded-t-lg w-full h-48 object-cover z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images"/>
+        <img class=" p-5 rounded-t-lg w-full h-48 object-cover z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="flashSaleImage"/>
         </a>
             <div class="px-5 pb-5">
                 <div class="flex items-center mt-2.5 mb-3">
