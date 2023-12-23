@@ -106,8 +106,8 @@ function createProduct() {
         .then((response) => response.json())
         .then((result) => {
           console.log(result.data);
-          alert('You have created new discount Product successfully!');
           window.location.reload();
+          alert('You have created new discount Product successfully!');
         })
         .catch((error) => console.log("error", error));
     })
