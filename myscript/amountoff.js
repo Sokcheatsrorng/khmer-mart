@@ -40,16 +40,16 @@ const createPaginationButton = (text, isEnabled) => {
 const fetchData = async (page) => {
   try {
     const response = await $.ajax({
-      url: `https://cms.istad.co/api/km-products?filters[type][id][$containsi]=1&populate=*&&pagination%5Bpage%5D=${page}&pagination[pageSize]=8`,
+      url: `https://cms.istad.co/api/km-products?filters[type][id][$containsi]=4&populate=*&&pagination%5Bpage%5D=${page}&pagination[pageSize]=8`,
       method: "GET",
     });
 
-    const flashSaleCardContainer = $("#flashSaleDisplayCard");
-    flashSaleCardContainer.empty(); // Clear existing content
+    const amountOffCardContainer = $("#amountOffDisplayCard");
+    amountOffCardContainer.empty(); // Clear existing content
 
-    const flashSaleLists = response.data;
-    flashSaleLists.forEach((product) => {
-      flashSaleCardContainer.append(renderCard(product));
+    const amountOffLists = response.data;
+    amountOffLists.forEach((product) => {
+      amountOffCardContainer.append(renderCard(product));
     });
 
     // Update the current page
@@ -70,7 +70,7 @@ const renderStars = (rating) => {
   return `${filledStars}${emptyStars}`;
 };
 const renderCard = ({ attributes }) => {
-  const { name,rating, price, image,createdAt } = attributes;
+  const { name, discount, rating, price, image,createdAt } = attributes;
   // get image name
   const imageName =
     image && image.data && image.data.attributes
@@ -79,7 +79,8 @@ const renderCard = ({ attributes }) => {
   const imageUrl =
     image.data != null ? image.data.attributes.url : "";
   
-   return `
+  const discountprice = price - (discount*price)/100;
+  return `
         <style>
             /* Internal CSS */
             #btnaddtoFav.active {
@@ -88,6 +89,9 @@ const renderCard = ({ attributes }) => {
             }
         </style>
         <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none">
+            <div class="discount-percent z-10 h-12 w-24 mt-4 ms-4 text-center justify-center text-2xl flex items-center mx-auto" id="discPercent">
+               ${discount}%
+            </div>
             <a href="/src/detail-card.html">
         <img class=" p-5 rounded-t-lg w-full h-52 object-cover z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="flashSaleImage"/>
         </a>
@@ -105,7 +109,8 @@ const renderCard = ({ attributes }) => {
                     <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">${rating}</span>
                 </div>
                 <div class="flex items-center justify-between gap-4">
-                    <span class="text-3xl font-bold text-red-700" id="originalPrice">$${price}</span>
+                    <span class="text-3xl font-bold text-red-700" id="originalPrice">$${discountprice.toFixed(2)}  </span>
+                    <span class="text-3xl font-inter text-gray-700"><del id="discPrice">$${price}</del> </span>
                     <button class="flex gap-8" id="btnaddtoFav">
                         <svg class="w-6 h-6 text-gray-800 dark:text-black md:mt-0" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 21 19">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8"
