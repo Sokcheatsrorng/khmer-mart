@@ -47,11 +47,10 @@ const updateNavbar = () => {
     signInLink.replaceWith(profileLink);
   }
 };
-// Call the updateNavbar function on page load
-window.addEventListener("load", updateNavbar);
 
 // Function to handle form submission
-function submitForm() {
+function submitForm(event) {
+  event.preventDefault();
   // Get input values
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
@@ -86,7 +85,7 @@ function submitForm() {
         // Call updateNavbar after successful login
         updateNavbar();
         // Redirect to the home page or perform other actions
-        window.location.href = "/src/index.html?login=success";
+        window.location.href = "/src/index.html";
       } else {
         alert("You cannot sign In!!");
       }
