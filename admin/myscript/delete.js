@@ -150,6 +150,7 @@ const renderCard = ({id, attributes }) => {
 };
 // Initial fetch on page load
 fetchData(currentPage);
+
 function removeDataFromARow(productId,button) {
   const rowToRemove = button.closest('tr');
   if (rowToRemove) {
