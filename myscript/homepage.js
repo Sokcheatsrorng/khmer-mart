@@ -65,7 +65,7 @@ const amountOff = ({ attributes }) => {
         </style>
 
         <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none">
-            <div class="discount-percent z-10 h-12 w-24 mt-4 ms-4 text-center justify-center text-2xl flex items-center mx-auto" id="discPercent">
+            <div class="absolute discount-percent z-10 h-12 w-24 mt-4 ms-4 text-center justify-center text-2xl flex items-center mx-auto" id="discPercent">
                ${discount}%
             </div>
             <a href="/src/flashsale.html">
