@@ -1,42 +1,51 @@
 'use strict'
-
-const trendingCard = ({ images, title, price, discPrice }) => {
-    return `
-      <div class="bg-white rounded-2xl mt-2">
-        <a href="/src/detail-card.html">
-          <img class="object-fit w-[480px] h-[350px] p-5 rounded-t-lg" src="${images}" alt="product image" />
-        </a>
-        <div class="px-5 pb-5">
-          <a href="#">
-            <h5 class="text-2xl font-semibold tracking-tight text-gray-600 pb-5">${title}</h5>
-          </a>
-          <div class="items-center justify-between pb-5">
-            <span class="text-3xl font-bold text-red-600">$${price}</span>
-          </div>
-          <div class="flex items-center justify-between">
-            <span class="text-3xl font-bold text-neutral-700 text-opacity-80 line-through">$${discPrice}</span>
-            <a href="#" class="text-white bg-[#1A6E09] hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center" id="btnaddtoFav">Add to Favorite</a>
-          </div>
-        </div>
+const trending = ({ attributes }) => {
+  const { name, discount, rating, price, image,createdAt } = attributes;
+  // get image name
+  const imageName =
+    image && image.data && image.data.attributes
+      ? image.data.attributes.name
+      : "";
+  const imageUrl =
+    image.data != null ? image.data.attributes.url : "";
+  const discountprice = price - (discount*price)/100;
+  return `
+  <div class="bg-white rounded-2xl mt-2">
+    <a href="/src/detail-card.html">
+      <img class="object-fit w-[480px] h-[350px] p-5 rounded-t-lg" src="https://cms.istad.co${imageUrl}" alt="${imageName}" />
+    </a>
+    <div class="px-5 pb-5">
+      <a href="#">
+        <h5 class="text-2xl font-semibold tracking-tight text-gray-600 pb-5">${name}</h5>
+      </a>
+      <div class="items-center justify-between pb-5">
+        <span class="text-3xl font-bold text-red-600">$${price}</span>
       </div>
-    `;
-  };
-// btnadd to fav
+      <div class="flex items-center justify-between">
+        <span class="text-3xl font-bold text-neutral-700 text-opacity-80 line-through">$${discountprice.toFixed(2)}</span>
+        <button class="text-white bg-[#1A6E09]  focus:outline-none  font-medium rounded-xl text-sm px-5 py-2.5 text-center" id="btnaddtoFav" onclick="unvailable()">Add to Favorite</button>
+      </div>
+    </div>
+  </div>
+`;
+};
 
 // Fetch data from JSON
-fetch('/jsondata/trending.json')
-  .then(res => res.json())
-  .then(data => {
-    const trendingCardContainer = document.getElementById("display-card-trending");
-    const trendingLists = data.cards;
+var settings = {
+  "url": "https://cms.istad.co/api/km-products?filters[type][id][$containsi]=3&populate=*&pagination[pageSize]=3",
+  "method": "GET",
+  "timeout": 0,
+};
 
-    trendingLists.map(product => {
-      const cardElement = document.createElement('div');
-      cardElement.innerHTML = trendingCard(product);
-      trendingCardContainer.appendChild(cardElement.firstElementChild);
-    });
-  })
-  .catch(error => console.error('Error:', error));
+$.ajax(settings).done(function (response) {
+  
+  const trendingCardContainer = $("#display-card-trending");
+  trendingCardContainer.empty();
+
+  const trendingLists = response.data;
+  trendingLists.forEach((product) => {
+    trendingCardContainer.append(trending(product))})
+});
 
 //amount off
 const renderStars = (rating) => {
@@ -66,7 +75,7 @@ const amountOff = ({ attributes }) => {
         </style>
 
         <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none">
-            <div class="discount-percent z-10 h-12 w-24 mt-4 ms-4 text-center justify-center text-2xl flex items-center mx-auto" id="discPercent">
+            <div class="absolute discount-percent z-10 h-12 w-24 mt-4 ms-4 text-center justify-center text-2xl flex items-center mx-auto" id="discPercent">
                ${discount}%
             </div>
             <a href="/src/flashsale.html">
@@ -83,12 +92,12 @@ const amountOff = ({ attributes }) => {
                     <div class="flex items-center space-x-1 rtl:space-x-reverse text-[#FF9E37] text-2xl" id="stars">
                     ${renderStars(rating)} 
                     </div>
-                    <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">${rating}</span>
+                    <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">${rating}.00/5.00</span>
                 </div>
                 <div class="flex items-center justify-between gap-4">
                 <span class="text-3xl font-bold text-red-700" id="originalPrice">$${discountprice.toFixed(2)}  </span>
                 <span class="text-3xl font-inter text-gray-700"><del id="discPrice">$${price}</del> </span>
-                    <button class="flex gap-8" id="btnaddtoFav">
+                    <button class="flex gap-8" id="btnaddtoFav" onclick="unvailable()>
                         <svg class="w-6 h-6 text-gray-800 dark:text-black md:mt-0" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 21 19">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8"
                                 d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z" />
@@ -165,11 +174,11 @@ const buy1get1 = ({ attributes }) => {
             <div class="flex items-center space-x-1 rtl:space-x-reverse text-[#FF9E37] text-2xl" id="stars">
             ${renderStars(rating)} 
             </div>
-            <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">${rating}</span>
+            <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">${rating}.00/5.00</span>
         </div>
         <div class="flex items-center justify-between gap-4">
             <span class="text-3xl font-bold text-red-700" id="originalPrice">$${price}</span>
-            <button class="flex gap-8" id="btnaddtoFav">
+            <button class="flex gap-8" id="btnaddtoFav" onclick="unvailable()>
                 <svg class="w-6 h-6 text-gray-800 dark:text-black md:mt-0" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 21 19">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8"
                         d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z" />
@@ -235,11 +244,11 @@ const flashsale = ({ attributes }) => {
                     <div class="flex items-center space-x-1 rtl:space-x-reverse text-[#FF9E37] text-2xl" id="stars">
                     ${renderStars(rating)} 
                     </div>
-                    <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">${rating}</span>
+                    <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">${rating}.00/5.00</span>
                 </div>
                 <div class="flex items-center justify-between gap-4">
                     <span class="text-3xl font-bold text-red-700" id="originalPrice">$${price}</span>
-                    <button class="flex gap-8" id="btnaddtoFav">
+                    <button class="flex gap-8" id="btnaddtoFav" onclick="unvailable()>
                         <svg class="w-6 h-6 text-gray-800 dark:text-black md:mt-0" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 21 19">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8"
                                 d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z" />
@@ -279,6 +288,6 @@ $.ajax(settings).done(function (response) {
 
   const flashSaleLists = response.data;
   flashSaleLists.forEach((product) => {
-    flashSaleCardContainer.append(buy1get1(product))})
+    flashSaleCardContainer.append(flashsale(product))})
 });
 
