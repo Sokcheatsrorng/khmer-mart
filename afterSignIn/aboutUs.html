@@ -13,20 +13,19 @@
 
 
 <body class="bg-[#f5f5f5]">
-
 <!-- Navbar -->
 <header class=" sticky top-0 z-30 ">
   <nav class=" border-gray-200 bg-[#f5f5f5] p-0]">
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-[20px] xl:p-0">
       <!-- Logo and Category Link -->
-      <a href="/src/index.html"
+      <a href="index.html"
         class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="/Img/logo.png" alt="Khmer-Mart Logo"
           class="h-20 w-15 ms-[-10px]">
       </a>
       <!--  Category -->
-      <a href="/src/category.html"
+      <a href="category.html"
         class="flex flex-wrap items-center space-x-2 rtl:space-x-reverse ">
         <span class="hidden md:inline-block
         items-center font-semibold text-[#1A6E09] md:hover:text-[#363636] md:p-0 dark:text-[#1A6E09]  ">
@@ -64,7 +63,8 @@
         aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          xmlns="http://www.w3.org/2000/svg" fill="none"
+          viewBox="0 0 17 14">
           <path stroke="currentColor" stroke-linecap="round"
             stroke-linejoin="round" stroke-width="2"
             d="M1 1h15M1 7h15M1 13h15" />
@@ -74,7 +74,7 @@
         <ul
           class="font-medium flex flex-col justify-around p-0 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-3 rtl:space-x-reverse md:mt-0 md:border-0 md:dark:bg-[#f5f5f5] dark:bg-[#f5f5f5] md:dark:bg-[#f5f5f5]dark:border-gray-700">
           <li>
-            <a href="/src/signIn.html"
+            <a href="favourite.html"
               class=" hidden text-[#1A6E09] hover:text-gray-300 items-center space-x-0 md:block ">
               <svg class="w-6 h-6 text-gray-800 dark:text-black  md:mt-0"
                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -86,25 +86,47 @@
             </a>
           </li>
           <li>
-            <a href="/src/category.html"
+            <a href="favourite.html"
               class="block py-2 px-0 hover:bg-none
               md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]  hover:text-[#FF9E37] 
                md:dark:hover:bg-transparent md:hidden">Category</a>
           </li>
           <li>
-            <a href="/src/signIn.html"
+            <a href="favourite.html"
               class="block py-2 px-0  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]   hover:text-[#FF9E37] md:dark:hover:bg-transparent md:hidden">Favorite
               List</a>
           </li>
           <li>
-            <a href="/src/aboutUs.html"
+            <a href="aboutUs.html"
               class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0    hover:text-[#FF9E37] md:dark:hover:bg-transparent ">About
               Us</a>
           </li>
-          <li id="signInLink" >
-            <a href="/src/signIn.html" 
-              class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0    hover:text-[#FF9E37] md:dark:hover:bg-transparent">Sign
-              In</a>
+          <li id="signInLink">
+            <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+              <button type="button" class="flex text-sm  rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 " id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                <span class="sr-only">Open user menu</span>
+                <img class="w-8 h-8 rounded-full" src="/Img/Sokcheat_pic.png" alt="user photo">
+              </button>
+              <!-- Dropdown menu -->
+              <div class="z-50 hidden my-4 text-base list-none w-28 bg-white divide-y divide-gray-100 rounded-lg shadow " id="user-dropdown">
+                
+                <ul class="py-2" aria-labelledby="user-menu-button">
+                  <li>
+                    <a href="signUp.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign Up</a>
+                  </li>
+                  <hr>
+                  <li>
+                    <a href="/src/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                  </li>
+                </ul>
+              </div>
+              <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+          </div>
           </li>
 
         </ul>
@@ -172,55 +194,55 @@
 
           <div class=" grid grid-cols-2 md:grid-cols-4 gap-y-[70px] justify-between mt-6 mb-6 ">
             <div class=" flex flex-col items-center justify-center mx-auto w-[250px]">
-              <img class=" w-[100px] sm:w-[130px] md:w-[180px] lg:w-[300px] " src="/Img/chipor.png" alt="Chipor_pic">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px] " src="/Img/Chipor_pic.png" alt="Chipor_pic">
               <p class="font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px]  text-[#363636]">Sreng Chipor</p>
               <p class=" font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Back End Developer</p>
             </div>
 
             <div class=" flex flex-col items-center w-[250px] justify-center mx-auto">
-              <img class=" w-[100px] sm:w-[130px] md:w-[180px] lg:w-[300px]" src="/Img/mengkheang.png" alt="">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/Img/Mengkheang_ppic.png" alt="">
               <p class="font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px] text-[#363636]">Seang Mengkheang</p>
               <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Back End Developer</p>
             </div>
 
 
             <div class=" flex flex-col items-center w-[250px] justify-center mx-auto">
-              <img class=" w-[100px] sm:w-[130px] md:w-[180px] lg:w-[300px]" src="/Img/sokny.png" alt="">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/Img/Sokny_pic.png" alt="">
               <p class=" font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px]  text-[#363636]">Pov Sokny</p>
               <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Back End Developer</p>
             </div>
 
 
             <div class=" flex flex-col items-center w-[250px] justify-center mx-auto">
-              <img class=" w-[100px] sm:w-[130px] md:w-[180px] lg:w-[300px]" src="/Img/piseth.png" alt="">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/Img/Piseth_pic.png" alt="">
               <p class=" font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px] text-[#363636]">Long Piseth</p>
               <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px]  ">Back End Developer</p>
             </div>
 
 
             <div class=" flex flex-col items-center w-[250px] justify-center mx-auto">
-              <img class=" w-[100px] sm:w-[130px] md:w-[180px] lg:w-[300px]" src="/Img/sreang.png" alt="">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/Img/Meansreang_pic.png" alt="">
               <p class=" font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px] text-[#363636]">Ly meansreang</p>
               <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Fronted End Developer</p>
             </div>
 
 
             <div class=" flex flex-col items-center w-[250px] justify-center mx-auto">
-              <img class=" w-[100px] sm:w-[130px] md:w-[180px] lg:w-[300px]" src="/Img/votey.png" alt="">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/Img/Votey_pic.png" alt="">
               <p class=" font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px] text-[#363636]">Hom Pheakakvotey</p>
               <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Fronted End Developer</p>
             </div>
 
 
             <div class=" flex flex-col items-center w-[250px] justify-center mx-auto">
-              <img class=" w-[100px] sm:w-[130px] md:w-[180px] lg:w-[300px]" src="/Img/tevy.png" alt="">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/Img/tevy_pic.png" alt="">
               <p class=" font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px] text-[#363636]">Nhoem Tevy</p>
               <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Fronted End Developer</p>
             </div>
 
 
             <div class=" flex flex-col items-center mt-2 w-[250px] justify-center mx-auto">
-              <img class=" w-[100px] sm:w-[130px] md:w-[180px] lg:w-[300px]" src="/Img/sokcheat.png" alt="">
+              <img class=" w-[60px] sm:w-[80px] md:w-[100px] lg:w-[125px]" src="/Img/Sokcheat_pic.png" alt="">
               <p class=" font-inter font-semibold text-[16px] md:text-[22px] lg:text-[26px] text-[#363636]">Srorng Sokcheat</p>
               <p class="  font-inter text-gray-500 text-center text-[10px] md:text-[15px] lg:text-[20px] ">Fronted End Developer</p>
             </div>
@@ -413,7 +435,7 @@
         </div>
       </div>
     </footer>
-    
+ 
 </body>
 <!-- sign In script -->
 <script src="/myscript/signIn.js"></script>

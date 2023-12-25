@@ -32,7 +32,7 @@ function handleSignUpClick() {
         alert("Account created! Please check your email for verification.");
         //console.log(userData);
         setTimeout(() => {
-          window.location.href = "/src/index.html";
+          window.location.replace('/afterSignIn')
         }, 1000);
       } else {
         alert(data.message || "Signup failed. Please try again");

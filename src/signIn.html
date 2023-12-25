@@ -41,7 +41,7 @@
               </svg>
             </span>
           </a>
-
+    
           <!-- Search Bar -->
           <div
             class="relative flex  flex-wrap sm:w-[350px] w-[220px] xl:w-[500px]  lg:w-[400px] justify-between ms-[-30px] ">
@@ -58,7 +58,7 @@
             <input type="text" placeholder="Search for anything"
               class="py-2 pl-8 pr-3 border border-[#f5f5f5] rounded-full focus:outline-none focus:ring-1 focus:ring-[#1A6E09]  w-full  space-x-4 xl:w-[500px] ">
           </div>
-
+    
           <button data-collapse-toggle="navbar-default" type="button"
             class="inline-flex items-center me-[-10px] w-10 h-10 justify-center text-xl text-[#1A6E09] rounded-lg md:hidden hover:bg-gray-100 focus:outline-none  "
             aria-controls="navbar-default" aria-expanded="false">
@@ -74,7 +74,7 @@
             <ul
               class="font-medium flex flex-col justify-around p-0 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-3 rtl:space-x-reverse md:mt-0 md:border-0 md:dark:bg-[#f5f5f5] dark:bg-[#f5f5f5] md:dark:bg-[#f5f5f5]dark:border-gray-700">
               <li>
-                <a href="/src/favourite.html"
+                <a href="/src/signIn.html"
                   class=" hidden text-[#1A6E09] hover:text-gray-300 items-center space-x-0 md:block ">
                   <svg class="w-6 h-6 text-gray-800 dark:text-black  md:mt-0"
                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -86,13 +86,13 @@
                 </a>
               </li>
               <li>
-                <a href="/src/favourite.html"
+                <a href="/src/category.html"
                   class="block py-2 px-0 hover:bg-none
                   md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]  hover:text-[#FF9E37] 
                    md:dark:hover:bg-transparent md:hidden">Category</a>
               </li>
               <li>
-                <a href="/src/favourite.html"
+                <a href="/src/signIn.html"
                   class="block py-2 px-0  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]   hover:text-[#FF9E37] md:dark:hover:bg-transparent md:hidden">Favorite
                   List</a>
               </li>
@@ -106,7 +106,7 @@
                   class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0    hover:text-[#FF9E37] md:dark:hover:bg-transparent">Sign
                   In</a>
               </li>
-
+    
             </ul>
           </div>
         </div>
@@ -259,7 +259,7 @@
                           </div>
                           <div>
                             <label for="password" class="block mb-2 text-sm font-semibold text-[#363636]">Password</label>
-                            <input type="text" name="password" id="password" placeholder="••••••••" class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2" required>
+                            <input type="password" name="password" id="password" placeholder="••••••••" class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2" required>
                           </div>
                           <div class="flex items-center justify-between">
                             <div class="flex items-start">
@@ -270,7 +270,7 @@
                             </div>
                             
                           </div> 
-                              <button type="button" onclick="submitForm()" class="h-[55px] w-[450px] text-white text-[30px] font-inter bg-[rgb(26,110,9)] hover:bg-[#1d4b13] rounded-2xl text-center" id="signInLink">Sign in</button>
+                              <button type="button" onclick="submitForm(event)" class="h-[55px] w-[450px] text-white text-[30px] font-inter bg-[rgb(26,110,9)] hover:bg-[#1d4b13] rounded-2xl text-center" id="signInLink">Sign in</button>
                         
                           <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                             Don’t have an account yet? 

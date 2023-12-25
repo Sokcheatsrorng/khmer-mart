@@ -1,5 +1,5 @@
 "use strict";
-let currentPage = 1; // Initialize the current page
+
 
 // Function to render pagination buttons
 const renderPagination = (pageCount) => {
@@ -35,7 +35,6 @@ const createPaginationButton = (text, isEnabled) => {
   } else {
     link.addEventListener("click", () => fetchData(text.toLowerCase() === 'next' ? currentPage + 1 : currentPage - 1));
   }
-
   button.appendChild(link);
   return button;
 };
@@ -141,5 +140,6 @@ const renderCard = ({id, attributes }) => {
         </tr>
     `;
 };
+let currentPage = 1; // Initialize the current page
 // Initial fetch on page load
 fetchData(currentPage);

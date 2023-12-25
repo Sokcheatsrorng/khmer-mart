@@ -129,13 +129,28 @@ const renderCard = ({id, attributes }) => {
             )}  <span class="text-sm ms-5 text-gray-400">${rating}</span>
             </td>
             <td class="px-4 py-4 text-2xl text-[#FF9E37]">
-            <button class="px-4 py-2 rounded-lg bg-red-600 text-[#FFFFFF] text-sm"  onclick="removeDataFromARow(${id},this)">Delete</button>
+            <button class="px-4 py-2 rounded-lg flex text-[#FFFFFF] text-sm"  onclick="removeDataFromARow(${id},this)">
+            <svg
+            class="w-[25px] h-[25px] text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 18 20">
+            <path stroke="red"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="0.9"
+                d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z" />
+        </svg>
+       
+    </a>
+            </button>
             </td>
         </tr>
     `;
 };
 // Initial fetch on page load
 fetchData(currentPage);
+
 function removeDataFromARow(productId,button) {
   const rowToRemove = button.closest('tr');
   if (rowToRemove) {

@@ -15,6 +15,7 @@ const renderPagination = (pageCount) => {
   }
   paginationContainer.append(createPaginationButton('Next', currentPage < pageCount));
 };
+
 const createPaginationButton = (text, isEnabled) => {
   const listItem = $("<li>");
   const link = $("<a>", {
@@ -36,6 +37,32 @@ const createPaginationButton = (text, isEnabled) => {
   return listItem;
 };
 
+const fetchData = async (page) => {
+  try {
+    const response = await $.ajax({
+      url: `https://cms.istad.co/api/km-products?filters[type][id][$containsi]=4&populate=*&&pagination%5Bpage%5D=${page}&pagination[pageSize]=8`,
+      method: "GET",
+    });
+
+    const amountOffCardContainer = $("#amountOffDisplayCard");
+    amountOffCardContainer.empty(); // Clear existing content
+
+    const amountOffLists = response.data;
+    amountOffLists.forEach((product) => {
+      amountOffCardContainer.append(renderCard(product));
+    });
+
+    // Update the current page
+    currentPage = page;
+
+    // Assuming 'meta' is the pagination metadata
+    const { pageCount } = response.meta.pagination;
+    renderPagination(pageCount);
+  } catch (error) {
+    console.error("Error fetching products:", error);
+  }
+};
+
 const renderStars = (rating) => {
   const starCount = Math.round(rating);
   const filledStars = "★".repeat(starCount);
@@ -51,6 +78,8 @@ const renderCard = ({ attributes }) => {
       : "";
   const imageUrl =
     image.data != null ? image.data.attributes.url : "";
+  
+  const discountprice = price - (discount*price)/100;
   return `
         <style>
             /* Internal CSS */
@@ -59,11 +88,13 @@ const renderCard = ({ attributes }) => {
                 color: white;
             }
         </style>
-
         <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none">
+            <div class="discount-percent z-10 h-12 w-24 mt-4 ms-4 text-center justify-center text-2xl flex items-center mx-auto" id="discPercent">
+               ${discount}%
+            </div>
             <a href="/src/detail-card.html">
-        <img class="p-5 rounded-t-lg w-full h-48 object-cover z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images"/>
-    </a>
+        <img class=" p-5 rounded-t-lg w-full h-52 object-cover z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="flashSaleImage"/>
+        </a>
             <div class="px-5 pb-5">
                 <div class="flex items-center mt-2.5 mb-3">
                 <a href="#" class="w-full">
@@ -78,8 +109,8 @@ const renderCard = ({ attributes }) => {
                     <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">${rating}</span>
                 </div>
                 <div class="flex items-center justify-between gap-4">
-                    <span class="text-3xl font-bold text-red-700" id="originalPrice">$${price}</span>
-                    <span class="text-3xl font-inter text-gray-700"><del id="discPrice">$${discount} </del> </span>
+                    <span class="text-3xl font-bold text-red-700" id="originalPrice">$${discountprice.toFixed(2)}  </span>
+                    <span class="text-3xl font-inter text-gray-700"><del id="discPrice">$${price}</del> </span>
                     <button class="flex gap-8" id="btnaddtoFav" onclick="unvailable()>
                         <svg class="w-6 h-6 text-gray-800 dark:text-black md:mt-0" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 21 19">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8"
@@ -106,31 +137,7 @@ const renderCard = ({ attributes }) => {
     `;
 };
 
-const fetchData = async (page) => {
-    try {
-      const response = await $.ajax({
-        url: `https://cms.istad.co/api/km-products?filters[type][id][$containsi]=6&populate=*&&pagination%5Bpage%5D=${page}&pagination[pageSize]=8`,
-        method: "GET",
-      });
-  
-      const eventCardContainer = $("#event-discount");
-      eventCardContainer.empty();
-    
-      const eventLists = response.data;
-      eventLists.forEach((product) => {
-        eventCardContainer.append(renderCard(product));
-      });
-  
-      // Update the current page
-      currentPage = page;
-      // Assuming 'meta' is the pagination metadata
-      const { pageCount } = response.meta.pagination;
-      renderPagination(pageCount);
-    } catch (error) {
-      console.error("Error fetching products:", error);
-    }
-  };
-  
 
 let currentPage = 1;
 fetchData(currentPage);
+

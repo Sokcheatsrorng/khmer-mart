@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Khmer Mart</title>
+  <title>Khmer Mart-Coupon</title>
   <link rel="icon" href="/Img/logo-browser.jpg">
   <!-- tailwind css link -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -17,13 +17,13 @@
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-[20px] xl:p-0">
         <!-- Logo and Category Link -->
-        <a href="/src/index.html"
+        <a href="index.html"
           class="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="/Img/logo.png" alt="Khmer-Mart Logo"
             class="h-20 w-15 ms-[-10px]">
         </a>
         <!--  Category -->
-        <a href="/src/category.html"
+        <a href="category.html"
           class="flex flex-wrap items-center space-x-2 rtl:space-x-reverse ">
           <span class="hidden md:inline-block
           items-center font-semibold text-[#1A6E09] md:hover:text-[#363636] md:p-0 dark:text-[#1A6E09]  ">
@@ -38,7 +38,7 @@
             </svg>
           </span>
         </a>
-  
+
         <!-- Search Bar -->
         <div
           class="relative flex  flex-wrap sm:w-[350px] w-[220px] xl:w-[500px]  lg:w-[400px] justify-between ms-[-30px] ">
@@ -55,13 +55,14 @@
           <input type="text" placeholder="Search for anything"
             class="py-2 pl-8 pr-3 border border-[#f5f5f5] rounded-full focus:outline-none focus:ring-1 focus:ring-[#1A6E09]  w-full  space-x-4 xl:w-[500px] ">
         </div>
-  
+
         <button data-collapse-toggle="navbar-default" type="button"
           class="inline-flex items-center me-[-10px] w-10 h-10 justify-center text-xl text-[#1A6E09] rounded-lg md:hidden hover:bg-gray-100 focus:outline-none  "
           aria-controls="navbar-default" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <svg class="w-5 h-5" aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 17 14">
             <path stroke="currentColor" stroke-linecap="round"
               stroke-linejoin="round" stroke-width="2"
               d="M1 1h15M1 7h15M1 13h15" />
@@ -71,7 +72,7 @@
           <ul
             class="font-medium flex flex-col justify-around p-0 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-3 rtl:space-x-reverse md:mt-0 md:border-0 md:dark:bg-[#f5f5f5] dark:bg-[#f5f5f5] md:dark:bg-[#f5f5f5]dark:border-gray-700">
             <li>
-              <a href="/src/signIn.html"
+              <a href="favourite.html"
                 class=" hidden text-[#1A6E09] hover:text-gray-300 items-center space-x-0 md:block ">
                 <svg class="w-6 h-6 text-gray-800 dark:text-black  md:mt-0"
                   aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -83,105 +84,91 @@
               </a>
             </li>
             <li>
-              <a href="/src/category.html"
+              <a href="favourite.html"
                 class="block py-2 px-0 hover:bg-none
                 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]  hover:text-[#FF9E37] 
                  md:dark:hover:bg-transparent md:hidden">Category</a>
             </li>
             <li>
-              <a href="/src/signIn.html"
+              <a href="favourite.html"
                 class="block py-2 px-0  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]   hover:text-[#FF9E37] md:dark:hover:bg-transparent md:hidden">Favorite
                 List</a>
             </li>
             <li>
-              <a href="/src/aboutUs.html"
+              <a href="aboutUs.html"
                 class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0    hover:text-[#FF9E37] md:dark:hover:bg-transparent ">About
                 Us</a>
             </li>
-            <li id="signInLink" >
-              <a href="/src/signIn.html" 
-                class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0    hover:text-[#FF9E37] md:dark:hover:bg-transparent">Sign
-                In</a>
+            <li id="signInLink">
+              <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <button type="button" class="flex text-sm  rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 " id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                  <span class="sr-only">Open user menu</span>
+                  <img class="w-8 h-8 rounded-full" src="/Img/Sokcheat_pic.png" alt="user photo">
+                </button>
+                <!-- Dropdown menu -->
+                <div class="z-50 hidden my-4 text-base list-none w-28 bg-white divide-y divide-gray-100 rounded-lg shadow " id="user-dropdown">
+                  
+                  <ul class="py-2" aria-labelledby="user-menu-button">
+                    <li>
+                      <a href="signUp.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign Up</a>
+                    </li>
+                    <hr>
+                    <li>
+                      <a href="/src/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                    </li>
+                  </ul>
+                </div>
+                <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                  </svg>
+              </button>
+            </div>
             </li>
-  
+
           </ul>
         </div>
       </div>
     </nav>
   </header>
-    <main class="max-w-screen-xl container-fluid mx-auto justify-center p-[20px] text-inter md:p-0 ">
-      
-        <!-- Image and Card -->
-        <div class="flex mx-auto max-w-screen-xl sm:p-4 py-6 lg:py-8 gap-4 relative md:flex-row md:max-w-screen-xl" id="display-detail">
-            <!-- Image -->
-            
-        </div>
-      <!-- Description -->
-       <div class="mx-auto w-full max-w-screen-xl px-4 sm:p-4 md:py-0 gap-4 relative">
-        <div class=" text-black text-5xl font-semibold capitalize leading-[144px] tracking-wide">About this item</div>
-        <div class="w-[75%]"><span class="text-neutral-700 text-opacity-80 text-xl font-normal l">Escape the everyday and share the epic with the Samsung Galaxy S23 Ultra from Total by Verizon. Reach new heights in your wireless life and take the perfect selfies and photos of your squad like a pro with an incredible camera. No matter where the adventure of life takes you'll be able to start capturing and creating images in rich detail, and then use Quick Share** to share them with your friends across devices without losing quality. You can crank up the performance and stop settling for less with Samsung's fastest mobile processor available. Plus, your display will always look incredible with Adaptive Vision Booster that adjusts your screen's brightness. Write, sketch, edit, create, and share from anywhere with a built-in S Pen.<br/><br/>Start getting a better wireless experience at a price that fits your life and ditch costly long-term contracts with unlimited talk, text & high-speed data plans from Total by Verizon that start at just $30/mo for a single line. Access the fastest speeds with Verizon 5G Network and enjoy special perks like hotspot capability, international long distance calling, and exclusive discounts. Shop for the Samsung Galaxy S23 Ultra and your next Total by Verizon plan online or at your local Walmart.<br/><br/></span>
-        <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside  font-inter font-normal text-xl">
-            <li>
-              5,000mAh battery
-            </li>
-            <li>
-              45W Super-fast charger
-            </li>
-            <li>
-              Nightography camera capabilities
-            </li>
-            <li>
-              120Hz refresh rate
-            </li>
-            <li>
-              Adaptive vision Booster
-            </li>
-            <li>
-              Quickshare for photo sharing
-            </li>
-            <li>
-              8K 200mp video camera
-            </li>
-            <li>
-              5G access requires a 5G-capable device in a 5G coverage area
-            </li>
-            <li>
-              Pair it with a best-selling no-contract
-            </li>
-            <li>
-              This phone is locked to Total by Verizon and can be used with Total by Verizon service
-            </li>
-        </ul>
-        </div>
-       </div>
-
-      <!-- Related Product -->
-        <div class="mx-auto w-full max-w-screen-xl px-4 sm:p-4 lg:py-8 relative mt-0">
-          <div class=" text-black text-5xl font-semibold capitalize leading-[144px] tracking-wide">Similar</div>
-            <div class="flex gap-4 justify-around ">
-                <div class="container mx-auto px-0">
-                  <div class="grid xl:grid-cols-3 gap-4 py-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1  p-[20px] md:p-0" id="similiar">
-
-                  </div>  
-                </div>
+  <!-- main section -->
+    <main class="max-w-screen-xl container-fluid mx-auto justify-center p-[20px] md:p-0 text-inter">
+        <!-- Coupon -->
+        <section>
+            <div class="grid xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-1">  
+                <a href="#">
+                    <img class="rounded-3xl  xl:w-[500px]h-[270px]  " src="/Img/coupon1.png" alt="Coupon 1">
+                </a>
+                <a href="#"><img class="rounded-3xl xl:w-[500px]h-[270px]" src="/Img/coupon2.png" alt="Coupon 2">
+                </a>
             </div>
-        </div>
-         <!-- pagination -->
-         <nav>
-          <ul class="flex -space-x-px text-sm items-center mt-5 justify-center" id="pagination">
-            <!-- Pagination buttons will be dynamically added here using JavaScript -->
-          </ul>
-      </nav>
-      </div>
-       <!-- Location-->
-       <!-- <div class="mx-auto w-full max-w-screen-xl px-4 sm:p-4 lg:py-8 relative mt-0">
-        <div class=" text-black text-5xl font-semibold capitalize leading-[144px] tracking-wide">Location</div>
-        <div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.6314046837088!2d104.89921187466847!3d11.578259843893116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951e96d257a6f%3A0x6b66703c5fc0c7cc!2sScience%20and%20Technology%20Advanced%20Development%20Co.%2C%20Ltd.!5e0!3m2!1sen!2skh!4v1701829598149!5m2!1sen!2skh" class="w-full rounded-lg" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        </div> -->
+        </section>
+        <!-- description  -->
+        <section>
+          <div class="text-[#363636] font-inter text-lg py-8">
+            <h1 class="font-bold">TERMS AND CONDITIONS </h1>
+            <ol style="list-style-type:disc" class="ms-5">
+              <li>During 16 October 2022 - 31 December 2023</li>
+              <li>Spend over 50 $ (amount after discount), get discount value 70% ( Discount Code : <span class="text-red-500">NCFW6</span>) </li>
+              <li>Limit only 1 right(time) / purchase order / promotion / customer / address</li>
+              <li>The discount code is not valid for parcel delivery</li>
+              <li> Location: 28 Phnom Penh Hanoi Friendship Blvd (1019), Phnom Penh</li>
+              <li>Contact: +888 96 500 342</li>
+            </ol>
+               
+          </div>
+        </section>
+        <!-- coupon card section -->
+        <section class="flashSaleCard">
+          <div class="container mx-auto px-0 py-8">
+            <h1 class="font-semibold text-[2rem]">Coupon Discount Products</h1>
+            <div class="grid xl:grid-cols-3 gap-4 py-2 md:grid-cols-3  grid-cols-1 p-4" id="display-card-trending">
+              
+          </div>
+         
+        </section>
     </main>
- 
     <footer class="bg-[#f5f5f5]">
       <div
         class="mx-auto w-full max-w-screen-xl p-[20px] xl:p-0 py-6 lg:py-8 mt-48">
@@ -366,18 +353,17 @@
         </div>
       </div>
     </footer>
- 
 </body>
+<!-- jquery -->
 <script src="/jquery/jquery.js"></script>
 <!-- sign In script -->
 <script src="/myscript/signIn.js"></script>
-<script src="/myscript/unavailablefav.js"></script>
-<script src="/myscript/detail.js"></script>
-<!-- flowbite script -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js">
-
-</script>
+<!--my script -->
+<script src="/myscript/trendingcard.js"></script>
+<!-- add to favorite -->
+<script src="/myscript/addtoFav.js"></script>
+<!-- flowbite scripte -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 
 
 </html>
-   

@@ -12,7 +12,7 @@
   </head>
   <body class="bg-[#f5f5f5]">
     <!-- nav bar  -->
-    <header class=" sticky top-0 z-30">
+    <header class=" sticky top-0 z-30 ">
       <nav class=" border-gray-200 bg-[#f5f5f5] p-0]">
         <div
           class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-[20px] xl:p-0">
@@ -38,7 +38,7 @@
               </svg>
             </span>
           </a>
-
+    
           <!-- Search Bar -->
           <div
             class="relative flex  flex-wrap sm:w-[350px] w-[220px] xl:w-[500px]  lg:w-[400px] justify-between ms-[-30px] ">
@@ -55,7 +55,7 @@
             <input type="text" placeholder="Search for anything"
               class="py-2 pl-8 pr-3 border border-[#f5f5f5] rounded-full focus:outline-none focus:ring-1 focus:ring-[#1A6E09]  w-full  space-x-4 xl:w-[500px] ">
           </div>
-
+    
           <button data-collapse-toggle="navbar-default" type="button"
             class="inline-flex items-center me-[-10px] w-10 h-10 justify-center text-xl text-[#1A6E09] rounded-lg md:hidden hover:bg-gray-100 focus:outline-none  "
             aria-controls="navbar-default" aria-expanded="false">
@@ -71,7 +71,7 @@
             <ul
               class="font-medium flex flex-col justify-around p-0 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-3 rtl:space-x-reverse md:mt-0 md:border-0 md:dark:bg-[#f5f5f5] dark:bg-[#f5f5f5] md:dark:bg-[#f5f5f5]dark:border-gray-700">
               <li>
-                <a href="/src/favourite.html"
+                <a href="/src/signIn.html"
                   class=" hidden text-[#1A6E09] hover:text-gray-300 items-center space-x-0 md:block ">
                   <svg class="w-6 h-6 text-gray-800 dark:text-black  md:mt-0"
                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -83,13 +83,13 @@
                 </a>
               </li>
               <li>
-                <a href="/src/favourite.html"
+                <a href="/src/category.html"
                   class="block py-2 px-0 hover:bg-none
                   md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]  hover:text-[#FF9E37] 
                    md:dark:hover:bg-transparent md:hidden">Category</a>
               </li>
               <li>
-                <a href="/src/favourite.html"
+                <a href="/src/signIn.html"
                   class="block py-2 px-0  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]   hover:text-[#FF9E37] md:dark:hover:bg-transparent md:hidden">Favorite
                   List</a>
               </li>
@@ -103,7 +103,7 @@
                   class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0    hover:text-[#FF9E37] md:dark:hover:bg-transparent">Sign
                   In</a>
               </li>
-
+    
             </ul>
           </div>
         </div>
@@ -111,309 +111,384 @@
     </header>
     <!-- main section -->
     <main
-    class="max-w-screen-xl container-fluid mx-auto justify-center p-[20px] text-inter xl:p-0 ">
-    <!-- hero section -->
-    <section class="max-w-screen-xl justify-between mt-0 mb-[250px] xl:mb-0">
-      <div class=" flex
+      class="max-w-screen-xl container-fluid mx-auto justify-center p-[20px] text-inter xl:p-0 ">
+      <!-- hero section -->
+      <section class="max-w-screen-xl justify-between mt-0 mb-[250px] xl:mb-0">
+        <div class=" flex
         h-[500px] lg:grid-cols-2 grid-cols-1 py-8">
 
-        <!-- description of hero section -->
-        <div class=" bg-gray-100 text-[#363636] p-9 font-inter w-[50%]">
-          <article class="text-[3rem] font-semibold">
-            KHMER 
-            <span class="text-[#1A6E09] p-0">
-              MART
-            </span>
-            <h4 class="text-[32px] leading-[48px]">Discount List Website</h4>
-            <p class="text-[24px] font-light leading-[24px] py-2 xl:text-[20px]">Welcome to KHMER<span
-                class="text-[#1A6E09]"> MART</span> – your ultimate <br>
-              destination for unbeatable discounts on a wide range of
-              products!</p>
-          </article>
-          <button
-            class="rounded-[15px] xl:mt-2 border border-[#1A6E09] bg-[#1A6E09] h-10 w-[250px] text-center  text-white">
-            View Discount Products
-          </button>
+          <!-- description of hero section -->
+          <div class=" bg-gray-100 text-[#363636] font-inter w-[50%]">
+            <article class="text-[3rem] font-semibold">
+              KHMER
+              <span class="text-[#1A6E09] p-0">
+                MART
+              </span>
+              <h4 class="text-[32px] leading-[48px]">Discount List Website</h4>
+              <p
+                class="text-[24px] font-light leading-[24px] py-2 xl:text-[20px]">Welcome
+                to KHMER<span
+                  class="text-[#1A6E09]"> MART</span> – your ultimate <br>
+                destination for unbeatable discounts on a wide <br>range of
+                products!</p>
+            </article>
+            <button
+              class="rounded-[15px] xl:mt-20 border border-[#1A6E09] bg-[#1A6E09] h-10 w-[250px] text-center mt-[32px] text-white">
+              View Discount Products
+            </button>
+          </div>
+          <div class="flex  w-[50%]">
+            <img src="/Img/b1g1/1.png" alt="herosectionimage"
+              class="object-cover h-[500px] w-full">
+          </div>
         </div>
-        <div class="flex  w-[50%] ">
-          <img src="../Img/1.png" alt="herosectionimage"
-            class="w-full h-[470px] ">
-        </div>
-      </div>
-    </section> 
-    <!-- display card section -->
-    <!-- trending section -->
-    <section class="Trending">
-      <div class="container mx-auto px-0 py-8 ">
-        <h1 class="font-semibold text-[2rem] text-[#363636]">Trending Today</h1>
-        <div class="grid xl:grid-cols-3 gap-4 py-2 md:grid-cols-3  grid-cols-1 p-0 xl:p-0 md:p-0 sm:p-0" id="display-card-trending">
-      </div>
-    </section>
-    <!-- banner -->
-    <section id="banner" class="mt-2">
-      <div class="grid xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-4">  
-          <a href="#"><img class="rounded-3xl xl:w-[500px]h-[270px]" src="/Img/flashsale banner.jpg" alt="banner-2">
-          <a href="#"><img class="rounded-3xl xl:w-[500px]h-[270px]" src="/Img/flashsale banner.jpg" alt="banner-2">
-          </a>
-      </div>
-    </section>
-    <!-- flashsale section -->
-    <section class="FlashSaleCard ">
-      <div class="container mx-auto px-0 py-8 ">
-        <h1 class="font-semibold text-[2rem] text-[#363636]">FlashSale</h1>
-        <div class="grid xl:grid-cols-4 gap-4 py-2 md:grid-cols-3   grid-cols-1 p-0 xl:p-0 md:p-0 sm:p-0 mt-2" id="flashSaleDisplayCard">
-          
-         
-        <div class="grid xl:grid-cols-4 gap-4 py-2 md:grid-cols-3   grid-cols-1 p-0 xl:p-0 md:p-0 sm:p-0 mt-2" id="cosmeticsDisplayCard"> 
-    </section>
-    <!-- coupon section -->
-    <section id="coupon">
-      <h1 class="font-semibold text-[2rem] text-[#363636]">Coupon</h1>
-      <div class="grid xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-4 mt-2">  
-          <a href="/src/coupon.html">
-              <img class="rounded-2xl  xl:w-[500px]h-[270px]  " src="/Img/coupon1.jpg" alt="coupon-1">
-          </a>
-          <a href="/src/coupon.html"><img class="rounded-2xl xl:w-[500px]h-[270px]" src="/Img/coupon2.jpg" alt="coupon-2">
-          </a>
-      </div>
-    </section>
-    <!-- buy one get one  -->
-    <section class="">
-      <div class="container mx-auto px-0 py-0">
-        <h1 class="font-semibold text-[2rem] text-[#363636]">Buy One Get One</h1>
-        <div class="grid xl:grid-cols-4 gap-4 py-2 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 p-0 mt-2" id="buyOnegetOneDisplayCard">
-        <div class="grid xl:grid-cols-4 gap-4 py-2 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 p-0 mt-2" id="buy1get1container">
-             
-      </div>
-     
-    </section>
-    <!-- event section -->
-    <section class=" z-10">
-      <h1 class="font-semibold text-[2rem] text-[#363636]">Events</h1>
-      <a href="/src/event.html">
-          <div id="default-carousel" class="relative w-full mt-2 z-10" data-carousel="slide">
-        <!-- Carousel wrapper -->
-        <div class="relative h-56 overflow-hidden rounded-lg md:h-96 ">
-             <!-- Item 1 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/Img/event1.png" class="absolute block w-full  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 " alt="event1">
+      </section>
+      <!-- display card section -->
+      <!-- trending section -->
+      <section class="Trending">
+        <div class="container mx-auto px-0 py-8 ">
+          <h1 class="font-semibold text-[2rem] text-[#363636]">Trending
+            Today</h1>
+          <div
+            class="grid xl:grid-cols-3 gap-4 py-2 md:grid-cols-3  grid-cols-1 p-0 xl:p-0 md:p-0 sm:p-0"
+            id="trendingProductsContainer">
+
+          </div>
+
+        </section>
+        <!-- banner -->
+        <section id="banner" class="mt-2">
+          <div class="grid xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-4">
+            <a href="#"><img class="rounded-3xl xl:w-[500px]h-[270px]"
+                src="/Img/flashsale banner.jpg" alt="banner-2">
+              <a href="#"><img class="rounded-3xl xl:w-[500px]h-[270px]"
+                  src="/Img/flashsale banner.jpg" alt="banner-2">
+              </a>
             </div>
-            <!-- Item 2 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/Img/event2.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="event2">
-            </div>
-            <!-- Item 3 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/Img/event3.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="event3">
-            </div>
-        </div>
-        <!-- Slider indicators -->
-        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-        </div>
-        <!-- Slider controls -->
-      
-      </div>
-      </a>
-    
-      
-     </section>
-  </main>
+          </section>
+          <!-- Amount off section -->
+          <section class="amount off ">
+            <div class="container mx-auto px-0 py-8 ">
+              <h1
+                class="font-semibold text-[2rem] text-[#363636]">Amount Off</h1>
+              <div
+                class="grid xl:grid-cols-4 gap-4 py-2 md:grid-cols-3   grid-cols-1 p-0 xl:p-0 md:p-0 sm:p-0 mt-2"
+                id="amountOffDisplayCard">
+
+              </section>
+              <!-- coupon section -->
+              <section id="coupon">
+                <h1 class="font-semibold text-[2rem] text-[#363636]">Coupon</h1>
+                <div
+                  class="grid xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-4 mt-2">
+                  <a href="/src/coupon.html">
+                    <img class="rounded-2xl  xl:w-[500px]h-[270px]  "
+                      src="/Img/coupon1.jpg" alt="coupon-1">
+                  </a>
+                  <a href="/src/coupon.html"><img
+                      class="rounded-2xl xl:w-[500px]h-[270px]"
+                      src="/Img/coupon2.jpg" alt="coupon-2">
+                  </a>
+                </div>
+              </section>
+              <!-- buy one get one  -->
+              <section>
+                <div class="container mx-auto px-0 py-0">
+                  <h1 class="font-semibold text-[2rem] text-[#363636]">Buy One
+                    Get One</h1>
+                  <div
+                    class="grid xl:grid-cols-4 gap-4 py-2 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 p-0 mt-2"
+                    id="buyOnegetOneDisplayCard">
+
+                  </div>
+
+                </section>
+                <!-- flash Sale -->
+                <section>
+                  <div class="container mx-auto px-0 py-0">
+                    <h1 class="font-semibold text-[2rem] text-[#363636]">Flash Sale</h1>
+                    <div
+                      class="grid xl:grid-cols-4 gap-4 py-2 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 p-0 mt-2"
+                      id="flashSaleDisplayCardHome">
+                    </div>
   
-  <footer class="bg-[#f5f5f5]">
-    <div
-      class="mx-auto w-full max-w-screen-xl p-[20px] xl:p-0 py-6 lg:py-8 mt-48">
-      <div class="md:flex md:justify-between gap-8">
-        <div
-          class="mb-2 md:mb-0  ">
-          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="/Img/logo.png" alt="Khmer-Mart Logo" class="max-h-32 md:ms-[-10px]  ms-[-23px] ">
-          </a>
-        </div>
-        <div
-          class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 md:gap-4 ">
-          <div>
-            <h2
-              class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
-              Event
-            </h2>
-            <ul class="text-gray-500 dark:text-[#363636] font-inter text-sm">
-              <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Discount Type</a>
-              </li>
-              <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Find Information</a>
-              </li>
-              <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Privacy Prolicy</a>
-              </li>
-              <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Shops</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2
-              class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
-              About
-            </h2>
-            <ul class="text-gray-500 dark:text-[#363636]  font-inter text-sm">
-              <li class="mb-4">
-                  <a href="./aboutUs.html" class="hover:text-[#1A6E09]">About Us</a>
-              </li>
-              <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Help</a>
-              </li>
-              <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Location</a>
-              </li>
-              <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2
-              class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
-              Catalog
-            </h2>
-            <ul class="text-gray-500 dark:text-[#363636] font-inter text-sm">
-              <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Buy One Get One</a>
-              </li>
-              <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Flash Sale</a>
-              </li>
-              <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Events</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2
-              class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
-              Work Time
-            </h2>
-            <ul class="text-gray-500 dark:text-[#363636]  font-inter text-sm">
-              <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Mon-Thu 9:00 - 20:00</a>
-              </li>
-              <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Fri 9:00- 19:00</a>
-              </li>
-              <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Sat 9:00 - 17:00</a>
-              </li>
+                  </section>
+                <!-- event section -->
+                <section class=" z-10">
+                  <h1
+                    class="font-semibold text-[2rem] text-[#363636]">Events</h1>
+                  <a href="/src/event.html">
+                    <div id="default-carousel" class="relative w-full mt-2 z-10"
+                      data-carousel="slide">
+                      <!-- Carousel wrapper -->
+                      <div
+                        class="relative overflow-hidden rounded-lg md:h-96">
+                        <!-- Item 1 -->
+                        <div class="hidden duration-700 ease-in-out"
+                          data-carousel-item>
+                          <img src="/Img/b1g1/christmas.jpg"
+                            class="absolute block w-full  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
+                            alt="event1">
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="hidden duration-700 ease-in-out"
+                          data-carousel-item>
+                          <img src="/Img/b1g1/newyear.jpg"
+                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
+                            alt="event2">
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="hidden duration-700 ease-in-out"
+                          data-carousel-item>
+                          <img src="/Img/b1g1/chinese.jpg"
+                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
+                            alt="event3">
+                        </div>
+                      </div>
+                      <!-- Slider indicators -->
+                      <div
+                        class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                        <button type="button" class="w-3 h-3 rounded-full"
+                          aria-current="true" aria-label="Slide 1"
+                          data-carousel-slide-to="0"></button>
+                        <button type="button" class="w-3 h-3 rounded-full"
+                          aria-current="false" aria-label="Slide 2"
+                          data-carousel-slide-to="1"></button>
+                        <button type="button" class="w-3 h-3 rounded-full"
+                          aria-current="false" aria-label="Slide 3"
+                          data-carousel-slide-to="2"></button>
+                      </div>
+                      <!-- Slider controls -->
 
-            </ul>
-          </div>
-          <div class="col-span-2">
-            <h2
-              class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
-              Subscribe Our Newsletters
-            </h2>
-            <div class="relative w-full flex md:w-[320px] ">
-              <input type="email" id="currency-input"
-                class="flex p-2.5 w-full z-20 ps-10 text-sm placeholder:text-left text-gray-900  border border-[#1A6E09]  focus:ring-white  focus:outline-none focus:border-[#1A6E09]  dark:placeholder-gray-300 dark:text-black dark:focus:border-[#1A6E09]"
-                placeholder="Your Email">
-              <button
-                class="flex-shrink-0 z-10 inline-flex items-center  px-4 text-sm font-medium text-center text-gray-900 bg-[#1A6E09] border border-gray-300 rounded-0  focus:ring-0 focus:outline-none  dark:bg-[#1A6E09]  dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
-                type="button">
-                Subscribe
-              </button>
-            </div>
-            <div class="relative w-full flex md:w-[320px] mt-4">
-              <ul class="flex gap-4">
-                <li class="mb-4 border rounded-full p-1 ring-1 ring-[#1A6E09]">
-                  <a href="#" class="hover:text-[#1A6E09]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                      height="16" viewBox="0 0 16 16" fill="none">
-                      <g clip-path="url(#clip0_1630_814)">
-                        <path
-                          d="M9.07934 15.9688H6.51207C6.08325 15.9688 5.73443 15.6206 5.73443 15.1926V9.41333H4.23663C3.80781 9.41333 3.45898 9.06506 3.45898 8.63721V6.16077C3.45898 5.73279 3.80781 5.38464 4.23663 5.38464H5.73443V4.14453C5.73443 2.91492 6.12129 1.86877 6.85307 1.11938C7.58814 0.366577 8.61542 -0.03125 9.82383 -0.03125L11.7818 -0.0280762C12.2098 -0.0273437 12.5581 0.320801 12.5581 0.748047V3.04736C12.5581 3.47534 12.2094 3.82349 11.7807 3.82349L10.4624 3.82398C10.0604 3.82398 9.95801 3.90442 9.93611 3.92908C9.90003 3.96997 9.8571 4.08557 9.8571 4.40479V5.38452H11.6816C11.8189 5.38452 11.952 5.41834 12.0664 5.48206C12.3131 5.61963 12.4664 5.87976 12.4664 6.16089L12.4655 8.63733C12.4655 9.06506 12.1166 9.41321 11.6878 9.41321H9.8571V15.1926C9.8571 15.6206 9.50815 15.9688 9.07934 15.9688ZM6.67425 15.0308H8.91716V8.99341C8.91716 8.70764 9.15016 8.47522 9.43636 8.47522H11.5256L11.5265 6.32263H9.43624C9.15003 6.32263 8.91716 6.09021 8.91716 5.80444V4.40479C8.91716 4.03833 8.95446 3.62158 9.23161 3.30835C9.5665 2.92969 10.0943 2.88599 10.4622 2.88599L11.6182 2.8855V0.909668L9.8231 0.906738C7.88107 0.906738 6.67425 2.14746 6.67425 4.14453V5.80444C6.67425 6.09009 6.44137 6.32263 6.15517 6.32263H4.39881V8.47522H6.15517C6.44137 8.47522 6.67425 8.70764 6.67425 8.99341V15.0308ZM11.7799 0.909912H11.78H11.7799Z"
-                          fill="#1A6E09" />
-                      </g>
-                      <defs>
-                        <clippath id="clip0_1630_814">
-                          <rect width="16" height="16" fill="white" />
-                        </clippath>
-                      </defs>
-                    </svg>
+                    </div>
                   </a>
-                </li>
-                <li class="mb-4 border rounded-full p-1 ring-1 ring-[#1A6E09]">
-                  <a href="#" class="hover:text-[#1A6E09]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                      height="16" viewBox="0 0 16 16" fill="none">
-                      <g clip-path="url(#clip0_1630_817)">
-                        <path
-                          d="M11.6689 0H4.33105C1.94287 0 0 1.94287 0 4.33105V11.669C0 14.0571 1.94287 16 4.33105 16H11.669C14.0571 16 16 14.0571 16 11.669V4.33105C16 1.94287 14.0571 0 11.6689 0V0ZM15.062 11.669C15.062 13.5399 13.5399 15.062 11.6689 15.062H4.33105C2.46008 15.062 0.937986 13.5399 0.937986 11.669V4.33105C0.937986 2.46008 2.46008 0.937986 4.33105 0.937986H11.669C13.5399 0.937986 15.062 2.46008 15.062 4.33105V11.669Z"
-                          fill="#1A6E09" />
-                        <path
-                          d="M7.99987 3.625C5.58752 3.625 3.625 5.58752 3.625 7.99987C3.625 10.4122 5.58752 12.3747 7.99987 12.3747C10.4122 12.3747 12.3747 10.4122 12.3747 7.99987C12.3747 5.58752 10.4122 3.625 7.99987 3.625ZM7.99987 11.4368C6.10485 11.4368 4.56299 9.89501 4.56299 7.99987C4.56299 6.10485 6.10485 4.56299 7.99987 4.56299C9.89501 4.56299 11.4368 6.10485 11.4368 7.99987C11.4368 9.89501 9.89501 11.4368 7.99987 11.4368Z"
-                          fill="#1A6E09" />
-                        <path
-                          d="M12.4802 2.07129C11.7673 2.07129 11.1875 2.65124 11.1875 3.36401C11.1875 4.0769 11.7673 4.65686 12.4802 4.65686C13.1931 4.65686 13.7731 4.0769 13.7731 3.36401C13.7731 2.65112 13.1931 2.07129 12.4802 2.07129ZM12.4802 3.71875C12.2847 3.71875 12.1255 3.55957 12.1255 3.36401C12.1255 3.16833 12.2847 3.00928 12.4802 3.00928C12.6759 3.00928 12.8351 3.16833 12.8351 3.36401C12.8351 3.55957 12.6759 3.71875 12.4802 3.71875Z"
-                          fill="#1A6E09" />
-                      </g>
-                      <defs>
-                        <clippath id="clip0_1630_817">
-                          <rect width="16" height="16" fill="white" />
-                        </clippath>
-                      </defs>
-                    </svg>
-                  </a>
-                </li>
-                <li class="mb-4 border rounded-full p-1 ring-1 ring-[#1A6E09]">
-                  <a href="#" class="hover:text-[#1A6E09]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                      height="16" viewBox="0 0 16 16" fill="none">
-                      <g clip-path="url(#clip0_1630_823)">
-                        <path
-                          d="M4.13623 4.73828H1.43896C1.1366 4.73828 0.890625 4.98425 0.890625 5.28662V15.4518C0.890625 15.754 1.1366 16 1.43896 16H4.13623C4.43848 16 4.68445 15.754 4.68445 15.4518V5.28662C4.68445 4.98425 4.43848 4.73828 4.13623 4.73828ZM3.74561 15.0611H1.82947V5.67712H3.74561V15.0611Z"
-                          fill="#1A6E09" />
-                        <path
-                          d="M2.7876 0C1.73291 0 0.875 0.857909 0.875 1.91247C0.875 2.96716 1.73291 3.82507 2.7876 3.82507C3.84204 3.82507 4.70007 2.96716 4.70007 1.91247C4.70007 0.857909 3.84216 0 2.7876 0ZM2.7876 2.88622C2.25061 2.88622 1.81384 2.44946 1.81384 1.91247C1.81384 1.37561 2.25061 0.938841 2.7876 0.938841C3.32446 0.938841 3.76123 1.37561 3.76123 1.91247C3.76123 2.44934 3.32446 2.88622 2.7876 2.88622Z"
-                          fill="#1A6E09" />
-                        <path
-                          d="M13.408 5.92993C12.7632 5.39172 11.9435 5.10388 11.1007 5.11951C10.5773 5.12915 10.0658 5.25537 9.60229 5.48389V5.26196C9.60229 4.97278 9.3678 4.73828 9.07861 4.73828H6.33228C6.04309 4.73828 5.80859 4.97278 5.80859 5.26196V15.4762C5.80859 15.7655 6.04309 15.9999 6.33228 15.9999H9.13281C9.39209 15.9999 9.60229 15.7897 9.60229 15.5305V9.44054C9.60229 8.91918 10.0103 8.47802 10.5312 8.46252C11.0728 8.44653 11.5183 8.88219 11.5183 9.42016V15.5403C11.5183 15.794 11.7241 15.9999 11.9779 15.9999H14.6694C14.9232 15.9999 15.129 15.794 15.129 15.5403V9.60631C15.129 8.18298 14.5017 6.84289 13.408 5.92993ZM14.1902 15.061H12.4573V9.42016C12.4573 8.37426 11.6063 7.52331 10.5603 7.52331C9.5144 7.52331 8.66345 8.37426 8.66345 9.42016V15.061H6.74744V5.677H8.66345V6.35925H8.66406C8.66394 6.46985 8.70239 6.58093 8.78149 6.67041C8.95325 6.8645 9.25 6.88256 9.44409 6.71069C9.90662 6.30127 10.5011 6.06958 11.118 6.0581C11.7356 6.04638 12.335 6.25708 12.8064 6.65063C13.6859 7.38476 14.1902 8.46203 14.1902 9.60631V15.061Z"
-                          fill="#1A6E09" />
-                      </g>
-                      <defs>
-                        <clippath id="clip0_1630_823">
-                          <rect width="16" height="16" fill="white" />
-                        </clippath>
-                      </defs>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
 
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-200 lg:my-8" />
-      <div class="sm:flex sm:items-center sm:justify-between">
-        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">©
-          2023 <a href="https://flowbite.com/" class="hover:underline">Khmer
-            Mart CSTAD</a>. All Rights Reserved.
-        </span>
+                </section>
+              </main>
 
-      </div>
-    </div>
-  </footer>
+              <footer class="bg-[#f5f5f5]">
+                <div
+                  class="mx-auto w-full max-w-screen-xl p-[20px] xl:p-0 py-6 lg:py-8 mt-48">
+                  <div class="md:flex md:justify-between gap-8">
+                    <div
+                      class="mb-2 md:mb-0  ">
+                      <a href="#"
+                        class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src="/Img/logo.png" alt="Khmer-Mart Logo"
+                          class="max-h-32 md:ms-[-10px]  ms-[-23px] ">
+                      </a>
+                    </div>
+                    <div
+                      class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 md:gap-4 ">
+                      <div>
+                        <h2
+                          class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
+                          Event
+                        </h2>
+                        <ul
+                          class="text-gray-500 dark:text-[#363636] font-inter text-sm">
+                          <li class="mb-4">
+                            <a href="#" class="hover:text-[#1A6E09]">Discount
+                              Type</a>
+                          </li>
+                          <li class="mb-4">
+                            <a href="#" class="hover:text-[#1A6E09]">Find
+                              Information</a>
+                          </li>
+                          <li class="mb-4">
+                            <a href="#" class="hover:text-[#1A6E09]">Privacy
+                              Prolicy</a>
+                          </li>
+                          <li class="mb-4">
+                            <a href="#" class="hover:text-[#1A6E09]">Shops</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h2
+                          class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
+                          About
+                        </h2>
+                        <ul
+                          class="text-gray-500 dark:text-[#363636]  font-inter text-sm">
+                          <li class="mb-4">
+                            <a href="./aboutUs.html"
+                              class="hover:text-[#1A6E09]">About Us</a>
+                          </li>
+                          <li class="mb-4">
+                            <a href="#" class="hover:text-[#1A6E09]">Help</a>
+                          </li>
+                          <li class="mb-4">
+                            <a href="#"
+                              class="hover:text-[#1A6E09]">Location</a>
+                          </li>
+                          <li class="mb-4">
+                            <a href="#" class="hover:text-[#1A6E09]">Contact
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h2
+                          class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
+                          Catalog
+                        </h2>
+                        <ul
+                          class="text-gray-500 dark:text-[#363636] font-inter text-sm">
+                          <li class="mb-4">
+                            <a href="#" class="hover:text-[#1A6E09]">Buy One Get
+                              One</a>
+                          </li>
+                          <li class="mb-4">
+                            <a href="#" class="hover:text-[#1A6E09]">Flash
+                              Sale</a>
+                          </li>
+                          <li class="mb-4">
+                            <a href="#" class="hover:text-[#1A6E09]">Events</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h2
+                          class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
+                          Work Time
+                        </h2>
+                        <ul
+                          class="text-gray-500 dark:text-[#363636]  font-inter text-sm">
+                          <li class="mb-4">
+                            <a href="#" class="hover:text-[#1A6E09]">Mon-Thu
+                              9:00 - 20:00</a>
+                          </li>
+                          <li class="mb-4">
+                            <a href="#" class="hover:text-[#1A6E09]">Fri 9:00-
+                              19:00</a>
+                          </li>
+                          <li class="mb-4">
+                            <a href="#" class="hover:text-[#1A6E09]">Sat 9:00 -
+                              17:00</a>
+                          </li>
 
-  </body>
-  <!-- jquery script -->
-  <script src="/jquery/jquery.js"></script>
-  <!-- myscript -->
-  <script src="/myscript/homepage.js"></script>
-  <!-- tailwind script-->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+                        </ul>
+                      </div>
+                      <div class="col-span-2">
+                        <h2
+                          class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
+                          Subscribe Our Newsletters
+                        </h2>
+                        <div class="relative w-full flex md:w-[320px] ">
+                          <input type="email" id="currency-input"
+                            class="flex p-2.5 w-full z-20 ps-10 text-sm placeholder:text-left text-gray-900  border border-[#1A6E09]  focus:ring-white  focus:outline-none focus:border-[#1A6E09]  dark:placeholder-gray-300 dark:text-black dark:focus:border-[#1A6E09]"
+                            placeholder="Your Email">
+                          <button
+                            class="flex-shrink-0 z-10 inline-flex items-center  px-4 text-sm font-medium text-center text-gray-900 bg-[#1A6E09] border border-gray-300 rounded-0  focus:ring-0 focus:outline-none  dark:bg-[#1A6E09]  dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
+                            type="button">
+                            Subscribe
+                          </button>
+                        </div>
+                        <div class="relative w-full flex md:w-[320px] mt-4">
+                          <ul class="flex gap-4">
+                            <li
+                              class="mb-4 border rounded-full p-1 ring-1 ring-[#1A6E09]">
+                              <a href="#" class="hover:text-[#1A6E09]">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16" viewBox="0 0 16 16" fill="none">
+                                  <g clip-path="url(#clip0_1630_814)">
+                                    <path
+                                      d="M9.07934 15.9688H6.51207C6.08325 15.9688 5.73443 15.6206 5.73443 15.1926V9.41333H4.23663C3.80781 9.41333 3.45898 9.06506 3.45898 8.63721V6.16077C3.45898 5.73279 3.80781 5.38464 4.23663 5.38464H5.73443V4.14453C5.73443 2.91492 6.12129 1.86877 6.85307 1.11938C7.58814 0.366577 8.61542 -0.03125 9.82383 -0.03125L11.7818 -0.0280762C12.2098 -0.0273437 12.5581 0.320801 12.5581 0.748047V3.04736C12.5581 3.47534 12.2094 3.82349 11.7807 3.82349L10.4624 3.82398C10.0604 3.82398 9.95801 3.90442 9.93611 3.92908C9.90003 3.96997 9.8571 4.08557 9.8571 4.40479V5.38452H11.6816C11.8189 5.38452 11.952 5.41834 12.0664 5.48206C12.3131 5.61963 12.4664 5.87976 12.4664 6.16089L12.4655 8.63733C12.4655 9.06506 12.1166 9.41321 11.6878 9.41321H9.8571V15.1926C9.8571 15.6206 9.50815 15.9688 9.07934 15.9688ZM6.67425 15.0308H8.91716V8.99341C8.91716 8.70764 9.15016 8.47522 9.43636 8.47522H11.5256L11.5265 6.32263H9.43624C9.15003 6.32263 8.91716 6.09021 8.91716 5.80444V4.40479C8.91716 4.03833 8.95446 3.62158 9.23161 3.30835C9.5665 2.92969 10.0943 2.88599 10.4622 2.88599L11.6182 2.8855V0.909668L9.8231 0.906738C7.88107 0.906738 6.67425 2.14746 6.67425 4.14453V5.80444C6.67425 6.09009 6.44137 6.32263 6.15517 6.32263H4.39881V8.47522H6.15517C6.44137 8.47522 6.67425 8.70764 6.67425 8.99341V15.0308ZM11.7799 0.909912H11.78H11.7799Z"
+                                      fill="#1A6E09" />
+                                  </g>
+                                  <defs>
+                                    <clippath id="clip0_1630_814">
+                                      <rect width="16" height="16"
+                                        fill="white" />
+                                    </clippath>
+                                  </defs>
+                                </svg>
+                              </a>
+                            </li>
+                            <li
+                              class="mb-4 border rounded-full p-1 ring-1 ring-[#1A6E09]">
+                              <a href="#" class="hover:text-[#1A6E09]">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16" viewBox="0 0 16 16" fill="none">
+                                  <g clip-path="url(#clip0_1630_817)">
+                                    <path
+                                      d="M11.6689 0H4.33105C1.94287 0 0 1.94287 0 4.33105V11.669C0 14.0571 1.94287 16 4.33105 16H11.669C14.0571 16 16 14.0571 16 11.669V4.33105C16 1.94287 14.0571 0 11.6689 0V0ZM15.062 11.669C15.062 13.5399 13.5399 15.062 11.6689 15.062H4.33105C2.46008 15.062 0.937986 13.5399 0.937986 11.669V4.33105C0.937986 2.46008 2.46008 0.937986 4.33105 0.937986H11.669C13.5399 0.937986 15.062 2.46008 15.062 4.33105V11.669Z"
+                                      fill="#1A6E09" />
+                                    <path
+                                      d="M7.99987 3.625C5.58752 3.625 3.625 5.58752 3.625 7.99987C3.625 10.4122 5.58752 12.3747 7.99987 12.3747C10.4122 12.3747 12.3747 10.4122 12.3747 7.99987C12.3747 5.58752 10.4122 3.625 7.99987 3.625ZM7.99987 11.4368C6.10485 11.4368 4.56299 9.89501 4.56299 7.99987C4.56299 6.10485 6.10485 4.56299 7.99987 4.56299C9.89501 4.56299 11.4368 6.10485 11.4368 7.99987C11.4368 9.89501 9.89501 11.4368 7.99987 11.4368Z"
+                                      fill="#1A6E09" />
+                                    <path
+                                      d="M12.4802 2.07129C11.7673 2.07129 11.1875 2.65124 11.1875 3.36401C11.1875 4.0769 11.7673 4.65686 12.4802 4.65686C13.1931 4.65686 13.7731 4.0769 13.7731 3.36401C13.7731 2.65112 13.1931 2.07129 12.4802 2.07129ZM12.4802 3.71875C12.2847 3.71875 12.1255 3.55957 12.1255 3.36401C12.1255 3.16833 12.2847 3.00928 12.4802 3.00928C12.6759 3.00928 12.8351 3.16833 12.8351 3.36401C12.8351 3.55957 12.6759 3.71875 12.4802 3.71875Z"
+                                      fill="#1A6E09" />
+                                  </g>
+                                  <defs>
+                                    <clippath id="clip0_1630_817">
+                                      <rect width="16" height="16"
+                                        fill="white" />
+                                    </clippath>
+                                  </defs>
+                                </svg>
+                              </a>
+                            </li>
+                            <li
+                              class="mb-4 border rounded-full p-1 ring-1 ring-[#1A6E09]">
+                              <a href="#" class="hover:text-[#1A6E09]">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16" viewBox="0 0 16 16" fill="none">
+                                  <g clip-path="url(#clip0_1630_823)">
+                                    <path
+                                      d="M4.13623 4.73828H1.43896C1.1366 4.73828 0.890625 4.98425 0.890625 5.28662V15.4518C0.890625 15.754 1.1366 16 1.43896 16H4.13623C4.43848 16 4.68445 15.754 4.68445 15.4518V5.28662C4.68445 4.98425 4.43848 4.73828 4.13623 4.73828ZM3.74561 15.0611H1.82947V5.67712H3.74561V15.0611Z"
+                                      fill="#1A6E09" />
+                                    <path
+                                      d="M2.7876 0C1.73291 0 0.875 0.857909 0.875 1.91247C0.875 2.96716 1.73291 3.82507 2.7876 3.82507C3.84204 3.82507 4.70007 2.96716 4.70007 1.91247C4.70007 0.857909 3.84216 0 2.7876 0ZM2.7876 2.88622C2.25061 2.88622 1.81384 2.44946 1.81384 1.91247C1.81384 1.37561 2.25061 0.938841 2.7876 0.938841C3.32446 0.938841 3.76123 1.37561 3.76123 1.91247C3.76123 2.44934 3.32446 2.88622 2.7876 2.88622Z"
+                                      fill="#1A6E09" />
+                                    <path
+                                      d="M13.408 5.92993C12.7632 5.39172 11.9435 5.10388 11.1007 5.11951C10.5773 5.12915 10.0658 5.25537 9.60229 5.48389V5.26196C9.60229 4.97278 9.3678 4.73828 9.07861 4.73828H6.33228C6.04309 4.73828 5.80859 4.97278 5.80859 5.26196V15.4762C5.80859 15.7655 6.04309 15.9999 6.33228 15.9999H9.13281C9.39209 15.9999 9.60229 15.7897 9.60229 15.5305V9.44054C9.60229 8.91918 10.0103 8.47802 10.5312 8.46252C11.0728 8.44653 11.5183 8.88219 11.5183 9.42016V15.5403C11.5183 15.794 11.7241 15.9999 11.9779 15.9999H14.6694C14.9232 15.9999 15.129 15.794 15.129 15.5403V9.60631C15.129 8.18298 14.5017 6.84289 13.408 5.92993ZM14.1902 15.061H12.4573V9.42016C12.4573 8.37426 11.6063 7.52331 10.5603 7.52331C9.5144 7.52331 8.66345 8.37426 8.66345 9.42016V15.061H6.74744V5.677H8.66345V6.35925H8.66406C8.66394 6.46985 8.70239 6.58093 8.78149 6.67041C8.95325 6.8645 9.25 6.88256 9.44409 6.71069C9.90662 6.30127 10.5011 6.06958 11.118 6.0581C11.7356 6.04638 12.335 6.25708 12.8064 6.65063C13.6859 7.38476 14.1902 8.46203 14.1902 9.60631V15.061Z"
+                                      fill="#1A6E09" />
+                                  </g>
+                                  <defs>
+                                    <clippath id="clip0_1630_823">
+                                      <rect width="16" height="16"
+                                        fill="white" />
+                                    </clippath>
+                                  </defs>
+                                </svg>
+                              </a>
+                            </li>
+                          </ul>
 
-</html>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr
+                    class="my-6 border-gray-200 sm:mx-auto dark:border-gray-200 lg:my-8" />
+                  <div class="sm:flex sm:items-center sm:justify-between">
+                    <span
+                      class="text-sm text-gray-500 sm:text-center dark:text-gray-400">©
+                      2023 <a href="https://flowbite.com/"
+                        class="hover:underline">Khmer
+                        Mart CSTAD</a>. All Rights Reserved.
+                    </span>
+
+                  </div>
+                </div>
+              </footer>
+
+            </body>
+            <!-- jquery script -->
+            <script src="/jquery/jquery.js"></script>
+            <!-- sign In script -->
+            <script src="/myscript/signIn.js"></script>
+            <!-- myscript -->
+            <script src="/myscript/homepage.js"></script>
+            <script src="/myscript/unavailablefav.js"></script>
+            <!-- tailwind script-->
+            <script
+              src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+
+          </html>
