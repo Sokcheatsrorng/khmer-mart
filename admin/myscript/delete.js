@@ -88,7 +88,7 @@ const renderCard = ({id, attributes }) => {
       : "";
 
       
-    const imageUrl = image.data != null ? image.data.attributes.formats.thumbnail.url : "";
+      const imageUrl = image.data != null ? image?.data?.attributes?.formats?.thumbnail?.url : "";
   // get category name  
   const categoryName =
     category && category.data && category.data.attributes

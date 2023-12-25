@@ -2,16 +2,17 @@
 
 
 // Function to render pagination buttons
+let currentPage=1; // Initialize currentPage with an appropriate value
+
 const renderPagination = (pageCount) => {
   const paginationContainer = document.getElementById("pagination");
   paginationContainer.innerHTML = "";
-
   // Previous button
   paginationContainer.appendChild(createPaginationButton('Previous', currentPage > 1));
-  
+
   for (let i = 1; i <= pageCount; i++) {
     // Regular page button
-    const isActive = currentPage === i;
+    const isActive = i === currentPage; // Check if i is the current page
     const button = createPaginationButton(i, isActive);
     paginationContainer.appendChild(button);
   }
@@ -38,46 +39,6 @@ const createPaginationButton = (text, isEnabled) => {
   button.appendChild(link);
   return button;
 };
-
-// Function to fetch data based on page number
-const fetchData = async (page) => {
-  try {
-    const response = await fetch(
-      `https://cms.istad.co/api/km-products?populate=*&pagination%5Bpage%5D=${page}`,
-      { method: "GET" }
-    );
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    const result = await response.json();
-    const products = result.data;
-
-    const tableBody = document.querySelector("tbody");
-    tableBody.innerHTML = ""; // Clear existing content before adding new data
-
-    products.forEach((product) => {
-      const cardHtml = renderCard(product);
-      tableBody.insertAdjacentHTML("beforeend", cardHtml);
-    });
-
-    // Update the current page
-    currentPage = page;
-
-    // Assuming 'meta' is the pagination metadata
-    const { pageCount } = result.meta.pagination;
-    renderPagination(pageCount);
-  } catch (error) {
-    console.error("Error fetching products:", error);
-  }
-};
-
-// Replace this function with your actual implementation
-const renderStars = (rating) => {
-  const starCount = Math.round(rating);
-  const filledStars = "★".repeat(starCount);
-  const emptyStars = "☆".repeat(5 - starCount);
-  return `${filledStars}${emptyStars}`;
-};
 const renderCard = ({id, attributes }) => {
   const {name, discount, rating, price, type, category, image } = attributes;
   // get image name
@@ -87,7 +48,7 @@ const renderCard = ({id, attributes }) => {
       : "";
 
       
-    const imageUrl = image.data != null ? image.data.attributes.formats.thumbnail.url : "";
+    const imageUrl = image.data != null ? image?.data?.attributes?.formats?.thumbnail?.url : "";
   // get category name  
   const categoryName =
     category && category.data && category.data.attributes
@@ -140,6 +101,47 @@ const renderCard = ({id, attributes }) => {
         </tr>
     `;
 };
-let currentPage = 1; // Initialize the current page
-// Initial fetch on page load
+
+
+// Function to fetch data based on page number
+const fetchData = async (page) => {
+  try {
+    const response = await fetch(
+      `https://cms.istad.co/api/km-products?populate=*&pagination%5Bpage%5D=${page}`,
+      { method: "GET" }
+    );
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const result = await response.json();
+    const products = result.data;
+
+    console.log("current page: ", page)
+    console.log("product number: ", products.length)
+
+    const tableBody = document.querySelector("tbody");
+    tableBody.innerHTML = ""; // Clear existing content before adding new data
+
+    products.forEach((product) => {
+      const cardHtml = renderCard(product);
+      tableBody.insertAdjacentHTML("beforeend", cardHtml);
+    });
+    // Update the current page
+    currentPage = page;
+    // Assuming 'meta' is the pagination metadata
+    const { pageCount } = result.meta.pagination;
+    renderPagination(pageCount);
+  } catch (error) {
+    console.error("Error fetching products:", error);
+  }
+};
+// Replace this function with your actual implementation
+const renderStars = (rating) => {
+  const starCount = Math.round(rating);
+  const filledStars = "★".repeat(starCount);
+  const emptyStars = "☆".repeat(5 - starCount);
+  return `${filledStars}${emptyStars}`;
+};
+
+// Initial data fetch
 fetchData(currentPage);
