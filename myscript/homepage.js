@@ -23,7 +23,7 @@ const trending = ({ attributes }) => {
       </div>
       <div class="flex items-center justify-between">
         <span class="text-3xl font-bold text-neutral-700 text-opacity-80 line-through">$${discountprice.toFixed(2)}</span>
-        <a href="#" class="text-white bg-[#1A6E09] hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center" id="btnaddtoFav">Add to Favorite</a>
+        <button class="text-white bg-[#1A6E09]  focus:outline-none  font-medium rounded-xl text-sm px-5 py-2.5 text-center" id="btnaddtoFav" onclick="unvailable()">Add to Favorite</button>
       </div>
     </div>
   </div>
@@ -92,12 +92,12 @@ const amountOff = ({ attributes }) => {
                     <div class="flex items-center space-x-1 rtl:space-x-reverse text-[#FF9E37] text-2xl" id="stars">
                     ${renderStars(rating)} 
                     </div>
-                    <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">${rating}</span>
+                    <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">${rating}.00/5.00</span>
                 </div>
                 <div class="flex items-center justify-between gap-4">
                 <span class="text-3xl font-bold text-red-700" id="originalPrice">$${discountprice.toFixed(2)}  </span>
                 <span class="text-3xl font-inter text-gray-700"><del id="discPrice">$${price}</del> </span>
-                    <button class="flex gap-8" id="btnaddtoFav">
+                    <button class="flex gap-8" id="btnaddtoFav" onclick="unvailable()>
                         <svg class="w-6 h-6 text-gray-800 dark:text-black md:mt-0" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 21 19">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8"
                                 d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z" />
@@ -174,11 +174,11 @@ const buy1get1 = ({ attributes }) => {
             <div class="flex items-center space-x-1 rtl:space-x-reverse text-[#FF9E37] text-2xl" id="stars">
             ${renderStars(rating)} 
             </div>
-            <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">${rating}</span>
+            <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">${rating}.00/5.00</span>
         </div>
         <div class="flex items-center justify-between gap-4">
             <span class="text-3xl font-bold text-red-700" id="originalPrice">$${price}</span>
-            <button class="flex gap-8" id="btnaddtoFav">
+            <button class="flex gap-8" id="btnaddtoFav" onclick="unvailable()>
                 <svg class="w-6 h-6 text-gray-800 dark:text-black md:mt-0" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 21 19">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8"
                         d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z" />
@@ -244,11 +244,11 @@ const flashsale = ({ attributes }) => {
                     <div class="flex items-center space-x-1 rtl:space-x-reverse text-[#FF9E37] text-2xl" id="stars">
                     ${renderStars(rating)} 
                     </div>
-                    <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">${rating}</span>
+                    <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">${rating}.00/5.00</span>
                 </div>
                 <div class="flex items-center justify-between gap-4">
                     <span class="text-3xl font-bold text-red-700" id="originalPrice">$${price}</span>
-                    <button class="flex gap-8" id="btnaddtoFav">
+                    <button class="flex gap-8" id="btnaddtoFav" onclick="unvailable()>
                         <svg class="w-6 h-6 text-gray-800 dark:text-black md:mt-0" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 21 19">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8"
                                 d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z" />

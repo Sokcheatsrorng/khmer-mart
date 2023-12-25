@@ -1,12 +1,9 @@
-
 document.addEventListener("DOMContentLoaded", function () {
   function getUrlParameter(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
     var results = regex.exec(location.search);
-    return results === null
-      ? ""
-      : decodeURIComponent(results[1].replace(/\+/g, " "));
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
   }
 
   // Check for the login parameter in the URL
@@ -15,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var toastShown = sessionStorage.getItem("toastShown");
   // Display a toast message if login was successful
   if (loginStatus === "success" && !toastShown) {
-    toastShown.success("Login successful! Welcome.", "Success", {
+    toastr.success("Login successful! Welcome.", "Success", {
       closeButton: true,
       timeOut: 5000,
       extendedTimeOut: 1000,
@@ -24,29 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
     sessionStorage.setItem("toastShown", "true");
   }
 });
-
-// Function to update the navbar based on the sign-in status
-const updateNavbar = () => {
-  const isUserSignedIn = localStorage.getItem("token") !== null;
-  const signInLink = document.getElementById("signInLink");
-  const profileLink = document.createElement("li");
-  profileLink.id = "profileLink";
-
-  if (isUserSignedIn) {
-    // User is signed in, show profile image
-    profileLink.innerHTML = `<a href="/src/profile.html" 
-      class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0    hover:text-[#FF9E37] md:dark:hover:bg-transparent">
-      <img class="w-8 h-8 rounded-full" src="/Img/Sokcheat_pic.png"
-        alt="user photo"></a>`;
-    signInLink.replaceWith(profileLink);
-  } else {
-    // User is not signed in, show sign-in link
-    profileLink.innerHTML = `<a href="/src/signIn.html" 
-      class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0    hover:text-[#FF9E37] md:dark:hover:bg-transparent">
-      Sign In</a>`;
-    signInLink.replaceWith(profileLink);
-  }
-};
 
 // Function to handle form submission
 function submitForm(event) {
@@ -82,10 +56,9 @@ function submitForm(event) {
         // Store the token in local storage or a cookie for future requests
         localStorage.setItem("token", response.jwt);
         localStorage.setItem("id", response.user.id);
-        // Call updateNavbar after successful login
-        updateNavbar();
         // Redirect to the home page or perform other actions
-        window.location.href = "/src/index.html";
+        window.location.replace("/afterSignIn");
+        
       } else {
         alert("You cannot sign In!!");
       }
@@ -95,4 +68,3 @@ function submitForm(event) {
       toastr.error("Login failed. Please check your username and password.");
     });
 }
-
