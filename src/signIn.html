@@ -113,7 +113,7 @@
       </nav>
     </header>
     <!-- main section -->
-      <main class="text-inter max-w-screen-xl container-fluid mx-auto justify-center p-[20px] text-inter xl:p-0">
+      <main class="bg-[#f5f5f5] max-w-screen-xl container-fluid mx-6 justify-center p-[20px] md:p-0 text-inter z-10 xl:py-8 ">
         
         <section class="circle max-w-screen-xl absolute left-[0px] top-[150px] hidden lg:block">
            <svg xmlns="http://www.w3.org/2000/svg" width="480" height="700" viewBox="0 0 505 1100" fill="none">
@@ -121,7 +121,7 @@
         </svg>
         </section>
          <section class="flex justify-between">
-              <section class="relative ms-[-10%] mt-0">
+              <section class="relative ms-[-10%] mt-0 top-[140px] hidden lg:block">
                 <div data-aos="fade-right">
                   <svg width="500" height="780" viewBox="0 0 676 800" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M49.2922 687.054H127.023C132.163 687.054 136.334 691.057 136.334 695.99V744.078C136.334 749.01 132.163 753.013 127.023 753.013H103.88L96.5693 765.155L88.1524 779.156L79.7355 765.155L72.4253 753.013H49.2815C44.142 753.013 39.9708 749.01 39.9708 744.078V695.99C39.9708 691.057 44.142 687.054 49.2815 687.054H49.2922Z" fill="#FCB32B"/>
@@ -243,11 +243,11 @@
                 </div> 
                  
               </section>  
-              <section>
+              <section class="mb-12">
                   <div class="w-full sm:max-w-lg xl:p-0 "> 
                     <div class="space-y-4 md:space-y-6 p-[20px] xl:p-0">
                         <div>
-                            <h1 class="text-[42px] font-bold tracking-normal text-[#1A6E09] md:text-[42px]">
+                            <h1 class="text-[35px] text-inter font-bold tracking-normal text-[#1A6E09] md:text-[35px] sm:text-[25px]">
                                 Welcome Back
                             </h1>
                             <p class="mb-10 font-light text-[18px]">Sign in to continue your progress</p>
@@ -255,11 +255,11 @@
                         <form class="space-y-4 md:space-y-6" id="signInForm">
                           <div>
                             <label for="username" class="block mb-2 text-sm font-semibold text-[#363636]"> Username</label>
-                            <input type="text" name="name" id="username" class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2" placeholder="Your Email / Username" required>
+                            <input type="text" name="name" id="username" class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2 xl:w-[525px] md:w-[525px] sm:w-[460px]" placeholder="Your Email / Username" required>
                           </div>
                           <div>
                             <label for="password" class="block mb-2 text-sm font-semibold text-[#363636]">Password</label>
-                            <input type="password" name="password" id="password" placeholder="••••••••" class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2" required>
+                            <input type="password" name="password" id="password" placeholder="••••••••" class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2 xl:w-[525px] md:w-[525px] sm:w-[460px]" required>
                           </div>
                           <div class="flex items-center justify-between">
                             <div class="flex items-start">
@@ -270,7 +270,7 @@
                             </div>
                             
                           </div> 
-                              <button type="button" onclick="submitForm(event)" class="h-[55px] w-[450px] text-white text-[30px] font-inter bg-[rgb(26,110,9)] hover:bg-[#1d4b13] rounded-2xl text-center" id="signInLink">Sign in</button>
+                              <button type="button" onclick="submitForm(event)" class="h-[55px] w-[450px] text-white text-[30px] font-inter bg-[rgb(26,110,9)] hover:bg-[#1d4b13] rounded-2xl text-center xl:w-[525px] md:w-[525px] sm:w-[460px]" id="signInLink">Sign in</button>
                         
                           <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                             Don’t have an account yet? 
