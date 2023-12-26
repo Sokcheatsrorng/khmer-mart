@@ -89,7 +89,7 @@ const renderCard = ({ attributes }) => {
         </style>
         <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none">
             <a href="/src/detail-card.html">
-        <img class=" p-5 rounded-t-lg w-full h-52 object-cover z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="flashSaleImage"/>
+        <img class=" p-5 rounded-t-lg w-full h-52 object-contain z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="flashSaleImage"/>
         </a>
             <div class="px-5 pb-5">
                 <div class="flex items-center mt-2.5 mb-3">
@@ -106,7 +106,7 @@ const renderCard = ({ attributes }) => {
                 </div>
                 <div class="flex items-center justify-between gap-4">
                     <span class="text-3xl font-bold text-red-700" id="originalPrice">$${price}</span>
-                    <button class="flex gap-8" id="btnaddtoFav" onclick="unvailable()>
+                    <button class="flex gap-8" id="btnaddtoFav" onclick="unvailable()" >
                         <svg class="w-6 h-6 text-gray-800 dark:text-black md:mt-0" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 21 19">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8"
                                 d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z" />

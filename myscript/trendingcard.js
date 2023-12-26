@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const productHTML = `
           <div class="bg-white rounded-2xl mt-2">
             <a href="${product.url}">
-              <img class="object-fit w-[480px] h-[350px] p-5 rounded-t-lg" src="https://cms.istad.co${product.attributes.image.data.attributes.url}" alt="" />
+              <img class="object-contain w-[480px] h-[350px] p-5 rounded-t-lg" src="https://cms.istad.co${product.attributes.image.data.attributes.url}" alt="" />
             </a>
             <div class="px-5 pb-5">
               <a href="#">
