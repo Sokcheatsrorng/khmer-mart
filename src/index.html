@@ -111,42 +111,35 @@
     </header>
     <!-- main section -->
     <main
-      class="max-w-screen-xl container-fluid mx-auto justify-center p-[20px] text-inter xl:p-0 ">
+      class="max-w-screen-xl container-fluid mx-auto justify-center p-[20px] text-inter xl:p-0">
       <!-- hero section -->
-      <section class="max-w-screen-xl justify-between mt-0 mb-[250px] xl:mb-0">
-        <div class=" flex
-        h-[500px] lg:grid-cols-2 grid-cols-1 py-8">
-
-          <!-- description of hero section -->
-          <div class=" bg-gray-100 text-[#363636] font-inter w-[50%]">
-            <article class="text-[3rem] font-semibold">
-              KHMER
-              <span class="text-[#1A6E09] p-0">
-                MART
-              </span>
-              <h4 class="text-[32px] leading-[48px]">Discount List Website</h4>
-              <p
-                class="text-[24px] font-light leading-[24px] py-2 xl:text-[20px]">Welcome
-                to KHMER<span
-                  class="text-[#1A6E09]"> MART</span> – your ultimate <br>
-                destination for unbeatable discounts on a wide <br>range of
-                products!</p>
-            </article>
-            <button
-              class="rounded-[15px] xl:mt-20 border border-[#1A6E09] bg-[#1A6E09] h-10 w-[250px] text-center mt-[32px] text-white">
-              View Discount Products
-            </button>
-          </div>
-          <div class="flex  w-[50%]">
-            <img src="/Img/b1g1/1.png" alt="herosectionimage"
-              class="object-cover h-[500px] w-full">
-          </div>
+      <section class="max-w-screen-xl flex-col justify-between mt-0 xl:mb-0 ">
+        <div class="flex flex-col lg:flex-row h-[500px] lg:grid-cols-2 grid-cols-1 py-8">
+           
+         <!-- description of hero section -->
+         <div class="bg-gray-100 flex flex-col lg:block
+          text-[#363636] font-inter  lg:w-[50%] lg:order-1 order-2 ">
+          <article class="mt-8 text-[3.5rem] text-center lg:text-justify font-semibold">
+            KHMER
+            <span class="text-[#1A6E09] p-0">
+              MART
+            </span>
+            <h4 class="text-[2.5rem] leading-[48px] ">Discount List Website</h4>
+            <p class="text-[24px] font-normal leading-tight py-2 xl:text-[20px]">Welcome to KHMER<span class="text-[#1A6E09]"> MART</span> – your ultimate<br>destination for unbeatable discounts on a wide<br>range of products!</p>
+          </article>
+          <button class="rounded-[15px] lg:mt-4 border border-[#1A6E09] bg-[#1A6E09] h-10 w-2/3 mx-auto items-center  text-center mt-[32px] text-white text-[18px]">View Discount Products</button>
         </div>
+
+        <div class="flex justify-center items-center  lg:order-2 order-1">
+          <img src="/Img/1.png" alt="herosectionimage" class="object-cover lg:h-[500px] w-full lg:w-full">
+        </div>
+
+      </div>
       </section>
       <!-- display card section -->
       <!-- trending section -->
-      <section class="Trending">
-        <div class="container mx-auto px-0 py-8 ">
+      <section class="Trending lg:pt-20 md:pt-16 pt-16">
+        <div class="container mx-auto px-0 py-8">
           <h1 class="font-semibold text-[2rem] text-[#363636]">Trending
             Today</h1>
           <div
@@ -216,29 +209,29 @@
                 <!-- event section -->
                 <section class=" z-10">
                   <h1
-                    class="font-semibold text-[2rem] text-[#363636]">Events</h1>
+                    class="font-semibold text-[2rem] text-[#363636] mb-20 lg:mb-5">Events</h1>
                   <a href="/src/event.html">
                     <div id="default-carousel" class="relative w-full mt-2 z-10"
                       data-carousel="slide">
                       <!-- Carousel wrapper -->
                       <div
-                        class="relative overflow-hidden rounded-lg md:h-96">
+                        class="relative lg:overflow-hidden rounded-lg md:h-96">
                         <!-- Item 1 -->
-                        <div class="hidden duration-700 ease-in-out"
+                        <div class=" duration-700 ease-in-out"
                           data-carousel-item>
                           <img src="/Img/b1g1/christmas.jpg"
                             class="absolute block w-full  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
                             alt="event1">
                         </div>
                         <!-- Item 2 -->
-                        <div class="hidden duration-700 ease-in-out"
+                        <div class=" duration-700 ease-in-out"
                           data-carousel-item>
                           <img src="/Img/b1g1/newyear.jpg"
                             class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
                             alt="event2">
                         </div>
                         <!-- Item 3 -->
-                        <div class="hidden duration-700 ease-in-out"
+                        <div class=" duration-700 ease-in-out"
                           data-carousel-item>
                           <img src="/Img/b1g1/chinese.jpg"
                             class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
@@ -267,9 +260,8 @@
               </main>
 
               <footer class="bg-[#f5f5f5]">
-                <div
-                  class="mx-auto w-full max-w-screen-xl p-[20px] xl:p-0 py-6 lg:py-8 mt-48">
-                  <div class="md:flex md:justify-between gap-8">
+                <div class="mx-auto w-full max-w-screen-xl p-[20px] xl:p-0 py-6 lg:py-8 mt-5 lg:mt-20">
+                  <div class="md:flex md:justify-between gap-4">
                     <div
                       class="mb-2 md:mb-0  ">
                       <a href="#"
@@ -279,14 +271,14 @@
                       </a>
                     </div>
                     <div
-                      class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 md:gap-4 ">
+                      class="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 md:gap-4 ">
                       <div>
                         <h2
-                          class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
+                          class="mb-4 text-[1.3rem] font-semibold text-gray-900  dark:text-[#1A6E09]">
                           Event
                         </h2>
                         <ul
-                          class="text-gray-500 dark:text-[#363636] font-inter text-sm">
+                          class="text-gray-500 dark:text-[#363636] font-inter text-[1rem]">
                           <li class="mb-4">
                             <a href="#" class="hover:text-[#1A6E09]">Discount
                               Type</a>
@@ -306,11 +298,11 @@
                       </div>
                       <div>
                         <h2
-                          class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
-                          About
+                          class="mb-4 text-[1.3rem] font-semibold text-gray-900  dark:text-[#1A6E09]">
+                          About US
                         </h2>
                         <ul
-                          class="text-gray-500 dark:text-[#363636]  font-inter text-sm">
+                          class="text-gray-500 dark:text-[#363636]  font-inter text-[1rem]">
                           <li class="mb-4">
                             <a href="./aboutUs.html"
                               class="hover:text-[#1A6E09]">About Us</a>
@@ -330,11 +322,11 @@
                       </div>
                       <div>
                         <h2
-                          class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
+                          class="mb-4 text-[1.3rem] font-semibold text-gray-900  dark:text-[#1A6E09]">
                           Catalog
                         </h2>
                         <ul
-                          class="text-gray-500 dark:text-[#363636] font-inter text-sm">
+                          class="text-gray-500 dark:text-[#363636] font-inter text-[1rem]">
                           <li class="mb-4">
                             <a href="#" class="hover:text-[#1A6E09]">Buy One Get
                               One</a>
@@ -350,11 +342,11 @@
                       </div>
                       <div>
                         <h2
-                          class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
+                          class="mb-4 text-[1.3rem] font-semibold text-gray-900  dark:text-[#1A6E09]">
                           Work Time
                         </h2>
                         <ul
-                          class="text-gray-500 dark:text-[#363636]  font-inter text-sm">
+                          class="text-gray-500 dark:text-[#363636]  font-inter text-[1rem]">
                           <li class="mb-4">
                             <a href="#" class="hover:text-[#1A6E09]">Mon-Thu
                               9:00 - 20:00</a>
@@ -372,7 +364,7 @@
                       </div>
                       <div class="col-span-2">
                         <h2
-                          class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
+                          class="mb-4 text-[1.3rem] font-semibold text-gray-900  dark:text-[#1A6E09]">
                           Subscribe Our Newsletters
                         </h2>
                         <div class="relative w-full flex md:w-[320px] ">
@@ -466,10 +458,10 @@
                     </div>
                   </div>
                   <hr
-                    class="my-6 border-gray-200 sm:mx-auto dark:border-gray-200 lg:my-8" />
+                    class="my-6 border-gray-200 sm:mx-auto dark:border-gray-200 lg:my-2" />
                   <div class="sm:flex sm:items-center sm:justify-between">
                     <span
-                      class="text-sm text-gray-500 sm:text-center dark:text-gray-400">©
+                      class="text-sm text-gray-500 sm:text-center dark:text-gray-400 lg:my-4">©
                       2023 <a href="https://flowbite.com/"
                         class="hover:underline">Khmer
                         Mart CSTAD</a>. All Rights Reserved.
@@ -487,6 +479,7 @@
             <!-- myscript -->
             <script src="/myscript/homepage.js"></script>
             <script src="/myscript/unavailablefav.js"></script>
+            <!-- <script src="/myscript/trendingcard.js"></script> -->
             <!-- tailwind script-->
             <script
               src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
