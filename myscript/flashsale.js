@@ -76,8 +76,7 @@ const renderCard = ({ attributes }) => {
     image && image.data && image.data.attributes
       ? image.data.attributes.name
       : "";
-  const imageUrl =
-    image.data != null ? image.data.attributes.url : "";
+      const imageUrl = image.data != null ? image?.data?.attributes?.formats?.thumbnail?.url : "";
   
    return `
         <style>
