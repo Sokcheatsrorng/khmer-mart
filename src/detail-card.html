@@ -11,116 +11,116 @@
   <link rel="stylesheet" href="/style/style.css">
 </head>
 <body class="bg-[#f5f5f5]">
-  <!-- nav bar  -->
-  <header class=" sticky top-0 z-30 ">
-    <nav class=" border-gray-200 bg-[#f5f5f5] p-0]">
+<!-- nav bar  -->
+<header class=" sticky top-0 z-30 ">
+  <nav class=" border-gray-200 bg-[#f5f5f5] p-0]">
+    <div
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-[20px] xl:p-0">
+      <!-- Logo and Category Link -->
+      <a href="/src/index.html"
+        class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="/Img/logo.png" alt="Khmer-Mart Logo"
+          class="h-20 w-15 ms-[-10px]">
+      </a>
+      <!--  Category -->
+      <a href="/src/category.html"
+        class="flex flex-wrap items-center space-x-2 rtl:space-x-reverse ">
+        <span class="hidden md:inline-block
+        items-center font-semibold text-[#1A6E09] md:hover:text-[#363636] md:p-0 dark:text-[#1A6E09]  ">
+          Category
+          <svg
+            class="w-5 h-5 text-[#1A6E09] ms-2 inline md:hover:text-[#363636]  md:p-0  "
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 14 8">
+            <path stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="1.5"
+              d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1" />
+          </svg>
+        </span>
+      </a>
+
+      <!-- Search Bar -->
       <div
-        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-[20px] xl:p-0">
-        <!-- Logo and Category Link -->
-        <a href="/src/index.html"
-          class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="https://cms.istad.co/uploads/logo_642a242d12.png" alt="Khmer-Mart Logo"
-            class="h-20 w-15 ms-[-10px]">
-        </a>
-        <!--  Category -->
-        <a href="/src/category.html"
-          class="flex flex-wrap items-center space-x-2 rtl:space-x-reverse ">
-          <span class="hidden md:inline-block
-          items-center font-semibold text-[#1A6E09] md:hover:text-[#363636] md:p-0 dark:text-[#1A6E09]  ">
-            Category
-            <svg
-              class="w-5 h-5 text-[#1A6E09] ms-2 inline md:hover:text-[#363636]  md:p-0  "
-              aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-              fill="none" viewBox="0 0 14 8">
-              <path stroke="currentColor" stroke-linecap="round"
-                stroke-linejoin="round" stroke-width="1.5"
-                d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1" />
-            </svg>
-          </span>
-        </a>
-  
-        <!-- Search Bar -->
+        class="relative flex  flex-wrap sm:w-[350px] w-[220px] xl:w-[500px]  lg:w-[400px] justify-between ms-[-30px] ">
         <div
-          class="relative flex  flex-wrap sm:w-[350px] w-[220px] xl:w-[500px]  lg:w-[400px] justify-between ms-[-30px] ">
-          <div
-            class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none ">
-            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400"
-              aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-              fill="none" viewBox="0 0 20 20">
-              <path stroke="currentColor" stroke-linecap="round"
-                stroke-linejoin="round" stroke-width="2"
-                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-            </svg>
-          </div>
-          <input type="text" placeholder="Search for anything"
-            class="py-2 pl-8 pr-3 border border-[#f5f5f5] rounded-full focus:outline-none focus:ring-1 focus:ring-[#1A6E09]  w-full  space-x-4 xl:w-[500px] ">
-        </div>
-  
-        <button data-collapse-toggle="navbar-default" type="button"
-          class="inline-flex items-center me-[-10px] w-10 h-10 justify-center text-xl text-[#1A6E09] rounded-lg md:hidden hover:bg-gray-100 focus:outline-none  "
-          aria-controls="navbar-default" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none ">
+          <svg class="w-4 h-4 text-gray-500 dark:text-gray-400"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 20 20">
             <path stroke="currentColor" stroke-linecap="round"
               stroke-linejoin="round" stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15" />
+              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
           </svg>
-        </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul
-            class="font-medium flex flex-col justify-around p-0 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-3 rtl:space-x-reverse md:mt-0 md:border-0 md:dark:bg-[#f5f5f5] dark:bg-[#f5f5f5] md:dark:bg-[#f5f5f5]dark:border-gray-700">
-            <li>
-              <a href="/src/signIn.html"
-                class=" hidden text-[#1A6E09] hover:text-gray-300 items-center space-x-0 md:block ">
-                <svg class="w-6 h-6 text-gray-800 dark:text-black  md:mt-0"
-                  aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="none" viewBox="0 0 21 19">
-                  <path stroke="currentColor" stroke-linecap="round"
-                    stroke-linejoin="round" stroke-width="0.8"
-                    d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="/src/category.html"
-                class="block py-2 px-0 hover:bg-none
-                md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]  hover:text-[#FF9E37] 
-                 md:dark:hover:bg-transparent md:hidden">Category</a>
-            </li>
-            <li>
-              <a href="/src/signIn.html"
-                class="block py-2 px-0  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]   hover:text-[#FF9E37] md:dark:hover:bg-transparent md:hidden">Favorite
-                List</a>
-            </li>
-            <li>
-              <a href="/src/aboutUs.html"
-                class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0    hover:text-[#FF9E37] md:dark:hover:bg-transparent ">About
-                Us</a>
-            </li>
-            <li id="signInLink" >
-              <a href="/src/signIn.html" 
-                class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0    hover:text-[#FF9E37] md:dark:hover:bg-transparent">Sign
-                In</a>
-            </li>
-  
-          </ul>
         </div>
+        <input type="text" placeholder="Search for anything"
+          class="py-2 pl-8 pr-3 border border-[#f5f5f5] rounded-full focus:outline-none focus:ring-1 focus:ring-[#1A6E09]  w-full  space-x-4 xl:w-[500px] ">
       </div>
-    </nav>
-  </header>
+
+      <button data-collapse-toggle="navbar-default" type="button"
+        class="inline-flex items-center me-[-10px] w-10 h-10 justify-center text-xl text-[#1A6E09] rounded-lg md:hidden hover:bg-gray-100 focus:outline-none  "
+        aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15" />
+        </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul
+          class="font-medium flex flex-col justify-around p-0 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-3 rtl:space-x-reverse md:mt-0 md:border-0 md:dark:bg-[#f5f5f5] dark:bg-[#f5f5f5] md:dark:bg-[#f5f5f5]dark:border-gray-700">
+          <li>
+            <a href="/src/signIn.html"
+              class=" hidden text-[#1A6E09] hover:text-gray-300 items-center space-x-0 md:block ">
+              <svg class="w-6 h-6 text-gray-800 dark:text-black  md:mt-0"
+                aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 21 19">
+                <path stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="0.8"
+                  d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="/src/category.html"
+              class="block py-2 px-0 hover:bg-none
+              md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]  hover:text-[#FF9E37] 
+               md:dark:hover:bg-transparent md:hidden">Category</a>
+          </li>
+          <li>
+            <a href="/src/signIn.html"
+              class="block py-2 px-0  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0 text-[#1A6E09]   hover:text-[#FF9E37] md:dark:hover:bg-transparent md:hidden">Favorite
+              List</a>
+          </li>
+          <li>
+            <a href="/src/aboutUs.html"
+              class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0    hover:text-[#FF9E37] md:dark:hover:bg-transparent ">About
+              Us</a>
+          </li>
+          <li id="signInLink" >
+            <a href="/src/signIn.html" 
+              class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0    hover:text-[#FF9E37] md:dark:hover:bg-transparent">Sign
+              In</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <!-- Main Sectiom -->
     <main class="max-w-screen-xl container-fluid mx-auto justify-center p-[20px] text-inter md:p-0 ">
       
         <!-- Image and Card -->
-        <div class="flex mx-auto max-w-screen-xl sm:p-4 py-6 lg:py-8 gap-4 relative md:flex-row md:max-w-screen-xl" id="display-detail">
-            <!-- Image -->
-            
-        </div>
+        <div class="lg:flex lg:items-start  flex items-center  flex-col lg:flex-row mx-auto max-w-screen-xl sm:p-4  lg:py-8 gap-4 relative md:max-w-screen-xl" id="display-detail"></div>
+
       <!-- Description -->
-       <div class="mx-auto w-full max-w-screen-xl px-4 sm:p-4 md:py-0 gap-4 relative">
-        <div class=" text-black text-5xl font-semibold capitalize leading-[144px] tracking-wide">About this item</div>
-        <div class="w-[75%]"><span class="text-neutral-700 text-opacity-80 text-xl font-normal l">Escape the everyday and share the epic with the Samsung Galaxy S23 Ultra from Total by Verizon. Reach new heights in your wireless life and take the perfect selfies and photos of your squad like a pro with an incredible camera. No matter where the adventure of life takes you'll be able to start capturing and creating images in rich detail, and then use Quick Share** to share them with your friends across devices without losing quality. You can crank up the performance and stop settling for less with Samsung's fastest mobile processor available. Plus, your display will always look incredible with Adaptive Vision Booster that adjusts your screen's brightness. Write, sketch, edit, create, and share from anywhere with a built-in S Pen.<br/><br/>Start getting a better wireless experience at a price that fits your life and ditch costly long-term contracts with unlimited talk, text & high-speed data plans from Total by Verizon that start at just $30/mo for a single line. Access the fastest speeds with Verizon 5G Network and enjoy special perks like hotspot capability, international long distance calling, and exclusive discounts. Shop for the Samsung Galaxy S23 Ultra and your next Total by Verizon plan online or at your local Walmart.<br/><br/></span>
-        <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside  font-inter font-normal text-xl">
+       <div class="mx-auto w-full max-w-screen-xl px-4 gap-4 relative">
+        <div class=" text-black text-3xl lg:text-5xl md:text-5xl font-semibold capitalize lg:mt-8 lg:mb-6 mt-6 mb-6 tracking-wide">About this item</div>
+        <div class="w-full"><span class="text-neutral-700 text-opacity-80 lg:text-xl md:text-xl text-lg font-normal ">Escape the everyday and share the epic with the Samsung Galaxy S23 Ultra from Total by Verizon. Reach new heights in your wireless life and take the perfect selfies and photos of your squad like a pro with an incredible camera. No matter where the adventure of life takes you'll be able to start capturing and creating images in rich detail, and then use Quick Share** to share them with your friends across devices without losing quality. You can crank up the performance and stop settling for less with Samsung's fastest mobile processor available. Plus, your display will always look incredible with Adaptive Vision Booster that adjusts your screen's brightness. Write, sketch, edit, create, and share from anywhere with a built-in S Pen.<br/><br/>Start getting a better wireless experience at a price that fits your life and ditch costly long-term contracts with unlimited talk, text & high-speed data plans from Total by Verizon that start at just $30/mo for a single line. Access the fastest speeds with Verizon 5G Network and enjoy special perks like hotspot capability, international long distance calling, and exclusive discounts. Shop for the Samsung Galaxy S23 Ultra and your next Total by Verizon plan online or at your local Walmart.<br/><br/></span>
+        <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside  font-inter font-normal lg:text-xl md:text-xl text-lg">
             <li>
               5,000mAh battery
             </li>
@@ -158,8 +158,8 @@
 
 
       <!-- Related Product -->
-        <div class="mx-auto w-full max-w-screen-xl px-4 sm:p-4 lg:py-8 relative mt-0">
-          <div class=" text-black text-5xl font-semibold capitalize leading-[144px] tracking-wide">Similar</div>
+        <div class="mx-auto w-full max-w-screen-xl px-4 sm:p-4  relative mt-0">
+          <div class=" text-black lg:text-5xl md:text-5xl text-3xl  font-semibold capitalize lg:mt-8 lg:mb-6 mt-6 mb-6 tracking-wide">Similar</div>
             <div class="flex gap-4 justify-around ">
                 <div class="container mx-auto px-0">
                   <div class="grid xl:grid-cols-3 gap-4 py-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1  p-[20px] md:p-0" id="similiar">
@@ -186,7 +186,7 @@
  
     <footer class="bg-[#f5f5f5]">
       <div
-        class="mx-auto w-full max-w-screen-xl p-[20px] xl:p-0 py-6 lg:py-8 mt-48">
+        class="mx-auto w-full max-w-screen-xl p-[20px] xl:p-0 py-6 lg:py-8 mt-16">
         <div class="md:flex md:justify-between gap-8">
           <div
             class="mb-2 md:mb-0  ">

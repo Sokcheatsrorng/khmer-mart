@@ -145,7 +145,7 @@ const renderReview = `'
 <span
     class="w-1 h-1 mx-2 bg-gray-900 rounded-full dark:bg-gray-500"></span>
 <p
-    class="text-sm font-medium text-gray-500 dark:text-gray-400">
+    class="text-sm font-medium text-gray-500 dark:text-gray-400">128
     products</p>
 <a href="read.html"
     class="ms-auto text-sm font-medium text-blue-600 hover:underline ">Read
