@@ -81,7 +81,7 @@ const renderCard = ({id,attributes }) => {
 
         <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none">
             <a href="/src/detail-card.html?id=${id}&type=${typeId}">
-        <img class="p-5 rounded-t-lg w-full h-48 object-contain z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images"/>
+        <img class="p-5 rounded-t-lg w-full h-48 object-contain z-0 image-hover" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images"/>
     </a>
             <div class="px-5 pb-5">
                 <div class="flex items-center mt-2.5 mb-3">

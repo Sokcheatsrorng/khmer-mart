@@ -125,7 +125,7 @@ const renderCard = ({id, attributes }) => {
                     <div class="flex items-center space-x-1 rtl:space-x-reverse text-[#FF9E37] text-2xl" id="stars">
                     ${renderStars(rating)} 
                     </div>
-                    <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">${rating}</span>
+                    <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">${rating}.000/5.00</span>
                 </div>
                 <div class="flex items-center justify-between gap-4">
                     <span class="text-3xl font-bold text-red-700" id="originalPrice">$${discountprice.toFixed(2)}  </span>

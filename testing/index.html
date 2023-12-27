@@ -1,53 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CKEditor LocalStorage Example</title>
-    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
-</head>
-<body>
-    <!-- Create a textarea for CKEditor -->
-    <div id="getDesc">
+<!DOCTYPE html> 
+<html> 
 
-    </div>
-    
-     <!-- Create a textarea for CKEditor -->
-<textarea id="editor"></textarea>
+<head> 
+	<title>Sweet Alert2</title> 
 
-<!-- Create a button for submitting -->
-<button id="submitButton">Submit</button>
+	<!-- Include the library -->
+	<script src= 
+"https://cdn.jsdelivr.net/npm/sweetalert2@9"> 
+	</script> 
+</head> 
 
-<script>
-    // Initialize CKEditor
-    CKEDITOR.replace('editor');
+<body> 
+	<h1> 
+		Sweet Alert2 HTML Page 
+	</h1> 
+	
+	<script type="text/javascript"> 
 
-    // Load content from localStorage if available
-    var storedContent = localStorage.getItem('editorContent');
-    if (storedContent) {
-        CKEDITOR.instances.editor.setData(storedContent);
-    }
+		// Make a simple alert 
+		// with the given text 
+		Swal.fire( 
+			'Hey!', 
+			'Welcome to GeeksForGeeks', 
+			'success' 
+		); 
+	</script> 
+</body> 
 
-    // Save content to localStorage when CKEditor content changes
-    CKEDITOR.instances.editor.on('change', function () {
-        var currentContent = CKEDITOR.instances.editor.getData()||[];
-        localStorage.setItem('editorContent', currentContent);
-    });
-
-    // Add an event listener to the submit button
-    document.getElementById('submitButton').addEventListener('click', function () {
-        // Get the stored content
-        var storedContent = localStorage.getItem('editorContent');
-
-        // You can now display the stored content in the HTML
-        // For this example, we'll set it to the textarea
-        document.getElementById('editor').value = storedContent;
-
-        // Log it to the console
-        //console.log('Displaying stored content:', storedContent);
-        const get = document.querySelector('#getDesc');
-        get.innerHTML = storedContent;
-    });
-</script>
-</body>
-</html>
+</html> 
