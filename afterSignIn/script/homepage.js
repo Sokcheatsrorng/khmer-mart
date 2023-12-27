@@ -36,10 +36,10 @@ const trending = ({id,attributes }) => {
         <h5 class="text-2xl font-semibold tracking-tight text-gray-600 pb-5">${name}</h5>
       </a>
       <div class="items-center justify-between pb-5">
-        <span class="text-3xl font-bold text-red-600">$${price}</span>
+        <span class="text-3xl font-bold text-red-600">$${discountprice.toFixed(2)}</span>
       </div>
       <div class="flex items-center justify-between">
-        <span class="text-3xl font-bold text-neutral-700 text-opacity-80 line-through">$${discountprice.toFixed(2)}</span>
+        <span class="text-3xl font-bold text-neutral-700 text-opacity-80 line-through">$${price}</span>
         <button class="text-white bg-[#1A6E09]  focus:outline-none  font-medium rounded-xl text-sm px-5 py-2.5 text-center" id="btnaddtoFav" onclick="unvailable()">Add to Favorite</button>
       </div>
     </div>
