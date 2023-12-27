@@ -102,7 +102,7 @@
               </li>
               <li id="signInLink" >
                 <a href="/src/signIn.html" 
-                  class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636]  md:p-0    hover:text-[#FF9E37] md:dark:hover:bg-transparent">Sign
+                  class="block py-2 px-0 text-[#1A6E09]  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#363636] md:p-0 hover:text-[#FF9E37] md:dark:hover:bg-transparent">Sign
                   In</a>
               </li>
     
@@ -116,31 +116,32 @@
 
         <section class="mb-12 flex lg:justify-between md:justify-center">
           <section>
-            <h1 class="text-[30px] text-[#1A6E09] text-inter font-bold">Sign Up with Us Here</h1>
-            <p class="text-[16px] text-[#363636] opacity-75">Begin your journey with us today</p>
-  
-            <section class="mt-8 w-full space-y-4 md:space-y-6 p-[20px] sm:max-w-lg xl:p-0">
-              <section> 
+            <div>
+              <h1 class="text-[30px] text-[#1A6E09] text-inter font-bold">Sign Up with Us Here</h1>
+              <p class="text-[16px] text-[#363636] opacity-75">Begin your journey with us today</p>
+            </div>
+            <section class="mt-8 w-full space-y-4 md:space-y-6 p-[20px] sm:max-w-lg xl:p-0 ms-0">
+              <section class=" lg:ms-[-4%] md:ms-[-4%] sm:ms-[-4%]"> 
                 <div>
                   <label class="block text-[16px] font-semibold text-inter my-2 text-[#363636]">Username</label>
-                  <input class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2 xl:w-[525px] md:w-[525px] sm:w-[450px]" type="text" placeholder="Your First Name" id="username" required>
+                  <input class="h-[55px] w-[350px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2 xl:w-[525px] lg:w-[525px] md:w-[525px] sm:w-[450px]" type="text" placeholder="Your First Name" id="username" required>
                 </div>
               </section>
-              <section>
+              <section class=" lg:ms-[-4%] md:ms-[-4%] sm:ms-[-4%]">
                 <div>
                   <label class="block mb-2 text-[16px] font-semibold text-inter text-[#363636] ">Email</label>
-                  <input class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2 xl:w-[525px] md:w-[525px] sm:w-[450px]" type="text" placeholder="Your Email" id="email" required>
+                  <input class="h-[55px] w-[350px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2 xl:w-[525px] md:w-[525px] sm:w-[450px] " type="text" placeholder="Your Email" id="email" required>
                 
                   <label class="block text-[16px] font-semibold text-inter mb-2 mt-4 text-[#363636]">Password</label>
-                  <input class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2 xl:w-[525px] md:w-[525px] sm:w-[450px]" type="text" placeholder="••••••••" id="password" required>
+                  <input class="h-[55px] w-[350px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2 xl:w-[525px] md:w-[525px] sm:w-[450px]" type="text" placeholder="••••••••" id="password" required>
                 </div>
                 <div class="flex items-start mt-4">
                   <div class="flex items-center ">
-                    <input id="remember" type="checkbox" value="" class="w-5 h-5 border border-gray-300 rounded accent-[#1A6E09] bg-[#1A6E09]" required>
+                    <input id="remember" type="checkbox" value="" class=" w-5 h-5 border border-gray-300 rounded accent-[#1A6E09] bg-[#1A6E09]" required>
                   </div>
                   <label for="remember" class="ms-2 font-medium text-[#363636]">I accept the Terms & Conditions</label>
                 </div>
-                  <button type="submit"  class="mt-6 h-[55px] w-[450px] text-white text-[30px] font-inter bg-[rgb(26,110,9)] hover:bg-[#1d4b13] rounded-xl text-center xl:w-[525px] md:w-[525px] sm:w-[450px]" onclick="handleSignUpClick()">Sign Up</button>
+                  <button type="submit"  class="mt-6 h-[55px] w-[350px] text-white text-[30px] font-inter bg-[rgb(26,110,9)] hover:bg-[#1d4b13] rounded-xl text-center xl:w-[525px] md:w-[525px] sm:w-[450px] " onclick="handleSignUpClick()">Sign Up</button>
               </section>
             </section>
           </section>
