@@ -28,7 +28,7 @@ const trending = ({id,attributes }) => {
   const typeId = attributes.type.data.id;
   return `
   <div class="bg-white rounded-2xl mt-2 ">
-    <a href="/src/detail-card.html?id=${id}&type=${typeId} " >
+    <a href="/afterSignIn/detail-card.html?id=${id}&type=${typeId} " >
       <img class="object-fit w-[480px] h-[350px] p-5 rounded-t-lg" src="https://cms.istad.co${imageUrl}" alt="${imageName}" />
     </a>
     <div class="px-5 pb-5">
@@ -56,7 +56,7 @@ var settings = {
 
 $.ajax(settings).done(function (response) {
   
-  const trendingCardContainer = $("#trendingProductsContainer");
+  const trendingCardContainer = $("#display-card-trending");
   trendingCardContainer.empty();
 
   const trendingLists = response.data;
@@ -98,7 +98,7 @@ const amountOff = ({ attributes }) => {
             <div class="absolute discount-percent z-10 h-12 w-24 mt-4 ms-4 text-center justify-center text-2xl flex items-center mx-auto" id="discPercent">
                ${discount}%
             </div>
-            <a href="/src/amountOff.html">
+            <a href="/afterSignIn/amountOff.html">
         <img class="p-5 rounded-t-lg w-full h-52 object-contain z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images"/>
     </a>
             <div class="px-5 pb-5">
@@ -187,8 +187,8 @@ const buy1get1 = ({ attributes }) => {
     </style>
     <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none">
     <img class=" absolute mx-1  mt-1 h-24 " src="/Img/b1g1/Logobuy1get1.jpg" alt="buy1get1Logo">
-<a href="/src/detail-card.html">
-    <a href="/src/BuyoneGetoneList.html">
+<a href="/afterSignIn/detail-card.html">
+    <a href="/afterSignIn/BuyoneGetoneList.html">
 <img class=" p-5 rounded-t-lg w-full object-contain z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="flashSaleImage"/>
 </a>
     <div class="px-5 pb-5">
@@ -261,7 +261,7 @@ const flashsale = ({ attributes }) => {
             }
         </style>
         <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none">
-            <a href="/src/flashsale.html">
+            <a href="/afterSignIn/flashsale.html">
         <img class=" p-5 rounded-t-lg w-full h-52 object-contain z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="flashSaleImage"/>
         </a>
             <div class="px-5 pb-5">

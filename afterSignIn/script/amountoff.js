@@ -111,7 +111,7 @@ const renderCard = ({id, attributes }) => {
             <div class="discount-percent z-10 h-12 w-24 mt-4 ms-4 text-center justify-center text-2xl flex items-center mx-auto" id="discPercent">
                ${discount}%
             </div>
-            <a href="/src/detail-card.html?id=${id}&type=${typeId}">
+            <a href="/afterSignIn/detail-card.html?id=${id}&type=${typeId}">
         <img class=" p-5 rounded-t-lg w-full h-52 object-contain z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="flashSaleImage"/>
         </a>
             <div class="px-5 pb-5">
