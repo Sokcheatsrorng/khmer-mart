@@ -188,9 +188,8 @@ const renderCard = ({ id,attributes }) => {
       : "";
   const imageUrl =
     image.data != null ? image.data.attributes.url : "";
-  
-  const discountprice = price - (discount*price)/100;
   const typeId = attributes.type.data.id;
+  const discountprice = price - (discount*price)/100;
   const isoString = createdAt;
   const extractedDate = extractDateFromISOString(isoString);
   const extractedHours = extractHoursAndMinutesFromISOString(isoString);
@@ -203,7 +202,7 @@ const renderCard = ({ id,attributes }) => {
             }
         </style>
         <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none">
-            <a href="/src/detail-card.html?id=${id}&type=${typeId}">
+            <a href="/afterSignIn/detail-card.html?id=${id}&type=${typeId}">
         <img class=" p-5 rounded-t-lg w-full h-64 object-contain z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="flashSaleImage"/>
         </a>
             <div class="px-5 pb-5">

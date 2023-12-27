@@ -42,7 +42,7 @@ const renderStars = (rating) => {
   const emptyStars = "☆".repeat(5 - starCount);
   return `${filledStars}${emptyStars}`;
 };
-const renderCard = ({ attributes }) => {
+const renderCard = ({id,attributes }) => {
   const { name, discount, rating, price, image,createdAt } = attributes;
   // get image name
   const imageName =
@@ -51,6 +51,7 @@ const renderCard = ({ attributes }) => {
       : "";
   const imageUrl =
     image.data != null ? image.data.attributes.url : "";
+  const typeId = attributes.type.data.id;
   return `
         <style>
             /* Internal CSS */
@@ -61,7 +62,7 @@ const renderCard = ({ attributes }) => {
         </style>
 
         <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none">
-            <a href="/src/detail-card.html">
+            <a href="/src/detail-card.html?id=${id}&type=${typeId}">
         <img class="p-5 rounded-t-lg w-full h-48 object-contain z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images"/>
     </a>
             <div class="px-5 pb-5">
