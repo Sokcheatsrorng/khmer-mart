@@ -7,7 +7,7 @@ const renderStars = (rating) => {
   return `${filledStars}${emptyStars}`;
 };
 
-const renderCard = ({ attributes }) => {
+const renderCard = ({id, attributes }) => {
   const { name, rating, price, image } = attributes;
   // get image name
   const imageName =
@@ -16,6 +16,7 @@ const renderCard = ({ attributes }) => {
       : "";
   const imageUrl =
     image.data != null ? image.data.attributes.url : "";
+    const typeId = attributes.type.data.id;
   return `
         <style>
             /* Internal CSS */
@@ -26,8 +27,7 @@ const renderCard = ({ attributes }) => {
         </style>
         <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none">
         <img class=" absolute mx-1  mt-1 h-24 " src="/Img/b1g1/Logobuy1get1.jpg" alt="buy1get1Logo">
-    <a href="/src/detail-card.html">
-        <a href="/src/detail-card.html">
+        <a href="/src/detail-card.html?id=${id}&type=${typeId}">
     <img class=" p-5 rounded-t-lg w-full  object-contain z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="flashSaleImage"/>
     </a>
         <div class="px-5 pb-5">
