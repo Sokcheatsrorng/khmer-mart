@@ -56,7 +56,7 @@ var settings = {
 
 $.ajax(settings).done(function (response) {
   
-  const trendingCardContainer = $("#trendingProductsContainer");
+  const trendingCardContainer = $("#display-card-trending");
   trendingCardContainer.empty();
 
   const trendingLists = response.data;
