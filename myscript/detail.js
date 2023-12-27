@@ -13,26 +13,26 @@ const detail = ({ id,attributes }) => {
   const discountprice = price - (discount * price) / 100;
   const totalSave = price - discountprice;
     return `
-    <div class="rounded-[15px] bg-white w-3/5">
+    <div class="rounded-[15px] bg-white lg:w-3/5 w-5/5 md: md:w-4/5">
       <a href="/src/BuyoneGetoneList.html">
-        <img class="p-4 rounded-t-lg w-full object-cover z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="detail"/>
+        <img class="lg:p-4 lg:rounded-t-lg lg:w-full lg:object-cover md:object-cover md:rounded-t-lg md:p-4 md:w-full lg:z-0 rounded-t-lg p-4" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="detail"/>
       </a>
     </div>
     <!-- Card -->
-    <div class="h-1/2 w-2/5 bg-white rounded-[15px] relative p-4 ">
-      <div class="flex items-center mb-4 gap-2 space-x-2 ">
+    <div class="lg:h-1/2 lg:w-2/5 bg-white rounded-[15px] relative p-4 w-5/5 md:w-4/5 md:p-4">
+      <div class="flex items-center lg:mb-6 mb-3 gap-2 space-x-2 ">
         <div class="flex items-center space-x-1 rtl:space-x-reverse text-[#FF9E37] text-2xl" id="stars">
           ${renderStars(rating)}
         </div>
         <div class="text-neutral-700 text-opacity-80 text-base font-normal leading-9 tracking-tight ">${rating}.0/5.0</div>
       </div>
-      <h5 class="mb-6 text-2xl font-semibold text-opacity-80 tracking-tight text-neutral-700 ">${name}</h5>
-      <div class="flex items-center space-x-1 rtl:space-x-reverse mb-4 gap-4">
-        <div class="text-[#FF0000] text-4xl font-bold leading-9 tracking-tight">Now $${discountprice.toFixed(2)}</div>
-        <div class="w-[109px] h-[35.76px] text-neutral-700 text-opacity-80 text-2xl font-normal line-through leading-9 tracking-tight  ">$${price}</div>
+      <h5 class="lg:mb-6 mb-4 lg:text-2xl md:text-2xl text-xl font-semibold text-opacity-80 tracking-tight text-neutral-700 ">${name}</h5>
+      <div class="flex items-center space-x-1 rtl:space-x-reverse lg:mb-6 mb-4 gap-4">
+        <div class="text-[#FF0000] lg:text-4xl md:text-4xl text-2xl font-bold leading-9 tracking-tight">Now $${discountprice.toFixed(2)}</div>
+        <div class="w-[109px] h-[35.76px] text-neutral-700 text-opacity-80 lg:text-3xl  md:text-3xl text-xl font-normal line-through leading-9 tracking-tight  ">$${price}</div>
       </div>
-      <h5 class="mb-2 text-2xl font-semibold tracking-tight text-[#FF0000] ">You save ${totalSave.toFixed(2)}</h5>  
-      <div class="flex items-center space-x-1 rtl:space-x-reverse mb-4 justify-between">
+      <h5 class="mb-4 lg:mb-6 lg:text-2xl md:text-2xl text-xl font-semibold tracking-tight text-[#FF0000] ">You save ${totalSave.toFixed(2)}</h5>  
+      <div class="flex items-center space-x-1 rtl:space-x-reverse lg:mb-6 mb-4 justify-between">
         <div class="flex gap-2">
         <span class="flex items-center">
         <svg class="w-4 h-4 text-[#1A6E09] " aria-hidden="true" xmlns="http:www.w3.org/2000/svg"
@@ -49,10 +49,10 @@ const detail = ({ id,attributes }) => {
           <svg class="w-[20px] h-[20px] text-[#1A6E09] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
             <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 6v4l3.276 3.276M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
           </svg>
-          <p class="mb-3 font-normal text-gray-700 ">5h 00mn</p>
+          <p class="font-normal text-gray-700 ">5h 00mn</p>
         </div>
       </div>
-      <button onclick="unvailable() class="mb-4 flex items-center text-lg px-20 font-medium text-center text-white bg-[#1A6E09] rounded-[59px]  w-72 h-12">
+      <button onclick="unvailable()" class="mt-4 mb-4 flex items-center text-lg px-20 font-medium text-center text-white bg-[#1A6E09] rounded-[59px]  w-72 h-12">
         Add to favorite
       </button> 
     </div>
@@ -158,7 +158,7 @@ const renderCard = ({ attributes }) => {
                 color: white;
             }
         </style>
-        <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none">
+        <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none  items-center md:flex-row">
             <a href="/src/detail-card.html">
         <img class=" p-5 rounded-t-lg w-full h-64 object-contain z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="flashSaleImage"/>
         </a>
@@ -199,7 +199,7 @@ const renderCard = ({ attributes }) => {
                     </span>
                     
                 </div>
-            </div>
+            </div>  
         </div>
     `;
 };

@@ -8,7 +8,7 @@ const renderStars = (rating) => {
 };
 
 const renderCard = ({ attributes }) => {
-  const { name, rating, price, image } = attributes;
+  const { name, discount, rating, price, image } = attributes;
   // get image name
   const imageName =
     image && image.data && image.data.attributes
@@ -126,5 +126,4 @@ const fetchData = async (page) => {
 };
 let currentPage = 1;
 fetchData(currentPage);
-
-
+;

@@ -40,7 +40,7 @@ const createPaginationButton = (text, isEnabled) => {
 const fetchData = async (page) => {
   try {
     const response = await $.ajax({
-      url: `https://cms.istad.co/api/km-products?filters[type][id][$containsi]=1&populate=*&&pagination%5Bpage%5D=${page}&pagination[pageSize]=8`,
+      url: `https://cms.istad.co/api/km-products?filters[type][id][$containsi]=1&populate=*&&pagination%5Bpage%5D=${page}`,
       method: "GET",
     });
 
@@ -86,6 +86,7 @@ const renderCard = ({ attributes }) => {
                 color: white;
             }
         </style>
+
         <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none">
             <a href="/src/detail-card.html">
         <img class=" p-5 rounded-t-lg w-full h-52 object-contain z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="flashSaleImage"/>
