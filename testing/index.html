@@ -1,89 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Display Data in Form</title>
-  <!-- Add your CSS styles here if needed -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKEditor LocalStorage Example</title>
+    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
 </head>
 <body>
+    <!-- Create a textarea for CKEditor -->
+    <div id="getDesc">
 
-  <div>
-    <label for="id">Product ID:</label>
-    <input type="text" id="id" />
-  </div>
+    </div>
+    
+     <!-- Create a textarea for CKEditor -->
+<textarea id="editor"></textarea>
 
-  <div>
-    <label for="name">Product Name:</label>
-    <input type="text" id="name" />
-  </div>
+<!-- Create a button for submitting -->
+<button id="submitButton">Submit</button>
 
-  <div>
-    <label for="messageDescription">Product Description:</label>
-    <textarea id="messageDescription"></textarea>
-  </div>
+<script>
+    // Initialize CKEditor
+    CKEDITOR.replace('editor');
 
-  <div>
-    <label for="price">Product Price:</label>
-    <input type="number" id="price" />
-  </div>
-
-  <div>
-    <label for="discount">Product Discount:</label>
-    <input type="number" id="discount" />
-  </div>
-
-  <div>
-    <label for="dropdown">Product Category:</label>
-    <select id="dropdown">
-      <option value="5">Food</option>
-      <option value="6">Drink</option>
-      <option value="7">Electronic</option>
-      <option value="8">Cosmetic</option>
-      <option value="4">Cloth</option>
-      <option value="9">Plant</option>
-    </select>
-  </div>
-
-  <div>
-    <label for="rating">Product Rating:</label>
-    <input type="number" id="rating" />
-  </div>
-
-  <div>
-    <label for="image">Product Image:</label>
-    <input type="text" id="image" />
-  </div>
-
-  <script>
-    // Function to populate form fields with data
-    function populateForm(data) {
-      document.getElementById("id").value = data.id;
-      document.getElementById("name").value = data.name;
-      document.getElementById("messageDescription").value = data.description;
-      document.getElementById("price").value = data.price;
-      document.getElementById("discount").value = data.discount;
-      document.getElementById("dropdown").value = data.category;
-      document.getElementById("rating").value = data.rating;
-      document.getElementById("image").value = data.image;
-      // Set values for other form fields based on your data object
+    // Load content from localStorage if available
+    var storedContent = localStorage.getItem('editorContent');
+    if (storedContent) {
+        CKEDITOR.instances.editor.setData(storedContent);
     }
 
-    // Sample product data
-    const productData = {
-      id: 1,
-      name: "Sample Product",
-      description: "Lorem ipsum dolor sit amet.",
-      price: 50,
-      discount: 10,
-      category: "7",
-      rating: 4.5,
-      image: "sample-image.jpg"
-    };
+    // Save content to localStorage when CKEditor content changes
+    CKEDITOR.instances.editor.on('change', function () {
+        var currentContent = CKEDITOR.instances.editor.getData()||[];
+        localStorage.setItem('editorContent', currentContent);
+    });
 
-    // Call the populateForm function with your productData
-    populateForm(productData);
-  </script>
+    // Add an event listener to the submit button
+    document.getElementById('submitButton').addEventListener('click', function () {
+        // Get the stored content
+        var storedContent = localStorage.getItem('editorContent');
 
+        // You can now display the stored content in the HTML
+        // For this example, we'll set it to the textarea
+        document.getElementById('editor').value = storedContent;
+
+        // Log it to the console
+        //console.log('Displaying stored content:', storedContent);
+        const get = document.querySelector('#getDesc');
+        get.innerHTML = storedContent;
+    });
+</script>
 </body>
 </html>
