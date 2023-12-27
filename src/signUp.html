@@ -118,20 +118,20 @@
           <h1 class="text-[30px] text-[#1A6E09] text-inter font-bold">Sign Up with Us Here</h1>
           <p class="text-[16px] text-[#363636] opacity-75">Begin your journey with us today</p>
 
-          <section class="space-y-4 mt-8">
-            <section class="flex flex-wrap gap-4 "> 
-              <div class="">
+          <section class="mt-8 w-full space-y-4 md:space-y-6 p-[20px] sm:max-w-lg xl:p-0">
+            <section> 
+              <div>
                 <label class="block text-[16px] font-semibold text-inter my-2 text-[#363636]">Username</label>
-                <input class="bg-[#f5f5f5] rounded-xl border border-[#1A6E09] focus:border-[#1A6E09] focus:ring-[#1A6E09] focus:outline-none focus:ring-2 md:w-[525px] h-[55px] p-2.5" type="text" placeholder="Your First Name" id="username" required>
+                <input class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2 xl:w-[525px] md:w-[525px] sm:w-[450px]" type="text" placeholder="Your First Name" id="username" required>
               </div>
             </section>
-            <section class="space-y-4">
-              <div class="">
+            <section>
+              <div>
                 <label class="block mb-2 text-[16px] font-semibold text-inter text-[#363636] ">Email</label>
-                <input class="bg-[#f5f5f5] rounded-xl border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2 xl:w-[525px] md:w-[525px] sm:w-[450px] h-[55px] p-2.5  focus:ring-[#1A6E09]" type="text" placeholder="Your Email" id="email" required>
+                <input class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2 xl:w-[525px] md:w-[525px] sm:w-[450px]" type="text" placeholder="Your Email" id="email" required>
               
                 <label class="block text-[16px] font-semibold text-inter mb-2 mt-4 text-[#363636]">Password</label>
-                <input class="bg-[#f5f5f5] rounded-xl border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2 xl:w-[525px] md:w-[525px] sm:w-[450px] h-[55px] p-2.5 first-letter: focus:ring-[#1A6E09]" type="text" placeholder="••••••••" id="password" required>
+                <input class="h-[55px] w-[450px] bg-gray-50 text-gray-700 sm:text-sm rounded-xl focus:ring-[#1A6E09] block p-2.5 dark:bg-white dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#1A6E09] dark:focus:border-[#1A6E09] border border-[#1A6E09] focus:border-[#1A6E09] focus:outline-none focus:ring-2 xl:w-[525px] md:w-[525px] sm:w-[450px]" type="text" placeholder="••••••••" id="password" required>
               </div>
               <div class="flex items-start mt-4">
                 <div class="flex items-center ">
@@ -139,7 +139,7 @@
                 </div>
                 <label for="remember" class="ms-2 font-medium text-[#363636]">I accept the Terms & Conditions</label>
               </div>
-                <button type="submit"  class="h-[55px] w-[450px] text-white text-[30px] font-inter bg-[rgb(26,110,9)] hover:bg-[#1d4b13] rounded-2xl text-center" onclick="handleSignUpClick()">Sign Up</button>
+                <button type="submit"  class="h-[55px] w-[450px] text-white text-[30px] font-inter bg-[rgb(26,110,9)] hover:bg-[#1d4b13] rounded-xl text-center xl:w-[525px] md:w-[525px] sm:w-[450px]" onclick="handleSignUpClick()">Sign Up</button>
             </section>
           </section>
         </section>  
@@ -148,7 +148,6 @@
             <path d="M1107 550C1107 853.757 859.19 1100 553.5 1100C247.81 1100 0 853.757 0 550C0 246.243 247.81 0 553.5 0C859.19 0 1107 246.243 1107 550Z" fill="#1A6E09"/>
           </svg>
         </section>
-
         <section class="absolute right-[70px] top-[140px] hidden lg:block">
           <div data-aos="fade-left">
             <svg class="" width="400" height="720" viewBox="0 0 512 720" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -250,35 +249,38 @@
         </section>
 
       </main>
-
-      
    <!-- Footer -->
    <footer class="bg-[#f5f5f5]">
-    <div
-      class="mx-auto w-full max-w-screen-xl p-[20px] xl:p-0 py-6 lg:py-8 mt-48">
-      <div class="md:flex md:justify-between gap-8">
+    <div class="mx-auto w-full max-w-screen-xl p-[20px] xl:p-0 py-6 lg:py-40 mt-5 lg:mt-20">
+      <div class="md:flex md:justify-between gap-4">
         <div
-          class="mb-2 md:mb-0  ">
-          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="/Img/logo.png" alt="Khmer-Mart Logo" class="max-h-32 md:ms-[-10px]  ms-[-23px] ">
+          class="mb-2 md:mb-0">
+          <a href="#"
+            class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="/Img/logo.png" alt="Khmer-Mart Logo"
+              class="max-h-32 md:ms-[-10px]  ms-[-23px] ">
           </a>
         </div>
         <div
-          class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 md:gap-4 ">
+          class="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 md:gap-4 ">
           <div>
             <h2
-              class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
+              class="mb-4 text-[1.3rem] font-semibold text-gray-900  dark:text-[#1A6E09]">
               Event
             </h2>
-            <ul class="text-gray-500 dark:text-[#363636] font-inter text-sm">
+            <ul
+              class="text-gray-500 dark:text-[#363636] font-inter text-[1rem]">
               <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Discount Type</a>
+                <a href="#" class="hover:text-[#1A6E09]">Discount
+                  Type</a>
               </li>
               <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Find Information</a>
+                <a href="#" class="hover:text-[#1A6E09]">Find
+                  Information</a>
               </li>
               <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Privacy Prolicy</a>
+                <a href="#" class="hover:text-[#1A6E09]">Privacy
+                  Prolicy</a>
               </li>
               <li class="mb-4">
                 <a href="#" class="hover:text-[#1A6E09]">Shops</a>
@@ -287,18 +289,21 @@
           </div>
           <div>
             <h2
-              class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
-              About
+              class="mb-4 text-[1.3rem] font-semibold text-gray-900  dark:text-[#1A6E09]">
+              About US
             </h2>
-            <ul class="text-gray-500 dark:text-[#363636]  font-inter text-sm">
+            <ul
+              class="text-gray-500 dark:text-[#363636]  font-inter text-[1rem]">
               <li class="mb-4">
-                  <a href="./aboutUs.html" class="hover:text-[#1A6E09]">About Us</a>
+                <a href="./aboutUs.html"
+                  class="hover:text-[#1A6E09]">About Us</a>
               </li>
               <li class="mb-4">
                 <a href="#" class="hover:text-[#1A6E09]">Help</a>
               </li>
               <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Location</a>
+                <a href="#"
+                  class="hover:text-[#1A6E09]">Location</a>
               </li>
               <li class="mb-4">
                 <a href="#" class="hover:text-[#1A6E09]">Contact
@@ -308,15 +313,18 @@
           </div>
           <div>
             <h2
-              class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
+              class="mb-4 text-[1.3rem] font-semibold text-gray-900  dark:text-[#1A6E09]">
               Catalog
             </h2>
-            <ul class="text-gray-500 dark:text-[#363636] font-inter text-sm">
+            <ul
+              class="text-gray-500 dark:text-[#363636] font-inter text-[1rem]">
               <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Buy One Get One</a>
+                <a href="#" class="hover:text-[#1A6E09]">Buy One Get
+                  One</a>
               </li>
               <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Flash Sale</a>
+                <a href="#" class="hover:text-[#1A6E09]">Flash
+                  Sale</a>
               </li>
               <li class="mb-4">
                 <a href="#" class="hover:text-[#1A6E09]">Events</a>
@@ -325,25 +333,29 @@
           </div>
           <div>
             <h2
-              class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
+              class="mb-4 text-[1.3rem] font-semibold text-gray-900  dark:text-[#1A6E09]">
               Work Time
             </h2>
-            <ul class="text-gray-500 dark:text-[#363636]  font-inter text-sm">
+            <ul
+              class="text-gray-500 dark:text-[#363636]  font-inter text-[1rem]">
               <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Mon-Thu 9:00 - 20:00</a>
+                <a href="#" class="hover:text-[#1A6E09]">Mon-Thu
+                  9:00 - 20:00</a>
               </li>
               <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Fri 9:00- 19:00</a>
+                <a href="#" class="hover:text-[#1A6E09]">Fri 9:00-
+                  19:00</a>
               </li>
               <li class="mb-4">
-                <a href="#" class="hover:text-[#1A6E09]">Sat 9:00 - 17:00</a>
+                <a href="#" class="hover:text-[#1A6E09]">Sat 9:00 -
+                  17:00</a>
               </li>
 
             </ul>
           </div>
           <div class="col-span-2">
             <h2
-              class="mb-4 text-md font-semibold text-gray-900  dark:text-[#1A6E09]">
+              class="mb-4 text-[1.3rem] font-semibold text-gray-900  dark:text-[#1A6E09]">
               Subscribe Our Newsletters
             </h2>
             <div class="relative w-full flex md:w-[320px] ">
@@ -358,9 +370,11 @@
             </div>
             <div class="relative w-full flex md:w-[320px] mt-4">
               <ul class="flex gap-4">
-                <li class="mb-4 border rounded-full p-1 ring-1 ring-[#1A6E09]">
+                <li
+                  class="mb-4 border rounded-full p-1 ring-1 ring-[#1A6E09]">
                   <a href="#" class="hover:text-[#1A6E09]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                      width="16"
                       height="16" viewBox="0 0 16 16" fill="none">
                       <g clip-path="url(#clip0_1630_814)">
                         <path
@@ -369,15 +383,18 @@
                       </g>
                       <defs>
                         <clippath id="clip0_1630_814">
-                          <rect width="16" height="16" fill="white" />
+                          <rect width="16" height="16"
+                            fill="white" />
                         </clippath>
                       </defs>
                     </svg>
                   </a>
                 </li>
-                <li class="mb-4 border rounded-full p-1 ring-1 ring-[#1A6E09]">
+                <li
+                  class="mb-4 border rounded-full p-1 ring-1 ring-[#1A6E09]">
                   <a href="#" class="hover:text-[#1A6E09]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                      width="16"
                       height="16" viewBox="0 0 16 16" fill="none">
                       <g clip-path="url(#clip0_1630_817)">
                         <path
@@ -392,15 +409,18 @@
                       </g>
                       <defs>
                         <clippath id="clip0_1630_817">
-                          <rect width="16" height="16" fill="white" />
+                          <rect width="16" height="16"
+                            fill="white" />
                         </clippath>
                       </defs>
                     </svg>
                   </a>
                 </li>
-                <li class="mb-4 border rounded-full p-1 ring-1 ring-[#1A6E09]">
+                <li
+                  class="mb-4 border rounded-full p-1 ring-1 ring-[#1A6E09]">
                   <a href="#" class="hover:text-[#1A6E09]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                      width="16"
                       height="16" viewBox="0 0 16 16" fill="none">
                       <g clip-path="url(#clip0_1630_823)">
                         <path
@@ -415,7 +435,8 @@
                       </g>
                       <defs>
                         <clippath id="clip0_1630_823">
-                          <rect width="16" height="16" fill="white" />
+                          <rect width="16" height="16"
+                            fill="white" />
                         </clippath>
                       </defs>
                     </svg>
@@ -427,10 +448,13 @@
           </div>
         </div>
       </div>
-      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-200 lg:my-8" />
+      <hr
+        class="my-6 border-gray-200 sm:mx-auto dark:border-gray-200 lg:my-2" />
       <div class="sm:flex sm:items-center sm:justify-between">
-        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">©
-          2023 <a href="https://flowbite.com/" class="hover:underline">Khmer
+        <span
+          class="text-sm text-gray-500 sm:text-center dark:text-gray-400 lg:my-4">©
+          2023 <a href="https://flowbite.com/"
+            class="hover:underline">Khmer
             Mart CSTAD</a>. All Rights Reserved.
         </span>
 
