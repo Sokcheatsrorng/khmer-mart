@@ -126,5 +126,4 @@ const fetchData = async (page) => {
 };
 let currentPage = 1;
 fetchData(currentPage);
-
-
+;
