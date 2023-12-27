@@ -59,9 +59,6 @@ const detail = ({attributes }) => {
                         </span>
                     </span>
       </div>
-      <button onclick="unvailable()" class="mt-4 mb-4 flex items-center text-lg px-20 font-medium text-center text-white bg-[#1A6E09] rounded-[59px]  w-72 h-12">
-        Add to favorite
-      </button> 
     </div>
     <button class="text-white bg-[#1A6E09]  focus:outline-none  font-medium rounded-[20px] text-sm px-5 py-2.5 text-center w-[270px]"  onclick="unvailable()">Add to Favorite</button>
     
