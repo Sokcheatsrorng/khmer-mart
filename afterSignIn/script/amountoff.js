@@ -112,7 +112,7 @@ const renderCard = ({id, attributes }) => {
                ${discount}%
             </div>
             <a href="/afterSignIn/detail-card.html?id=${id}&type=${typeId}">
-        <img class=" p-5 rounded-t-lg w-full h-52 object-contain z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="flashSaleImage"/>
+        <img class=" p-5 rounded-t-lg w-full h-52 object-contain z-0 image-hover" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="flashSaleImage"/>
         </a>
             <div class="px-5 pb-5">
                 <div class="flex items-center mt-2.5 mb-3">
@@ -125,7 +125,7 @@ const renderCard = ({id, attributes }) => {
                     <div class="flex items-center space-x-1 rtl:space-x-reverse text-[#FF9E37] text-2xl" id="stars">
                     ${renderStars(rating)} 
                     </div>
-                    <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">${rating}</span>
+                    <span class=" text-gray-500 text-sm px-2.5 py-0.5  ms-3">${rating}.00/5.00</span>
                 </div>
                 <div class="flex items-center justify-between gap-4">
                     <span class="text-3xl font-bold text-red-700" id="originalPrice">$${discountprice.toFixed(2)}  </span>

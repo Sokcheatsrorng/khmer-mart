@@ -1,4 +1,5 @@
 'use strict'
+
 // function get only date
 function extractDateFromISOString(isoString) {
   const dateObject = new Date(isoString);
@@ -29,7 +30,7 @@ const trending = ({id,attributes }) => {
   return `
   <div class="bg-white rounded-2xl mt-2 ">
     <a href="/afterSignIn/detail-card.html?id=${id}&type=${typeId} " >
-      <img class="object-fit w-[480px] h-[350px] p-5 rounded-t-lg" src="https://cms.istad.co${imageUrl}" alt="${imageName}" />
+      <img class="object-fit w-[480px] h-[350px] p-5 rounded-t-lg image-hover" src="https://cms.istad.co${imageUrl}" alt="${imageName}" />
     </a>
     <div class="px-5 pb-5">
       <a href="#">
@@ -99,7 +100,7 @@ const amountOff = ({ attributes }) => {
                ${discount}%
             </div>
             <a href="/afterSignIn/amountOff.html">
-        <img class="p-5 rounded-t-lg w-full h-52 object-contain z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images"/>
+        <img class="p-5 rounded-t-lg w-full h-52 object-contain z-0 image-hover" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images"/>
     </a>
             <div class="px-5 pb-5">
                 <div class="flex items-center mt-2.5 mb-3">
@@ -186,10 +187,12 @@ const buy1get1 = ({ attributes }) => {
         }
     </style>
     <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none">
-    <img class=" absolute mx-1  mt-1 h-24 " src="/Img/b1g1/Logobuy1get1.jpg" alt="buy1get1Logo">
+    <div class=" absolute z-10 h-12 w-24 mt-4 ms-4 text-center justify-center text-2xl flex items-center mx-auto" >
+    <img class=" mx-1  mt-1 h-24  " src="/Img/b1g1/Logobuy1get1.jpg" alt="buy1get1Logo">
+ </div>
 <a href="/afterSignIn/detail-card.html">
     <a href="/afterSignIn/BuyoneGetoneList.html">
-<img class=" p-5 rounded-t-lg w-full object-contain z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="flashSaleImage"/>
+<img class=" p-5 rounded-t-lg w-full object-contain z-0 image-hover" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="flashSaleImage"/>
 </a>
     <div class="px-5 pb-5">
         <div class="flex items-center mt-2.5 mb-3">
@@ -262,7 +265,7 @@ const flashsale = ({ attributes }) => {
         </style>
         <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none">
             <a href="/afterSignIn/flashsale.html">
-        <img class=" p-5 rounded-t-lg w-full h-52 object-contain z-0" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="flashSaleImage"/>
+        <img class=" p-5 rounded-t-lg w-full h-52 object-contain z-0 image-hover" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="flashSaleImage"/>
         </a>
             <div class="px-5 pb-5">
                 <div class="flex items-center mt-2.5 mb-3">
