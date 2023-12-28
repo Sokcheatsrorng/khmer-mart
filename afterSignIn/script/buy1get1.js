@@ -27,9 +27,10 @@ const renderCard = ({id, attributes }) => {
         </style>
         <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none">
         <div class=" absolute z-10 h-12 w-24 mt-4 ms-4 text-center justify-center text-2xl flex items-center mx-auto" >
-               <img class=" mx-1 z-1 mt-1 h-24" src="/Img/b1g1/Logobuy1get1.jpg" alt="buy1get1Logo">
+               <img class=" mx-1  mt-1 h-24  " src="/Img/b1g1/Logobuy1get1.jpg" alt="buy1get1Logo">
             </div>
-        <a href="/src/detail-card.html?id=${id}&type=${typeId}">
+       
+        <a href="/afterSignIn/detail-card.html?id=${id}&type=${typeId}">
     <img class=" p-5 rounded-t-lg w-full  object-contain z-0 image-hover" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="flashSaleImage"/>
     </a>
         <div class="px-5 pb-5">
@@ -128,4 +129,5 @@ const fetchData = async (page) => {
 };
 let currentPage = 1;
 fetchData(currentPage);
-;
+
+

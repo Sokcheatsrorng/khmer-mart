@@ -18,6 +18,7 @@ const searchProductDisplay = ({ attributes }) => {
         : "";
     const imageUrl =
         image.data != null ? image.data.attributes.url : "";
+    
 
     return `
         <style>

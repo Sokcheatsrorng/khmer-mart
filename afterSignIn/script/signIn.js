@@ -68,4 +68,3 @@ function submitForm(event) {
       toastr.error("Login failed. Please check your username and password.");
     });
 }
-

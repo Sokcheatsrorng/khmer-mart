@@ -21,20 +21,20 @@ const detail = ({attributes }) => {
       </a>
     </div>
     <!-- Card -->
-    <div class="lg:h-1/2 lg:w-2/5 bg-white rounded-[15px] relative p-4 w-5/5 md:w-4/5 md:p-4">
-      <div class="flex items-center lg:mb-6 mb-3 gap-2 space-x-2 ">
+    <div class="h-1/2 w-2/5 bg-white rounded-[15px] relative p-4 ">
+      <div class="flex items-center mb-4 gap-2 space-x-2 ">
         <div class="flex items-center space-x-1 rtl:space-x-reverse text-[#FF9E37] text-2xl" id="stars">
           ${renderStars(rating)}
         </div>
         <div class="text-neutral-700 text-opacity-80 text-base font-normal leading-9 tracking-tight ">${rating}.0/5.0</div>
       </div>
-      <h5 class="lg:mb-6 mb-4 lg:text-2xl md:text-2xl text-xl font-semibold text-opacity-80 tracking-tight text-neutral-700 ">${name}</h5>
-      <div class="flex items-center space-x-1 rtl:space-x-reverse lg:mb-6 mb-4 gap-4">
-        <div class="text-[#FF0000] lg:text-4xl md:text-4xl text-2xl font-bold leading-9 tracking-tight">Now $${discountprice.toFixed(2)}</div>
-        <div class="w-[109px] h-[35.76px] text-neutral-700 text-opacity-80 lg:text-3xl  md:text-3xl text-xl font-normal line-through leading-9 tracking-tight  ">$${price}</div>
+      <h5 class="mb-6 text-2xl font-semibold text-opacity-80 tracking-tight text-neutral-700 ">${name}</h5>
+      <div class="flex items-center space-x-1 rtl:space-x-reverse mb-4 gap-4">
+        <div class="text-[#FF0000] text-4xl font-bold leading-9 tracking-tight">Now $${discountprice.toFixed(2)}</div>
+        <div class="w-[109px] h-[35.76px] text-neutral-700 text-opacity-80 text-2xl font-normal line-through leading-9 tracking-tight  ">$${price}</div>
       </div>
-      <h5 class="mb-4 lg:mb-6 lg:text-2xl md:text-2xl text-xl font-semibold tracking-tight text-[#FF0000] ">You save ${totalSave.toFixed(2)}</h5>  
-      <div class="flex items-center space-x-1 rtl:space-x-reverse lg:mb-6 mb-4 justify-between">
+      <h5 class="mb-2 text-2xl font-semibold tracking-tight text-[#FF0000] ">You save ${totalSave.toFixed(2)}</h5>  
+      <div class="flex items-center space-x-1 rtl:space-x-reverse mb-4 justify-between">
         <div class="flex gap-2">
         <span class="flex items-center">
         <span class="flex items-center">
@@ -188,9 +188,8 @@ const renderCard = ({ id,attributes }) => {
       : "";
   const imageUrl =
     image.data != null ? image.data.attributes.url : "";
-  
-  const discountprice = price - (discount*price)/100;
   const typeId = attributes.type.data.id;
+  const discountprice = price - (discount*price)/100;
   const isoString = createdAt;
   const extractedDate = extractDateFromISOString(isoString);
   const extractedHours = extractHoursAndMinutesFromISOString(isoString);
@@ -203,7 +202,7 @@ const renderCard = ({ id,attributes }) => {
             }
         </style>
         <div class="w-full max-w-sm bg-white border border-white rounded-xl shadow-none">
-            <a href="/src/detail-card.html?id=${id}&type=${typeId}">
+            <a href="/afterSignIn/detail-card.html?id=${id}&type=${typeId}">
         <img class=" p-5 rounded-t-lg w-full h-64 object-contain z-0 image-hover" src="https://cms.istad.co${imageUrl}" alt="${imageName}" id="images" class="flashSaleImage"/>
         </a>
             <div class="px-5 pb-5">
@@ -251,7 +250,7 @@ const renderCard = ({ id,attributes }) => {
                     </span>
                     
                 </div>
-            </div>  
+            </div>
         </div>
     `;
 };
